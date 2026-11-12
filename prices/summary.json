@@ -1,8 +1,9 @@
 {
+ "checked_at": "2026-11-12T22:21:09Z",
  "models": 445,
- "models_with_spread": 151,
+ "models_with_spread": 152,
  "providers": 80,
- "read_at": "2026-11-12T21:38:32Z",
+ "read_at": "2026-11-12T22:21:09Z",
  "records": 1926,
  "top_spread_model": "qwen3-6-35b-a3b",
  "top_spread_p90_model": "qwen3-6-35b-a3b",
