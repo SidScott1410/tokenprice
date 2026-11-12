@@ -37,9 +37,11 @@ def parse(payload: dict, read_at: str | None = None, url: str = URL) -> list[Rec
             continue
         if inp == 0 and outp == 0:
             continue  # free tiers carry no price signal
+        if inp < 0 or outp < 0:
+            continue  # OpenRouter uses -1 for dynamic pricing (auto router); not a price
         cached = pricing.get("input_cache_read")
-        out.append(
-            Record(
+        try:
+            rec = Record(
                 provider="openrouter",
                 model=normalize(m["id"]),
                 model_raw=m["id"],
@@ -52,7 +54,9 @@ def parse(payload: dict, read_at: str | None = None, url: str = URL) -> list[Rec
                 provenance="api",
                 extra={"name": m.get("name")},
             )
-        )
+        except ValueError:
+            continue  # validator refused it; the feed must not carry it
+        out.append(rec)
     return out
 
 

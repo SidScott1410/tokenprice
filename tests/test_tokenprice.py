@@ -18,6 +18,7 @@ FIXTURE = {
         {"id": "anthropic/claude-sonnet-4.5", "name": "Claude", "context_length": 200000,
          "pricing": {"prompt": "0.000003", "completion": "0.000015", "input_cache_read": "0.0000003"}},
         {"id": "broken/model", "pricing": {"prompt": "n/a", "completion": "x"}},
+        {"id": "openrouter/auto", "pricing": {"prompt": "-1", "completion": "-1"}},
     ]
 }
 
@@ -53,7 +54,7 @@ def test_parse_endpoints():
 
 def test_parse_openrouter():
     rs = openrouter.parse(FIXTURE, read_at="2026-11-10T22:00:00Z")
-    assert len(rs) == 3                      # free tier and broken entry dropped
+    assert len(rs) == 3                      # free tier, broken entry and -1 dynamic pricing dropped
     a = rs[0]
     assert a.model == "llama-3-8b-instruct" and a.input_per_m == 0.05 and a.output_per_m == 0.08
     assert a.provenance == "api" and a.source.startswith("https://")

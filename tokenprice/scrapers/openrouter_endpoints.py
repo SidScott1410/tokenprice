@@ -42,14 +42,14 @@ def parse(payload: dict, model_id: str, read_at: str | None = None) -> list[Reco
             outp = float(pricing.get("completion", "0")) * 1e6
         except (TypeError, ValueError):
             continue
-        if inp == 0 and outp == 0:
-            continue
+        if inp == 0 and outp == 0 or inp < 0 or outp < 0:
+            continue  # free tier, or -1 "dynamic pricing": neither is a price
         provider = ep.get("provider_name") or ep.get("name")
         if not provider:
             continue
         cached = pricing.get("input_cache_read")
-        out.append(
-            Record(
+        try:
+            rec = Record(
                 provider=str(provider).strip().lower().replace(" ", "-"),
                 model=normalize(model_id),
                 model_raw=model_id,
@@ -62,7 +62,9 @@ def parse(payload: dict, model_id: str, read_at: str | None = None) -> list[Reco
                 provenance="api",
                 extra={"quantization": ep.get("quantization"), "uptime_30m": ep.get("uptime_last_30m")},
             )
-        )
+        except ValueError:
+            continue  # validator refused it; the feed must not carry it
+        out.append(rec)
     return out
 
 
