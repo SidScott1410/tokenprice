@@ -19,6 +19,7 @@ FIXTURE = {
          "pricing": {"prompt": "0.000003", "completion": "0.000015", "input_cache_read": "0.0000003"}},
         {"id": "broken/model", "pricing": {"prompt": "n/a", "completion": "x"}},
         {"id": "openrouter/auto", "pricing": {"prompt": "-1", "completion": "-1"}},
+        {"id": "mistralai/mistral-7b", "pricing": {"prompt": "0.00000005", "completion": "0.00000008"}},
     ]
 }
 
@@ -54,7 +55,7 @@ def test_parse_endpoints():
 
 def test_parse_openrouter():
     rs = openrouter.parse(FIXTURE, read_at="2026-11-10T22:00:00Z")
-    assert len(rs) == 3                      # free tier, broken entry and -1 dynamic pricing dropped
+    assert len(rs) == 4                      # free tier, broken entry and -1 dynamic pricing dropped
     a = rs[0]
     assert a.model == "llama-3-8b-instruct" and a.input_per_m == 0.05 and a.output_per_m == 0.08
     assert a.provenance == "api" and a.source.startswith("https://")
@@ -75,8 +76,8 @@ def test_write_and_read_feed(tmp_path, monkeypatch):
     rs = openrouter.parse(FIXTURE, read_at="2026-11-10T22:00:00Z")
     rs += openrouter_endpoints.parse(ENDPOINTS, "meta-llama/llama-3-8b-instruct", read_at="2026-11-10T22:00:00Z")
     info = feed.write_run(rs, root=tmp_path)
-    assert info["records"] == 5 and info["changed"] == 5 and info["day"] == "2026-11-10"
-    assert (tmp_path / "history" / "2026-11-10.jsonl").read_text().count("\n") == 5
+    assert info["records"] == 6 and info["changed"] == 6 and info["day"] == "2026-11-10"
+    assert (tmp_path / "history" / "2026-11-10.jsonl").read_text().count("\n") == 6
     sp = json.loads((tmp_path / "spread.json").read_text())["models"]
     # router listings (base and :extended) do not make a spread; two real providers do
     assert list(sp) == ["llama-3-8b-instruct"]
@@ -87,13 +88,13 @@ def test_write_and_read_feed(tmp_path, monkeypatch):
     # unchanged prices: latest rewritten, history untouched
     info = feed.write_run(rs, root=tmp_path, read_at="2026-11-10T23:00:00Z")
     assert info["changed"] == 0
-    assert (tmp_path / "history" / "2026-11-10.jsonl").read_text().count("\n") == 5
+    assert (tmp_path / "history" / "2026-11-10.jsonl").read_text().count("\n") == 6
     # one price moves: one history line
     rs[0].input_per_m = 0.06
     info = feed.write_run(rs, root=tmp_path, read_at="2026-11-11T00:00:00Z")
     assert info["changed"] == 1 and feed.history_days(tmp_path) == ["2026-11-10", "2026-11-11"]
     assert len(feed.changes_since("2026-11-11", tmp_path)) == 1
-    assert len(feed.changes_since("2026-11-10", tmp_path)) == 6
+    assert len(feed.changes_since("2026-11-10", tmp_path)) == 7
     summ = json.loads((tmp_path / "summary.json").read_text())
     assert summ["top_spread_model"] == "llama-3-8b-instruct" and summ["providers"] == 3
 
@@ -128,3 +129,24 @@ def test_cli(tmp_path, monkeypatch, capsys):
     assert main(["claude-sonnet-4-5", "--spread"]) == 1
     assert main(["nope"]) == 1
     assert main(["--models"]) == 0
+
+
+def test_update_wires_endpoints(tmp_path, monkeypatch, capsys):
+    """Regression: _update must call the endpoints scraper, not just the list."""
+    from tokenprice.cli import main
+    from tokenprice.scrapers import openrouter, openrouter_endpoints
+    monkeypatch.setattr(openrouter, "fetch", lambda: FIXTURE)
+    monkeypatch.setattr(openrouter_endpoints, "fetch", lambda mid, timeout=30: ENDPOINTS)
+    monkeypatch.setattr(openrouter_endpoints, "time", type("T", (), {"sleep": staticmethod(lambda s: None)}))
+    monkeypatch.setattr(feed, "ROOT", tmp_path)
+    assert main(["--update"]) == 0
+    info = json.loads(capsys.readouterr().out.strip().splitlines()[-1])
+    assert info["endpoint_models"] == 4 and info["endpoint_records"] == 8 and info["endpoint_models_failed"] == 0
+    assert json.loads((tmp_path / "summary.json").read_text())["providers"] == 3
+
+
+def test_spread_survives_price_ties():
+    a = Record("p1", "m", "x/m", 1.0, 2.0, "https://x", "2026-01-01T00:00:00Z", "api")
+    b = Record("p2", "m", "x/m", 1.0, 2.0, "https://x", "2026-01-01T00:00:00Z", "api")
+    s = feed.spread([a, b])["m"]
+    assert s["ratio"] == 1.0 and s["n"] == 2

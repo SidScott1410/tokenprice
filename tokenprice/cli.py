@@ -17,10 +17,17 @@ from tokenprice import feed
 
 
 def _update() -> int:
-    from tokenprice.scrapers import openrouter  # local import: scrapers are not part of the wheel
+    from tokenprice.scrapers import openrouter, openrouter_endpoints
 
-    records = openrouter.scrape()
-    info = feed.write_run(records)
+    listed = openrouter.scrape()  # one router price per model
+    ids = sorted({r.model_raw for r in listed})
+    per_provider, failed = openrouter_endpoints.scrape_all(ids)  # the spread lives here
+    info = feed.write_run(listed + per_provider)
+    info["endpoint_models"] = len(ids)
+    info["endpoint_records"] = len(per_provider)
+    info["endpoint_models_failed"] = len(failed)
+    if failed:
+        print("endpoints failed for: " + ", ".join(failed[:10]) + (" ..." if len(failed) > 10 else ""), file=sys.stderr)
     print(json.dumps(info))
     return 0
 

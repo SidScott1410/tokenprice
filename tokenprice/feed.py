@@ -21,7 +21,8 @@ from .schema import Record
 ROOT = Path(__file__).resolve().parent.parent / "prices"
 
 
-def write_run(records: list[Record], root: Path = ROOT, read_at: str | None = None) -> dict:
+def write_run(records: list[Record], root: Path | None = None, read_at: str | None = None) -> dict:
+    root = root or ROOT
     if not records:
         raise ValueError("refusing to write an empty run")
     read_at = read_at or records[0].read_at
@@ -101,7 +102,8 @@ def spread(records: list[Record]) -> dict:
     for model, rs in by.items():
         if len({r.provider for r in rs}) < 2:
             continue
-        blended = sorted((r.input_per_m + 3 * r.output_per_m, r) for r in rs)
+        # key on price only: Record is not orderable, and ties are common in a real feed
+        blended = sorted(((r.input_per_m + 3 * r.output_per_m, r) for r in rs), key=lambda t: t[0])
         lo, hi = blended[0], blended[-1]
         out[model] = {
             "n": len(rs),
