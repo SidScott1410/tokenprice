@@ -167,3 +167,13 @@ def test_spread_robust_stats_resist_outlier():
     rs = [mk(f"p{i}", 0.3, 1.2) for i in range(10)] + [mk("cheap", 0.1, 0.4), mk("venice", 3.0, 12.0)]
     s = feed.spread(rs)["m"]
     assert s["ratio"] == 30.0 and s["ratio_p90"] == 3.0 and s["median_x"] == 3.0
+    assert s["ratio_p90_p10"] == 1.0  # the pack itself is flat
+
+
+def test_history_key_separates_provider_variants(tmp_path):
+    t = "2026-01-01T00:00:00Z"
+    a = Record("venice", "m", "x/m", 1.0, 2.0, "https://x", t, "api", extra={"quantization": "fp8"})
+    b = Record("venice", "m", "x/m", 3.0, 9.0, "https://x", t, "api", extra={"quantization": "bf16"})
+    feed.write_run([a, b], root=tmp_path)
+    info = feed.write_run([b, a], root=tmp_path, read_at="2026-01-01T01:00:00Z")  # same prices, different order
+    assert info["changed"] == 0

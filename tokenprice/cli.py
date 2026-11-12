@@ -78,7 +78,8 @@ def main(argv: list[str] | None = None) -> int:
             lo, hi = s["min_blended_per_m"], s["max_blended_per_m"]
             print(f"{a.model}: {s['n']} providers, blended ${lo:.3f} (min) ${s['median_blended_per_m']:.3f} (median) "
                   f"${s['p90_blended_per_m']:.3f} (p90) ${hi:.3f} (max) per M")
-            print(f"  max/min {s['ratio']}x   p90/min {s['ratio_p90']}x   median/min {s['median_x']}x")
+            print(f"  max/min {s['ratio']}x   p90/min {s['ratio_p90']}x   p90/p10 {s['ratio_p90_p10']}x   "
+                  f"median/min {s['median_x']}x")
             print(f"  cheapest {s['cheapest']}\n  dearest  {s['dearest']}")
         return 0
 

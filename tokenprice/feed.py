@@ -73,8 +73,11 @@ def changes_since(day: str, root: Path = ROOT) -> list[dict]:
     return out
 
 
-def _key(r: Record) -> tuple[str, str]:
-    return (r.provider, r.model_raw)
+def _key(r: Record) -> tuple:
+    # a provider can list one model several times (quantization, context tier);
+    # keying on provider+model alone made those pairs flip every run and bloat history
+    ex = r.extra or {}
+    return (r.provider, r.model_raw, ex.get("quantization"), r.context)
 
 
 def _price_tuple(r: Record) -> tuple:
@@ -102,7 +105,8 @@ def spread(records: list[Record]) -> dict:
     price for the same endpoints.
 
     ratio      = max / min across providers. Sensitive to one premium outlier.
-    ratio_p90  = 90th percentile / min. The robust headline.
+    ratio_p90  = 90th percentile / min. Robust to a premium outlier, not to a cheap one.
+    ratio_p90_p10 = p90 / p10. Trims one outlier at each end; the pack spread.
     median_x   = median / min. What a typical provider charges over the floor.
     """
     by: dict[str, dict[str, tuple[float, Record]]] = defaultdict(dict)
@@ -123,14 +127,17 @@ def spread(records: list[Record]) -> dict:
         n = len(prices)
         med = prices[n // 2] if n % 2 else (prices[n // 2 - 1] + prices[n // 2]) / 2
         p90 = prices[min(n - 1, int(round(0.9 * (n - 1))))]
+        p10 = prices[max(0, int(round(0.1 * (n - 1))))]
         out[model] = {
             "n": n,
             "min_blended_per_m": round(lo[0], 4),
+            "p10_blended_per_m": round(p10, 4),
             "median_blended_per_m": round(med, 4),
             "p90_blended_per_m": round(p90, 4),
             "max_blended_per_m": round(hi[0], 4),
             "ratio": round(hi[0] / lo[0], 2) if lo[0] > 0 else None,
             "ratio_p90": round(p90 / lo[0], 2) if lo[0] > 0 else None,
+            "ratio_p90_p10": round(p90 / p10, 2) if p10 > 0 else None,  # trims one outlier at each end
             "median_x": round(med / lo[0], 2) if lo[0] > 0 else None,
             "cheapest": lo[1].provider,
             "dearest": hi[1].provider,
