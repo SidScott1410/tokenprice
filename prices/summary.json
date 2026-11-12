@@ -1,9 +1,9 @@
 {
  "models": 444,
- "models_with_spread": 0,
- "providers": 1,
- "read_at": "2026-11-12T21:23:26Z",
- "records": 448,
- "top_spread_model": null,
- "top_spread_ratio": null
+ "models_with_spread": 151,
+ "providers": 80,
+ "read_at": "2026-11-12T21:27:54Z",
+ "records": 1924,
+ "top_spread_model": "deepseek-v4-1-flash",
+ "top_spread_ratio": 34.82
 }
