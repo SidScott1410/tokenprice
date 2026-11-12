@@ -84,6 +84,7 @@ def test_write_and_read_feed(tmp_path, monkeypatch):
     s = sp["llama-3-8b-instruct"]
     # deepinfra 0.03+3*0.06=0.21 ; together 0.18+3*0.18=0.72 ; ratio 3.43
     assert s["n"] == 2 and s["ratio"] == 3.43 and s["cheapest"] == "deepinfra" and s["dearest"] == "together"
+    assert s["ratio_p90"] == 3.43 and s["median_x"] == 2.21
 
     # unchanged prices: latest rewritten, history untouched
     info = feed.write_run(rs, root=tmp_path, read_at="2026-11-10T23:00:00Z")
@@ -150,3 +151,19 @@ def test_spread_survives_price_ties():
     b = Record("p2", "m", "x/m", 1.0, 2.0, "https://x", "2026-01-01T00:00:00Z", "api")
     s = feed.spread([a, b])["m"]
     assert s["ratio"] == 1.0 and s["n"] == 2
+
+
+def test_spread_collapses_provider_tiers():
+    """One provider's own tiers must not read as a cross-provider spread."""
+    mk = lambda prov, i, o: Record(prov, "m", "x/m", i, o, "https://x", "2026-01-01T00:00:00Z", "api")  # noqa: E731
+    rs = [mk("openai", 1.0, 4.0), mk("openai", 12.0, 48.0), mk("azure", 1.5, 6.0)]
+    s = feed.spread(rs)["m"]
+    assert s["n"] == 2 and s["ratio"] == 1.5 and s["dearest"] == "azure"
+    assert feed.spread([mk("openai", 1.0, 4.0), mk("openai", 12.0, 48.0)]) == {}
+
+
+def test_spread_robust_stats_resist_outlier():
+    mk = lambda prov, i, o: Record(prov, "m", "x/m", i, o, "https://x", "2026-01-01T00:00:00Z", "api")  # noqa: E731
+    rs = [mk(f"p{i}", 0.3, 1.2) for i in range(10)] + [mk("cheap", 0.1, 0.4), mk("venice", 3.0, 12.0)]
+    s = feed.spread(rs)["m"]
+    assert s["ratio"] == 30.0 and s["ratio_p90"] == 3.0 and s["median_x"] == 3.0

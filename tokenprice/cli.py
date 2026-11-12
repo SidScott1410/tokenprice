@@ -76,7 +76,9 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(s, indent=2))
         else:
             lo, hi = s["min_blended_per_m"], s["max_blended_per_m"]
-            print(f"{a.model}: {s['n']} listings, blended ${lo:.3f} to ${hi:.3f} per M, ratio {s['ratio']}x")
+            print(f"{a.model}: {s['n']} providers, blended ${lo:.3f} (min) ${s['median_blended_per_m']:.3f} (median) "
+                  f"${s['p90_blended_per_m']:.3f} (p90) ${hi:.3f} (max) per M")
+            print(f"  max/min {s['ratio']}x   p90/min {s['ratio_p90']}x   median/min {s['median_x']}x")
             print(f"  cheapest {s['cheapest']}\n  dearest  {s['dearest']}")
         return 0
 
@@ -89,10 +91,15 @@ def main(argv: list[str] | None = None) -> int:
     if a.json:
         print(json.dumps([r.to_dict() for r in rs], indent=2))
         return 0
-    print(f"{'model_raw':<48} {'in $/M':>8} {'out $/M':>8} {'cached':>8}  read_at")
+    hdr = f"{'provider':<18} {'quant':<6} {'ctx':>7} {'in $/M':>8} {'out $/M':>8} {'cached':>8} {'blended':>8}"
+    print(f"{hdr}  model_raw")
     for r in rs:
         c = f"{r.cached_input_per_m:.3f}" if r.cached_input_per_m is not None else "-"
-        print(f"{r.model_raw:<48} {r.input_per_m:>8.3f} {r.output_per_m:>8.3f} {c:>8}  {r.read_at}")
+        q = (r.extra or {}).get("quantization") or "-"
+        ctx = f"{r.context:,}" if r.context else "-"
+        b = r.input_per_m + 3 * r.output_per_m
+        row = f"{r.provider:<18} {q:<6} {ctx:>7} {r.input_per_m:>8.3f} {r.output_per_m:>8.3f} {c:>8} {b:>8.3f}"
+        print(f"{row}  {r.model_raw}")
     return 0
 
 

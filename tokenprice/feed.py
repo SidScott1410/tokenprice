@@ -46,6 +46,7 @@ def write_run(records: list[Record], root: Path | None = None, read_at: str | No
 
     # tiny file for badges; shields.io times out on the full feed
     top = max(sp.items(), key=lambda kv: kv[1]["ratio"] or 0) if sp else None
+    top_r = max(sp.items(), key=lambda kv: kv[1]["ratio_p90"] or 0) if sp else None
     summary = {
         "read_at": read_at,
         "records": len(records),
@@ -54,6 +55,8 @@ def write_run(records: list[Record], root: Path | None = None, read_at: str | No
         "models_with_spread": len(sp),
         "top_spread_model": top[0] if top else None,
         "top_spread_ratio": top[1]["ratio"] if top else None,
+        "top_spread_p90_model": top_r[0] if top_r else None,
+        "top_spread_p90_ratio": top_r[1]["ratio_p90"] if top_r else None,
     }
     (root / "summary.json").write_text(json.dumps(summary, indent=1, sort_keys=True))
     return {"records": len(records), "changed": len(changed), "models_with_spread": len(sp), "day": day}
@@ -85,31 +88,50 @@ def load_latest(root: Path = ROOT) -> list[Record]:
     return [Record.from_dict(d) for d in json.loads(p.read_text())["records"]]
 
 
+def blended(r: Record) -> float:
+    """input + 3 * output per M. A fixed ranking convention, stated wherever quoted."""
+    return r.input_per_m + 3 * r.output_per_m
+
+
 def spread(records: list[Record]) -> dict:
-    """For each model served by 2+ distinct providers: min, max, ratio on a blended price.
+    """For each model served by 2+ distinct providers, the price dispersion across providers.
 
-    Only per-provider records count. The router's own listing (provider
-    "openrouter") is excluded, since it is a price for the same endpoints.
+    Each provider is collapsed to its cheapest listing first, so a provider's own
+    tiers (OpenAI priority/flex, say) do not register as a cross-provider spread.
+    The router's own listing (provider "openrouter") is excluded, since it is a
+    price for the same endpoints.
 
-    Blended = input + 3 * output per M, a fixed convention that weights output
-    tokens the way a chat workload does. State it when you quote the number.
+    ratio      = max / min across providers. Sensitive to one premium outlier.
+    ratio_p90  = 90th percentile / min. The robust headline.
+    median_x   = median / min. What a typical provider charges over the floor.
     """
-    by: dict[str, list[Record]] = defaultdict(list)
+    by: dict[str, dict[str, tuple[float, Record]]] = defaultdict(dict)
     for r in records:
-        if r.provider != "openrouter":
-            by[r.model].append(r)
-    out = {}
-    for model, rs in by.items():
-        if len({r.provider for r in rs}) < 2:
+        if r.provider == "openrouter":
             continue
-        # key on price only: Record is not orderable, and ties are common in a real feed
-        blended = sorted(((r.input_per_m + 3 * r.output_per_m, r) for r in rs), key=lambda t: t[0])
-        lo, hi = blended[0], blended[-1]
+        b = blended(r)
+        cur = by[r.model].get(r.provider)
+        if cur is None or b < cur[0]:
+            by[r.model][r.provider] = (b, r)
+    out = {}
+    for model, per_provider in by.items():
+        if len(per_provider) < 2:
+            continue
+        rows = sorted(per_provider.values(), key=lambda t: t[0])
+        prices = [b for b, _ in rows]
+        lo, hi = rows[0], rows[-1]
+        n = len(prices)
+        med = prices[n // 2] if n % 2 else (prices[n // 2 - 1] + prices[n // 2]) / 2
+        p90 = prices[min(n - 1, int(round(0.9 * (n - 1))))]
         out[model] = {
-            "n": len(rs),
+            "n": n,
             "min_blended_per_m": round(lo[0], 4),
+            "median_blended_per_m": round(med, 4),
+            "p90_blended_per_m": round(p90, 4),
             "max_blended_per_m": round(hi[0], 4),
             "ratio": round(hi[0] / lo[0], 2) if lo[0] > 0 else None,
+            "ratio_p90": round(p90 / lo[0], 2) if lo[0] > 0 else None,
+            "median_x": round(med / lo[0], 2) if lo[0] > 0 else None,
             "cheapest": lo[1].provider,
             "dearest": hi[1].provider,
         }

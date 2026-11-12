@@ -29,7 +29,7 @@ r = tokenprice.get("llama-3-8b-instruct")  # cheapest listing, a Record
 r.input_per_m, r.output_per_m, r.source, r.read_at, r.provenance
 
 tokenprice.cheapest("llama-3-8b-instruct", n=3)
-tokenprice.spread("llama-3-8b-instruct")   # {"n", "min_blended_per_m", "max_blended_per_m", "ratio", "cheapest", "dearest"}
+tokenprice.spread("llama-3-8b-instruct")   # per-provider dispersion: min, median, p90, max, ratio, ratio_p90, median_x
 tokenprice.models()
 ```
 
@@ -48,7 +48,7 @@ Model names are normalized: provider prefix, date suffix, and OpenRouter variant
 - Prices are USD per million tokens.
 - Blended price (used for ranking and spread) is `input + 3 * output` per M, a 1:3 input:output mix. It is a ranking convention, not your bill.
 - Free tiers (price 0) are dropped. They are not prices.
-- `spread` requires at least two distinct upstream providers for a model.
+- `spread` collapses each provider to its cheapest listing, then compares across providers (2+ required). Quote `ratio_p90` (p90 / min) as the headline; `ratio` (max / min) is one premium outlier away from meaningless.
 - A full update is ~1 request per model plus one for the list, paced at 150 ms, so the hourly job takes a few minutes.
 
 ## Feed layout
