@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>tokenprice: cross-provider spread</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font:15px/1.45 system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#111}
+h1{font-size:1.5rem;margin:0 0 .25rem}p.sub{color:#555;margin:0 0 1.25rem}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:.4rem .5rem;border-bottom:1px solid #e5e5e5;text-align:right}
+th:first-child,td:first-child{text-align:left}th{cursor:pointer;user-select:none;background:#fafafa;position:sticky;top:0}
+input{padding:.4rem .6rem;font:inherit;width:100%;max-width:360px;margin:0 0 1rem}
+code{background:#f3f3f3;padding:.1rem .3rem;border-radius:3px}
+</style></head><body>
+<h1>Same model, different sellers</h1>
+<p class="sub">Blended = input + 3 × output, USD per M tokens. Each provider collapsed to its cheapest tier. <span id="meta"></span>
+Data: <a href="https://github.com/SidScott1410/tokenprice">github.com/SidScott1410/tokenprice</a> · <a href="https://github.com/SidScott1410/tokenprice/blob/main/prices/MOVES.md">this week's price moves</a></p>
+<input id="q" placeholder="filter models (e.g. llama, deepseek)">
+<table id="t"><thead><tr>
+<th data-k="model">model</th><th data-k="n">providers</th><th data-k="min_blended_per_m">min</th><th data-k="p10_blended_per_m">p10</th>
+<th data-k="median_blended_per_m">median</th><th data-k="p90_blended_per_m">p90</th><th data-k="max_blended_per_m">max</th>
+<th data-k="ratio_p90_p10">p90/p10</th><th data-k="median_x">median/min</th><th data-k="cheapest">cheapest</th></tr></thead><tbody></tbody></table>
+<script>
+const RAW="https://raw.githubusercontent.com/SidScott1410/tokenprice/main/prices/";
+let rows=[],key="ratio_p90_p10",dir=-1;
+async function load(){
+  const [sp,su]=await Promise.all([fetch(RAW+"spread.json").then(r=>r.json()),fetch(RAW+"summary.json").then(r=>r.json())]);
+  rows=Object.entries(sp.models).map(([m,v])=>({model:m,...v}));
+  document.getElementById("meta").textContent=`${su.models_with_spread} models with 2+ sellers, ${su.providers} providers, prices as of ${su.read_at}.`;
+  render();
+}
+function render(){
+  const q=document.getElementById("q").value.toLowerCase();
+  const tb=document.querySelector("#t tbody");tb.innerHTML="";
+  rows.filter(r=>r.model.includes(q)).sort((a,b)=>((a[key]??-1)>(b[key]??-1)?1:-1)*dir).forEach(r=>{
+    const tr=document.createElement("tr");
+    tr.innerHTML=`<td><code>${r.model}</code></td><td>${r.n}</td><td>${r.min_blended_per_m}</td><td>${r.p10_blended_per_m}</td><td>${r.median_blended_per_m}</td><td>${r.p90_blended_per_m}</td><td>${r.max_blended_per_m}</td><td>${r.ratio_p90_p10}x</td><td>${r.median_x}x</td><td>${r.cheapest}</td>`;
+    tb.appendChild(tr);});
+}
+document.querySelectorAll("th").forEach(th=>th.onclick=()=>{const k=th.dataset.k;dir=(key===k)?-dir:-1;key=k;render();});
+document.getElementById("q").oninput=render;
+load().catch(e=>document.getElementById("meta").textContent="could not load feed: "+e);
+</script></body></html>

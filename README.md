@@ -1,83 +1,97 @@
 # tokenprice
 
-Live token prices across providers, with provenance. A git-backed feed updated hourly by GitHub Actions, plus a one-call Python API and CLI.
+**The same open-weight model is sold by dozens of providers at prices that differ 2x to 10x. This feed measures that gap every hour, with provenance on every number.**
 
-![feed](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FSidScott1410%2Ftokenprice%2Fmain%2Fprices%2Fsummary.json&query=%24.records&label=listings&color=blue)
-![updated](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FSidScott1410%2Ftokenprice%2Fmain%2Fprices%2Fsummary.json&query=%24.read_at&label=as%20of&color=green)
+![listings](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FSidScott1410%2Ftokenprice%2Fmain%2Fprices%2Fsummary.json&query=%24.records&label=listings&color=blue)
+![providers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FSidScott1410%2Ftokenprice%2Fmain%2Fprices%2Fsummary.json&query=%24.providers&label=providers&color=blue)
+![checked](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FSidScott1410%2Ftokenprice%2Fmain%2Fprices%2Fsummary.json&query=%24.checked_at&label=checked&color=green)
+![update prices](https://github.com/SidScott1410/tokenprice/actions/workflows/update.yml/badge.svg)
 
-## Why
+**[Live table](https://sidscott1410.github.io/tokenprice/)** · **[This week's price moves](prices/MOVES.md)** · **[Feed files](prices/)**
 
-Every price in the feed carries three fields you cannot omit: the URL it was read from, when it was read, and how (`api`, `page`, or `manual`). A number without those is not a price, it is a rumor. Records that fail validation are refused at construction time, so the feed cannot contain an invented price.
+## Get the data
 
-The feed also answers a question no single provider page does: for the same open-weight model, how far apart are the cheapest and dearest listings right now? That ratio (`spread.json`) is the arbitrage that an inference buyer or a dispatcher should be capturing.
+No install, pick a format:
 
-## Install
+| want | file |
+|---|---|
+| everything, one row per listing | [`prices/latest.csv`](prices/latest.csv) · [`prices/latest.json`](prices/latest.json) |
+| per-model dispersion across providers | [`prices/spread.json`](prices/spread.json) |
+| price changes, append-only | [`prices/history/YYYY-MM-DD.jsonl`](prices/history/) |
+| LiteLLM drop-in (`model_prices_and_context_window` shape) | [`prices/litellm.json`](prices/litellm.json) |
+| counts and the top spread, for badges | [`prices/summary.json`](prices/summary.json) |
+
+Raw URL pattern: `https://raw.githubusercontent.com/SidScott1410/tokenprice/main/prices/<file>`.
+
+```python
+# LiteLLM users: price OpenRouter calls from the live feed instead of the bundled table
+import json, urllib.request, litellm
+u = "https://raw.githubusercontent.com/SidScott1410/tokenprice/main/prices/litellm.json"
+litellm.register_model(json.load(urllib.request.urlopen(u)))
+```
+
+```python
+import pandas as pd
+df = pd.read_csv("https://raw.githubusercontent.com/SidScott1410/tokenprice/main/prices/latest.csv")
+df[df.model == "deepseek-v4-1-flash"].sort_values("blended_per_m")
+```
+
+## Python and CLI
 
 ```
 pip install git+https://github.com/SidScott1410/tokenprice
 ```
 
-No runtime dependencies. Python 3.10+.
-
-## Use
-
 ```python
 import tokenprice
-
-tokenprice.refresh()                       # pull latest.json from GitHub (optional; ships with a snapshot)
-r = tokenprice.get("llama-3-8b-instruct")  # cheapest listing, a Record
-r.input_per_m, r.output_per_m, r.source, r.read_at, r.provenance
-
-tokenprice.cheapest("llama-3-8b-instruct", n=3)
-tokenprice.spread("llama-3-8b-instruct")   # per-provider dispersion: min, median, p90, max, ratio, ratio_p90, median_x
-tokenprice.models()
+tokenprice.refresh()                              # pull latest.json (the package ships a snapshot)
+tokenprice.get("qwen3-6-35b-a3b")                 # cheapest listing: a Record with provider, source URL, read_at
+tokenprice.cheapest("qwen3-6-35b-a3b", n=3)
+tokenprice.spread("qwen3-6-35b-a3b")              # {n, min, p10, median, p90, max, ratio, ratio_p90, ratio_p90_p10, median_x, ...}
 ```
 
 ```
-tokenprice llama-3-8b-instruct            # table, cheapest first
-tokenprice llama-3-8b-instruct --spread   # min, max, ratio across providers
+tokenprice qwen3-6-35b-a3b              # every seller, cheapest first, with quantization and context
+tokenprice qwen3-6-35b-a3b --spread     # dispersion stats
+tokenprice --since 2026-11-13           # recorded price changes since a day
 tokenprice --models
-tokenprice --refresh claude-sonnet-4-5 --json
-tokenprice --since 2026-11-01             # every recorded price change since that day
 ```
 
-Model names are normalized: provider prefix, date suffix, and OpenRouter variant tags (`:free`, `:extended`) are stripped, underscores become dashes. `anthropic/claude-sonnet-4-5-20250929` and `claude-sonnet-4-5` resolve to the same key. The raw listing id is kept in `model_raw`.
+## What makes this different
+
+1. **Provenance is mandatory.** Every record carries the URL it was read from, the read time, and how (`api`, `page`, `manual`). A record without them is refused at construction. There are no hand-entered prices anywhere in the feed.
+2. **It measures sellers, not models.** Price pages show one number per model. This feed shows the distribution across everyone selling it, with each provider collapsed to its best tier first so a provider's own priority/flex tiers never masquerade as a market spread.
+3. **History is a changelog, not a log.** A line is written only when a price moves or a listing appears or vanishes. `MOVES.md` is regenerated hourly as the human-readable digest.
+4. **Robust statistics.** `ratio` (max/min) is one premium outlier away from meaningless; it is kept for transparency. Quote `ratio_p90_p10` (the pack) or `median_x` (typical seller over the floor).
 
 ## Conventions
 
-- Prices are USD per million tokens.
-- Blended price (used for ranking and spread) is `input + 3 * output` per M, a 1:3 input:output mix. It is a ranking convention, not your bill.
-- Free tiers (price 0) are dropped. They are not prices.
-- `spread` collapses each provider to its cheapest listing, then compares across providers (2+ required). Quote `ratio_p90` (p90 / min) as the headline; `ratio` (max / min) is one premium outlier away from meaningless.
-- A full update is ~1 request per model plus one for the list, paced at 150 ms, so the hourly job takes a few minutes.
+- USD per million tokens. Blended = `input + 3 × output` (a 1:3 mix, the Artificial Analysis convention). It is a ranking rule, not your bill.
+- Free tiers (price 0) and OpenRouter's `-1` dynamic-priced listings are dropped: neither is a price.
+- Model keys are normalized: provider prefix, date suffix and variant tags stripped, `.` and `_` become `-`. `anthropic/claude-sonnet-4.5` and `claude-sonnet-4-5-20250929` are one key; the raw id is kept in `model_raw`.
+- Spread needs two or more distinct upstream providers. The router's own listing (`provider: openrouter`) is kept in the feed and excluded from spread.
 
-## Feed layout
+## Method and limits
 
-```
-prices/latest.json             most recent scrape, all records
-prices/history/YYYY-MM-DD.jsonl  records whose price changed that day (unchanged runs write nothing)
-prices/spread.json             per-model min/max/ratio
-prices/summary.json            counts and the top spread, for badges
-```
+- Source today: OpenRouter's public `/api/v1/models` (one router price per model) and `/api/v1/models/{id}/endpoints` (per-provider prices, quantization, context). One request per model, paced at 150 ms. About 450 models, 80 providers, 1,900 listings per run.
+- Not covered: first-party list prices outside the router (OpenAI, Anthropic, Google direct). A `page` scraper for those is the next addition; it will enable a router-markup metric.
+- A listing's price is what the provider quotes, not what you get after rate limits, uptime, or quality drift. Same model id does not guarantee same weights or same serving quality; quantization is recorded where the provider declares it.
+- Run cadence is hourly. Sub-hour moves are missed.
 
-The feed is populated by the Action on first run. There is no hand-entered seed data.
+## Citing
 
-## Sources
+See [CITATION.cff](CITATION.cff). State the `read_at` of the snapshot you used; prices move hourly.
 
-| scraper | provenance | what it covers |
-|---|---|---|
-| `tokenprice/scrapers/openrouter.py` | `api` | one router price per model from `/api/v1/models` (provider `openrouter`) |
-| `tokenprice/scrapers/openrouter_endpoints.py` | `api` | per-provider prices from `/api/v1/models/{id}/endpoints`; this is where the spread comes from |
+## Contributing
 
-The router listing is kept so every model has at least one price; it is excluded from spread, which is computed over distinct upstream providers only.
-
-Adding a scraper: write `scrape() -> list[Record]` in `tokenprice/scrapers/<name>.py`, call it from `cli._update`. First-party pages (OpenAI, Anthropic, Google) are client-rendered or change layout often; a `page` scraper for them is welcome but must set `provenance="page"` and keep the exact URL.
+A scraper is a module in `tokenprice/scrapers/` with `scrape() -> list[Record]`, called from `cli._update`. First-party pricing pages are the most wanted. Open an issue with the URL before writing it, so provenance rules are agreed up front.
 
 ## Related
 
-- [agent-cost](https://github.com/SidScott1410/agent-cost): prices an agent run step by step and uses this feed when installed.
-- [reckon](https://github.com/reckonresearch/reckon): measured served-token cost on real silicon, the other half of the price question.
+- [agent-cost](https://github.com/SidScott1410/agent-cost): prices an agent run step by step; uses this feed when installed.
+- [reckon](https://github.com/reckonresearch/reckon): measured served-token cost on real silicon, the supply side of the same question.
+- [awesome-ai-compute-economics](https://github.com/SidScott1410/awesome-ai-compute-economics): the reading list.
 
 ## License
 
-Apache-2.0
+Code: Apache-2.0. Feed data in `prices/`: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); attribute "tokenprice (Sidney Scott)" with the snapshot date.

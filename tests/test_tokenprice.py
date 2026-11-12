@@ -177,3 +177,39 @@ def test_history_key_separates_provider_variants(tmp_path):
     feed.write_run([a, b], root=tmp_path)
     info = feed.write_run([b, a], root=tmp_path, read_at="2026-01-01T01:00:00Z")  # same prices, different order
     assert info["changed"] == 0
+
+
+def test_change_only_writes_and_exports(tmp_path):
+    rs = openrouter.parse(FIXTURE, read_at="2026-11-10T22:00:00Z")
+    rs += openrouter_endpoints.parse(ENDPOINTS, "meta-llama/llama-3-8b-instruct", read_at="2026-11-10T22:00:00Z")
+    feed.write_run(rs, root=tmp_path)
+    m1 = (tmp_path / "latest.json").stat().st_mtime_ns
+    csv_text = (tmp_path / "latest.csv").read_text()
+    assert csv_text.startswith("provider,model,model_raw") and csv_text.count("\n") == len(rs) + 1
+    ll = json.loads((tmp_path / "litellm.json").read_text())
+    assert ll["openrouter/meta-llama/llama-3-8b-instruct"]["input_cost_per_token"] == 5e-8
+    assert "openrouter/anthropic/claude-sonnet-4.5" in ll and ll["_meta"]["source"] == "tokenprice"
+    assert (tmp_path / "MOVES.md").read_text().startswith("# Price moves")
+
+    # unchanged run: big files untouched, summary tracks checked_at separately
+    info = feed.write_run(rs, root=tmp_path, read_at="2026-11-10T23:00:00Z")
+    assert info["changed"] == 0 and info["removed"] == 0
+    assert (tmp_path / "latest.json").stat().st_mtime_ns == m1
+    summ = json.loads((tmp_path / "summary.json").read_text())
+    assert summ["read_at"] == "2026-11-10T22:00:00Z" and summ["checked_at"] == "2026-11-10T23:00:00Z"
+
+    # a provider drops a listing: recorded as removed, latest rewritten
+    info = feed.write_run(rs[:-1], root=tmp_path, read_at="2026-11-11T00:00:00Z")
+    assert info["removed"] == 1
+    assert any(r.get("removed") for r in feed.changes_since("2026-11-11", tmp_path))
+
+
+def test_moves_digest(tmp_path):
+    rs = openrouter_endpoints.parse(ENDPOINTS, "meta-llama/llama-3-8b-instruct", read_at="2026-11-10T22:00:00Z")
+    feed.write_run(rs, root=tmp_path)
+    rs[0].output_per_m = 0.03  # deepinfra cuts output price in half
+    feed.write_run(rs, root=tmp_path, read_at="2026-11-11T22:00:00Z")
+    m = feed.moves(tmp_path, days=7, now="2026-11-12T00:00:00Z")
+    assert m["cuts"][0]["provider"] == "deepinfra" and m["cuts"][0]["pct"] < 0
+    assert m["rises"] == []
+    assert "deepinfra" in (tmp_path / "MOVES.md").read_text()

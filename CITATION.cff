@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "tokenprice: hourly cross-provider LLM token prices with provenance"
+message: "If you use this feed, cite it and state the read_at of the snapshot you used."
+type: dataset
+authors:
+  - family-names: Scott
+    given-names: Sidney
+repository-code: "https://github.com/SidScott1410/tokenprice"
+license: Apache-2.0
+keywords: [llm, inference, pricing, openrouter, dataset]
