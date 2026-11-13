@@ -34,7 +34,7 @@ def write_run(records: list[Record], root: Path | None = None, read_at: str | No
     changed = [r for r in records if prev.get(_key(r)) != _price_tuple(r)]
     removed = [r for r in prev_records if _key(r) not in {_key(x) for x in records}]
     # a listing that vanished is a change too (provider dropped the model)
-    exports = ["latest.json", "latest.csv", "litellm.json", "spread.json", "spread.svg"]
+    exports = ["latest.json", "latest.csv", "litellm.json", "spread.json", "spread.svg", "markup.json"]
     missing = [f for f in exports if not (root / f).exists()]
     set_changed = bool(changed or removed or missing)  # also rewrite when an export is absent (new export added)
 
@@ -61,6 +61,8 @@ def write_run(records: list[Record], root: Path | None = None, read_at: str | No
     sp = spread(records)
     if set_changed:
         (root / "spread.json").write_text(json.dumps({"read_at": read_at, "models": sp}, indent=1, sort_keys=True))
+        mk = markup(records)
+        (root / "markup.json").write_text(json.dumps({"read_at": read_at, "models": mk}, indent=1, sort_keys=True))
     write_moves(root, read_at)
 
     # tiny file for badges; shields.io times out on the full feed
@@ -83,6 +85,29 @@ def write_run(records: list[Record], root: Path | None = None, read_at: str | No
     (root / "summary.json").write_text(json.dumps(summary, indent=1, sort_keys=True))
     return {"records": len(records), "changed": len(changed), "removed": len(removed),
             "models_with_spread": len(sp), "day": day}
+
+
+def markup(records: list[Record]) -> dict:
+    """Router and reseller prices over the first-party list price, per model.
+
+    Only models with a `page`-provenance first-party record are included. Ratio
+    1.0 means pass-through; above 1 is markup, below 1 is a discount. Blended basis.
+    """
+    first = {r.model: r for r in records if r.provenance == "page"}
+    out: dict[str, dict] = {}
+    for r in records:
+        if r.provenance == "page" or r.model not in first:
+            continue
+        lp = blended(first[r.model])
+        if lp <= 0:
+            continue
+        out.setdefault(r.model, {"list_provider": first[r.model].provider, "list_blended_per_m": round(lp, 4),
+                                 "sellers": []})
+        out[r.model]["sellers"].append({"provider": r.provider, "blended_per_m": round(blended(r), 4),
+                                        "over_list": round(blended(r) / lp, 3)})
+    for v in out.values():
+        v["sellers"].sort(key=lambda x: x["over_list"])
+    return out
 
 
 def write_csv(records: list[Record], path: Path) -> None:

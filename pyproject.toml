@@ -38,6 +38,7 @@ select = ["E", "F", "I", "B", "UP"]
 [tool.ruff.lint.per-file-ignores]
 "tokenprice/feed.py" = ["E501"]  # MOVES.md template lines
 "tokenprice/chart.py" = ["E501"]  # SVG template lines
+"tests/test_tokenprice.py" = ["E501"]  # fixture tables
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

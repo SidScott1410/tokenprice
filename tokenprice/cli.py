@@ -17,12 +17,19 @@ from tokenprice import feed
 
 
 def _update() -> int:
-    from tokenprice.scrapers import openrouter, openrouter_endpoints
+    from tokenprice.scrapers import anthropic_page, openrouter, openrouter_endpoints
 
     listed = openrouter.scrape()  # one router price per model
     ids = sorted({r.model_raw for r in listed})
     per_provider, failed = openrouter_endpoints.scrape_all(ids)  # the spread lives here
-    info = feed.write_run(listed + per_provider)
+    first_party: list = []
+    for name, mod in (("anthropic", anthropic_page),):
+        try:  # first-party pages are best effort: a layout change must not take the feed down
+            first_party += mod.scrape()
+        except Exception as e:  # noqa: BLE001
+            print(f"first-party scraper {name} failed: {e}", file=sys.stderr)
+    info = feed.write_run(listed + per_provider + first_party)
+    info["first_party_records"] = len(first_party)
     info["endpoint_models"] = len(ids)
     info["endpoint_records"] = len(per_provider)
     info["endpoint_models_failed"] = len(failed)
@@ -41,6 +48,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--refresh", action="store_true")
     ap.add_argument("--update", action="store_true", help="run scrapers and write the feed (maintainers)")
     ap.add_argument("--since", metavar="YYYY-MM-DD", help="list price changes recorded since this day")
+    ap.add_argument("--markup", action="store_true", help="router/reseller price over first-party list price")
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args(argv)
 
@@ -59,6 +67,18 @@ def main(argv: list[str] | None = None) -> int:
             for r in rows:
                 head = f"{r['read_at']}  {r['provider']:<14} {r['model_raw']:<44}"
                 print(f"{head} in {r['input_per_m']:.4f}  out {r['output_per_m']:.4f}")
+        return 0
+    if a.markup:
+        mk = feed.markup(tokenprice._records())
+        if a.model:
+            mk = {k: v for k, v in mk.items() if k == tokenprice.normalize(a.model)}
+        if a.json:
+            print(json.dumps(mk, indent=2))
+            return 0
+        for model, v in sorted(mk.items()):
+            print(f"{model}: list ${v['list_blended_per_m']:.3f}/M ({v['list_provider']})")
+            for s in v["sellers"]:
+                print(f"  {s['provider']:<18} ${s['blended_per_m']:.3f}  {s['over_list']:.2f}x list")
         return 0
     if a.models:
         print("\n".join(tokenprice.models()))

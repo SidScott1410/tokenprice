@@ -21,6 +21,7 @@ No install, pick a format:
 |---|---|
 | everything, one row per listing | [`prices/latest.csv`](prices/latest.csv) · [`prices/latest.json`](prices/latest.json) |
 | per-model dispersion across providers | [`prices/spread.json`](prices/spread.json) |
+| router and reseller price over first-party list price | [`prices/markup.json`](prices/markup.json) |
 | price changes, append-only | [`prices/history/YYYY-MM-DD.jsonl`](prices/history/) |
 | LiteLLM drop-in (`model_prices_and_context_window` shape) | [`prices/litellm.json`](prices/litellm.json) |
 | counts and the top spread, for badges | [`prices/summary.json`](prices/summary.json) |
@@ -58,6 +59,7 @@ tokenprice.spread("qwen3-6-35b-a3b")              # {n, min, p10, median, p90, m
 tokenprice qwen3-6-35b-a3b              # every seller, cheapest first, with quantization and context
 tokenprice qwen3-6-35b-a3b --spread     # dispersion stats
 tokenprice --since 2026-11-13           # recorded price changes since a day
+tokenprice --markup                     # every seller's price over the first-party list price
 tokenprice --models
 ```
 
@@ -78,7 +80,7 @@ tokenprice --models
 ## Method and limits
 
 - Source today: OpenRouter's public `/api/v1/models` (one router price per model) and `/api/v1/models/{id}/endpoints` (per-provider prices, quantization, context). One request per model, paced at 150 ms. About 450 models, 80 providers, 1,900 listings per run.
-- Not covered: first-party list prices outside the router (OpenAI, Anthropic, Google direct). A `page` scraper for those is the next addition; it will enable a router-markup metric.
+- First-party list prices: Anthropic today (its pricing page is served as markdown). OpenAI and Google pages are client-rendered and need a different approach; `markup.json` grows as those land.
 - A listing's price is what the provider quotes, not what you get after rate limits, uptime, or quality drift. Same model id does not guarantee same weights or same serving quality; quantization is recorded where the provider declares it.
 - Run cadence is hourly. Sub-hour moves are missed.
 

@@ -227,3 +227,43 @@ def test_chart_svg(tmp_path):
     svg = dot_plot([mk("a", 0.1, 0.4), mk("b", 0.3, 1.2), mk("c", 3.0, 12.0)], read_at="2026-01-01T00:00:00Z")
     assert svg.startswith("<svg") and svg.count("<circle") == 3 and "30.0x" in svg
     assert dot_plot([mk("a", 0.1, 0.4)]).startswith("<svg")  # fewer than 3 sellers: empty-state svg, no crash
+
+
+ANTHROPIC_MD = """
+## Model pricing
+
+| Model | Base Input Tokens | 5m Cache Writes | 1h Cache Writes | Cache Hits & Refreshes | Output Tokens |
+|---|---|---|---|---|---|
+| Claude Opus 4.7 | $5 / MTok | $6.25 / MTok | $10 / MTok | $0.50 / MTok | $25 / MTok |
+| Claude Sonnet 4.5 | $3 / MTok | $3.75 / MTok | $6 / MTok | $0.30 / MTok | $15 / MTok |
+| Claude Sonnet 3.7 ([deprecated](/docs/en/about-claude/model-deprecations)) | $3 / MTok | $3.75 / MTok | $6 / MTok | $0.30 / MTok | $15 / MTok |
+| Claude Haiku 3 | $0.25 / MTok | $0.30 / MTok | $0.50 / MTok | $0.03 / MTok | $1.25 / MTok |
+
+MTok = Million tokens.
+
+| Model | Tool choice | Tool use system prompt token count |
+|---|---|---|
+| Claude Opus 4.7 | auto, none | 346 tokens |
+"""
+
+
+def test_parse_anthropic_page():
+    from tokenprice.scrapers import anthropic_page
+    rs = anthropic_page.parse(ANTHROPIC_MD, read_at="2026-11-13T00:00:00Z")
+    assert [r.model for r in rs] == ["claude-opus-4-7", "claude-sonnet-4-5", "claude-sonnet-3-7", "claude-haiku-3"]
+    s = rs[1]
+    assert s.provider == "anthropic" and s.provenance == "page" and s.input_per_m == 3.0 and s.output_per_m == 15.0
+    assert s.cached_input_per_m == 0.30 and s.extra["cache_write_5m_per_m"] == 3.75
+    assert rs[2].extra["status"] == "deprecated" and rs[2].extra["display_name"] == "Claude Sonnet 3.7"
+    # the tool-use table (no $ / MTok cells) is ignored
+    assert all(r.output_per_m > 0 for r in rs)
+
+
+def test_markup_against_first_party():
+    from tokenprice.scrapers import anthropic_page
+    fp = anthropic_page.parse(ANTHROPIC_MD, read_at="2026-11-13T00:00:00Z")
+    router = openrouter.parse(FIXTURE, read_at="2026-11-13T00:00:00Z")  # has anthropic/claude-sonnet-4.5 at 3/15
+    mk = feed.markup(fp + router)
+    assert list(mk) == ["claude-sonnet-4-5"]
+    assert mk["claude-sonnet-4-5"]["sellers"][0]["provider"] == "openrouter"
+    assert mk["claude-sonnet-4-5"]["sellers"][0]["over_list"] == 1.0  # pass-through
