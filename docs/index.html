@@ -1,41 +1,144 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><title>tokenprice: cross-provider spread</title>
+<html lang="en"><head><meta charset="utf-8"><title>tokenprice: same model, different sellers</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Hourly cross-provider LLM token prices with provenance. Spread per model, price moves, history.">
 <style>
-body{font:15px/1.45 system-ui,sans-serif;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#111}
-h1{font-size:1.5rem;margin:0 0 .25rem}p.sub{color:#555;margin:0 0 1.25rem}
+:root{--fg:#111;--mut:#666;--line:#e6e6e6;--bg:#fff;--acc:#1a56db;--cut:#0a7f3f;--rise:#b42318;--soft:#f6f7f9}
+@media(prefers-color-scheme:dark){:root{--fg:#e8e8e8;--mut:#9a9a9a;--line:#2a2a2a;--bg:#111;--acc:#7aa2ff;--cut:#4fcf7f;--rise:#ff7a6e;--soft:#1a1a1a}}
+*{box-sizing:border-box}body{font:15px/1.45 system-ui,sans-serif;max-width:1150px;margin:0 auto;padding:1.5rem 1rem;color:var(--fg);background:var(--bg)}
+h1{font-size:1.45rem;margin:0 0 .2rem}.sub{color:var(--mut);margin:0 0 1rem}a{color:var(--acc)}
+nav{display:flex;gap:.25rem;margin:0 0 1rem;border-bottom:1px solid var(--line)}
+nav button{font:inherit;background:none;border:0;border-bottom:2px solid transparent;padding:.5rem .8rem;cursor:pointer;color:var(--mut)}
+nav button.on{color:var(--fg);border-color:var(--acc)}
 table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
-th,td{padding:.4rem .5rem;border-bottom:1px solid #e5e5e5;text-align:right}
-th:first-child,td:first-child{text-align:left}th{cursor:pointer;user-select:none;background:#fafafa;position:sticky;top:0}
-input{padding:.4rem .6rem;font:inherit;width:100%;max-width:360px;margin:0 0 1rem}
-code{background:#f3f3f3;padding:.1rem .3rem;border-radius:3px}
+th,td{padding:.38rem .5rem;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child,th.l,td.l{text-align:left}th{cursor:pointer;user-select:none;background:var(--soft);position:sticky;top:0}
+input,select{padding:.4rem .6rem;font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:4px}
+input{width:100%;max-width:380px;margin:0 0 .8rem}code{background:var(--soft);padding:.1rem .3rem;border-radius:3px}
+.cut{color:var(--cut)}.rise{color:var(--rise)}.row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin:0 0 .8rem}
+.stat{background:var(--soft);padding:.5rem .8rem;border-radius:6px;min-width:9rem}.stat b{display:block;font-size:1.2rem}
+svg{width:100%;height:220px;background:var(--soft);border-radius:6px}.hidden{display:none}
+.wrap{overflow-x:auto}small{color:var(--mut)}
 </style></head><body>
 <h1>Same model, different sellers</h1>
-<p class="sub">Blended = input + 3 × output, USD per M tokens. Each provider collapsed to its cheapest tier. <span id="meta"></span>
-Data: <a href="https://github.com/SidScott1410/tokenprice">github.com/SidScott1410/tokenprice</a> · <a href="https://github.com/SidScott1410/tokenprice/blob/main/prices/MOVES.md">this week's price moves</a></p>
-<input id="q" placeholder="filter models (e.g. llama, deepseek)">
-<table id="t"><thead><tr>
-<th data-k="model">model</th><th data-k="n">providers</th><th data-k="min_blended_per_m">min</th><th data-k="p10_blended_per_m">p10</th>
+<p class="sub">Hourly LLM token prices across providers, with the URL and time every number was read. Blended = input + 3 × output, USD per M tokens; each provider collapsed to its cheapest tier. <span id="meta"></span><br>
+<a href="https://github.com/SidScott1410/tokenprice">Repo and data</a> · <a href="https://raw.githubusercontent.com/SidScott1410/tokenprice/main/prices/latest.csv">CSV</a> · <a href="https://raw.githubusercontent.com/SidScott1410/tokenprice/main/prices/litellm.json">LiteLLM JSON</a></p>
+
+<nav><button data-v="spread" class="on">Spread</button><button data-v="moves">Moves, 7 days</button><button data-v="model">Model</button></nav>
+
+<section id="v-spread">
+<input id="q" placeholder="filter models (llama, deepseek, qwen…)">
+<div class="wrap"><table id="t"><thead><tr>
+<th data-k="model" class="l">model</th><th data-k="n">sellers</th><th data-k="min_blended_per_m">min</th><th data-k="p10_blended_per_m">p10</th>
 <th data-k="median_blended_per_m">median</th><th data-k="p90_blended_per_m">p90</th><th data-k="max_blended_per_m">max</th>
-<th data-k="ratio_p90_p10">p90/p10</th><th data-k="median_x">median/min</th><th data-k="cheapest">cheapest</th></tr></thead><tbody></tbody></table>
+<th data-k="ratio_p90_p10">p90/p10</th><th data-k="median_x">median/min</th><th data-k="cheapest" class="l">cheapest</th></tr></thead><tbody></tbody></table></div>
+<p><small>Click a row for its history. p90/p10 is the pack spread; max/min is one premium seller away from meaningless and is in the JSON if you want it.</small></p>
+</section>
+
+<section id="v-moves" class="hidden">
+<div class="row"><div class="stat"><b id="n-cuts">–</b>cuts</div><div class="stat"><b id="n-rises">–</b>rises</div><div class="stat"><b id="n-new">–</b>new listings</div><div class="stat"><b id="n-rem">–</b>removed</div></div>
+<h3>Biggest cuts</h3><div class="wrap"><table id="cuts"><thead><tr><th class="l">provider</th><th class="l">model</th><th>from</th><th>to</th><th>change</th><th class="l">when</th></tr></thead><tbody></tbody></table></div>
+<h3>Biggest rises</h3><div class="wrap"><table id="rises"><thead><tr><th class="l">provider</th><th class="l">model</th><th>from</th><th>to</th><th>change</th><th class="l">when</th></tr></thead><tbody></tbody></table></div>
+<p><small>Computed from <code>history/</code>: one line per listing whose price moved, nothing else. A listing that appears and never moves is "new", not a move.</small></p>
+</section>
+
+<section id="v-model" class="hidden">
+<div class="row"><select id="pick"></select><span id="mstat"></span></div>
+<svg id="chart" viewBox="0 0 900 220" preserveAspectRatio="none"></svg>
+<p><small id="chart-note"></small></p>
+<div class="wrap"><table id="listings"><thead><tr><th class="l">provider</th><th class="l">quant</th><th>ctx</th><th>in $/M</th><th>out $/M</th><th>cached</th><th>blended</th><th class="l">read</th></tr></thead><tbody></tbody></table></div>
+</section>
+
 <script>
 const RAW="https://raw.githubusercontent.com/SidScott1410/tokenprice/main/prices/";
-let rows=[],key="ratio_p90_p10",dir=-1;
+const $=s=>document.querySelector(s);
+const bl=r=>r.input_per_m+3*r.output_per_m;
+let spreadRows=[],latest=[],hist=null,key="ratio_p90_p10",dir=-1;
+
+async function j(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(u+" "+r.status);return r.json();}
+async function text(u){const r=await fetch(u,{cache:"no-store"});return r.ok?r.text():"";}
+
 async function load(){
-  const [sp,su]=await Promise.all([fetch(RAW+"spread.json").then(r=>r.json()),fetch(RAW+"summary.json").then(r=>r.json())]);
-  rows=Object.entries(sp.models).map(([m,v])=>({model:m,...v}));
-  document.getElementById("meta").textContent=`${su.models_with_spread} models with 2+ sellers, ${su.providers} providers, prices as of ${su.read_at}.`;
-  render();
+  const [sp,su,lt]=await Promise.all([j(RAW+"spread.json"),j(RAW+"summary.json"),j(RAW+"latest.json")]);
+  spreadRows=Object.entries(sp.models).map(([m,v])=>({model:m,...v}));
+  latest=lt.records;
+  $("#meta").textContent=`${su.models_with_spread} models with 2+ sellers, ${su.providers} providers, ${su.records} listings. Last price change ${su.read_at}, last check ${su.checked_at}.`;
+  renderSpread();
+  const sel=$("#pick");[...new Set(latest.map(r=>r.model))].sort().forEach(m=>{const o=document.createElement("option");o.value=o.textContent=m;sel.appendChild(o);});
+  sel.onchange=()=>showModel(sel.value);
+  loadHistory();
 }
-function render(){
-  const q=document.getElementById("q").value.toLowerCase();
-  const tb=document.querySelector("#t tbody");tb.innerHTML="";
-  rows.filter(r=>r.model.includes(q)).sort((a,b)=>((a[key]??-1)>(b[key]??-1)?1:-1)*dir).forEach(r=>{
-    const tr=document.createElement("tr");
-    tr.innerHTML=`<td><code>${r.model}</code></td><td>${r.n}</td><td>${r.min_blended_per_m}</td><td>${r.p10_blended_per_m}</td><td>${r.median_blended_per_m}</td><td>${r.p90_blended_per_m}</td><td>${r.max_blended_per_m}</td><td>${r.ratio_p90_p10}x</td><td>${r.median_x}x</td><td>${r.cheapest}</td>`;
+
+function renderSpread(){
+  const q=$("#q").value.toLowerCase(),tb=$("#t tbody");tb.innerHTML="";
+  spreadRows.filter(r=>r.model.includes(q)).sort((a,b)=>((a[key]??-1)>(b[key]??-1)?1:-1)*dir).forEach(r=>{
+    const tr=document.createElement("tr");tr.style.cursor="pointer";
+    tr.innerHTML=`<td class="l"><code>${r.model}</code></td><td>${r.n}</td><td>${r.min_blended_per_m}</td><td>${r.p10_blended_per_m}</td><td>${r.median_blended_per_m}</td><td>${r.p90_blended_per_m}</td><td>${r.max_blended_per_m}</td><td>${r.ratio_p90_p10}x</td><td>${r.median_x}x</td><td class="l">${r.cheapest}</td>`;
+    tr.onclick=()=>{view("model");$("#pick").value=r.model;showModel(r.model);};
     tb.appendChild(tr);});
 }
-document.querySelectorAll("th").forEach(th=>th.onclick=()=>{const k=th.dataset.k;dir=(key===k)?-dir:-1;key=k;render();});
-document.getElementById("q").oninput=render;
-load().catch(e=>document.getElementById("meta").textContent="could not load feed: "+e);
+
+async function loadHistory(){
+  // last 8 days of history files; missing days are fine
+  const days=[...Array(8)].map((_,i)=>{const d=new Date(Date.now()-i*864e5);return d.toISOString().slice(0,10);});
+  const texts=await Promise.all(days.map(d=>text(RAW+"history/"+d+".jsonl")));
+  hist=texts.flatMap(t=>t.split("\n").filter(Boolean).map(l=>JSON.parse(l))).sort((a,b)=>a.read_at<b.read_at?-1:1);
+  renderMoves();
+}
+
+const k=r=>[r.provider,r.model_raw,(r.extra||{}).quantization,r.context].join("|");
+function renderMoves(){
+  const first={},last={},removed=[];
+  for(const r of hist){if(r.removed){removed.push(r);continue;}const kk=k(r);if(!(kk in first))first[kk]=r;last[kk]=r;}
+  const cuts=[],rises=[];let nnew=0;
+  for(const kk in first){const a=first[kk],b=last[kk];if(a===b){nnew++;continue;}
+    const pa=bl(a),pb=bl(b);if(pa===0||pa===pb)continue;
+    (pb<pa?cuts:rises).push({provider:b.provider,model:b.model_raw,from:pa,to:pb,pct:(pb-pa)/pa*100,at:b.read_at});}
+  cuts.sort((a,b)=>a.pct-b.pct);rises.sort((a,b)=>b.pct-a.pct);
+  $("#n-cuts").textContent=cuts.length;$("#n-rises").textContent=rises.length;$("#n-new").textContent=nnew;$("#n-rem").textContent=removed.length;
+  const fill=(id,rows,cls)=>{const tb=$(id+" tbody");tb.innerHTML="";rows.slice(0,25).forEach(x=>{const tr=document.createElement("tr");
+    tr.innerHTML=`<td class="l">${x.provider}</td><td class="l"><code>${x.model}</code></td><td>${x.from.toFixed(3)}</td><td>${x.to.toFixed(3)}</td><td class="${cls}">${x.pct>0?"+":""}${x.pct.toFixed(1)}%</td><td class="l">${x.at}</td>`;tb.appendChild(tr);});
+    if(!rows.length)tb.innerHTML='<tr><td class="l" colspan="6">none in the window</td></tr>';};
+  fill("#cuts",cuts,"cut");fill("#rises",rises,"rise");
+}
+
+function showModel(m){
+  const rows=latest.filter(r=>r.model===m).sort((a,b)=>bl(a)-bl(b));
+  const tb=$("#listings tbody");tb.innerHTML="";
+  rows.forEach(r=>{const tr=document.createElement("tr");const ex=r.extra||{};
+    tr.innerHTML=`<td class="l">${r.provider}</td><td class="l">${ex.quantization||"-"}</td><td>${r.context?r.context.toLocaleString():"-"}</td><td>${r.input_per_m.toFixed(3)}</td><td>${r.output_per_m.toFixed(3)}</td><td>${r.cached_input_per_m==null?"-":r.cached_input_per_m.toFixed(3)}</td><td>${bl(r).toFixed(3)}</td><td class="l"><a href="${r.source}" title="${r.read_at}">${r.read_at.slice(0,16)}Z</a></td>`;tb.appendChild(tr);});
+  const sp=spreadRows.find(r=>r.model===m);
+  $("#mstat").textContent=sp?`${sp.n} sellers · min ${sp.min_blended_per_m} · median ${sp.median_blended_per_m} · p90 ${sp.p90_blended_per_m} · pack spread ${sp.ratio_p90_p10}x`:`${rows.length} listing(s)`;
+  drawChart(m,rows);
+}
+
+function drawChart(m,rows){
+  const svg=$("#chart");svg.innerHTML="";
+  if(!hist){$("#chart-note").textContent="loading history…";return;}
+  // step series per provider: each history line is a new price from read_at onward; latest row closes it at now
+  const series={};
+  hist.filter(r=>r.model===m&&!r.removed).forEach(r=>{(series[r.provider]??=[]).push([Date.parse(r.read_at),bl(r)]);});
+  rows.forEach(r=>{(series[r.provider]??=[]).push([Date.parse(r.read_at),bl(r)]);});
+  const now=Date.now(),t0=now-7*864e5;
+  const pts=Object.values(series).flat().filter(p=>p[0]>=t0);
+  if(!pts.length){$("#chart-note").textContent="no history yet for this model in the last 7 days; the feed started "+(hist[0]?hist[0].read_at.slice(0,10):"today")+".";return;}
+  const ys=pts.map(p=>p[1]),ymin=0,ymax=Math.max(...ys)*1.08;
+  const X=t=>20+(t-t0)/(now-t0)*870,Y=v=>210-(v-ymin)/(ymax-ymin)*195;
+  const ns="http://www.w3.org/2000/svg",el=(n,a)=>{const e=document.createElementNS(ns,n);for(const q in a)e.setAttribute(q,a[q]);return e;};
+  for(let i=0;i<=4;i++){const v=ymin+(ymax-ymin)*i/4,y=Y(v);svg.appendChild(el("line",{x1:20,x2:890,y1:y,y2:y,stroke:"currentColor","stroke-opacity":.12}));
+    const t=el("text",{x:22,y:y-3,"font-size":10,fill:"currentColor","fill-opacity":.6});t.textContent=v.toFixed(2);svg.appendChild(t);}
+  const provs=Object.keys(series).sort();
+  provs.forEach((p,i)=>{let s=series[p].sort((a,b)=>a[0]-b[0]);const first=s.filter(x=>x[0]<t0).pop();s=s.filter(x=>x[0]>=t0);if(first)s.unshift([t0,first[1]]);if(!s.length)return;
+    let d="";s.forEach((pt,j)=>{const x=X(pt[0]),y=Y(pt[1]);d+=(j?`H${x} V${y}`:`M${x} ${y}`);});d+=`H${X(now)}`;
+    const hue=(i*47)%360;svg.appendChild(el("path",{d,fill:"none",stroke:`hsl(${hue} 70% 45%)`,"stroke-width":1.6,"stroke-opacity":.9}));
+    const t=el("title",{});t.textContent=p;svg.lastChild.appendChild(t);});
+  $("#chart-note").textContent=`Blended price per seller, last 7 days, step chart from the changelog. ${provs.length} sellers; hover a line for the name. Each point links to the provenance URL in the table.`;
+}
+
+function view(v){document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v===v));
+  ["spread","moves","model"].forEach(x=>$("#v-"+x).classList.toggle("hidden",x!==v));}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>view(b.dataset.v));
+document.querySelectorAll("#t th").forEach(th=>th.onclick=()=>{const kk=th.dataset.k;dir=(key===kk)?-dir:-1;key=kk;renderSpread();});
+$("#q").oninput=renderSpread;
+load().catch(e=>$("#meta").textContent="could not load feed: "+e.message);
 </script></body></html>
