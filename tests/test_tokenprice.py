@@ -135,15 +135,17 @@ def test_cli(tmp_path, monkeypatch, capsys):
 def test_update_wires_endpoints(tmp_path, monkeypatch, capsys):
     """Regression: _update must call the endpoints scraper, not just the list."""
     from tokenprice.cli import main
-    from tokenprice.scrapers import openrouter, openrouter_endpoints
+    from tokenprice.scrapers import anthropic_page, openrouter, openrouter_endpoints
     monkeypatch.setattr(openrouter, "fetch", lambda: FIXTURE)
+    monkeypatch.setattr(anthropic_page, "fetch", lambda *a, **k: ANTHROPIC_MD)  # no live network in tests
     monkeypatch.setattr(openrouter_endpoints, "fetch", lambda mid, timeout=30: ENDPOINTS)
     monkeypatch.setattr(openrouter_endpoints, "time", type("T", (), {"sleep": staticmethod(lambda s: None)}))
     monkeypatch.setattr(feed, "ROOT", tmp_path)
     assert main(["--update"]) == 0
     info = json.loads(capsys.readouterr().out.strip().splitlines()[-1])
     assert info["endpoint_models"] == 4 and info["endpoint_records"] == 8 and info["endpoint_models_failed"] == 0
-    assert json.loads((tmp_path / "summary.json").read_text())["providers"] == 3
+    assert json.loads((tmp_path / "summary.json").read_text())["providers"] == 4  # 3 OpenRouter + anthropic
+    assert info["first_party_records"] == 6
 
 
 def test_spread_survives_price_ties():
@@ -238,8 +240,16 @@ ANTHROPIC_MD = """
 | Claude Sonnet 4.5 | $3 / MTok | $3.75 / MTok | $6 / MTok | $0.30 / MTok | $15 / MTok |
 | Claude Sonnet 3.7 ([deprecated](/docs/en/about-claude/model-deprecations)) | $3 / MTok | $3.75 / MTok | $6 / MTok | $0.30 / MTok | $15 / MTok |
 | Claude Haiku 3 | $0.25 / MTok | $0.30 / MTok | $0.50 / MTok | $0.03 / MTok | $1.25 / MTok |
+| Claude Haiku 5.5 (for prompts up to 100,000 tokens) | $0.10 / MTok | $0.125 / MTok | $0.20 / MTok | $0.01 / MTok | $0.50 / MTok |
+| Claude Haiku 5.5 (for prompts over 100,000 tokens) | $0.50 / MTok | $0.625 / MTok | $1 / MTok | $0.05 / MTok | $2.50 / MTok |
 
 MTok = Million tokens.
+
+## Batch processing
+
+| Model | Batch input | Batch output |
+|---|---|---|
+| Claude Haiku 5.5 (for prompts up to 100,000 tokens) | $0.05 / MTok | $0.25 / MTok |
 
 | Model | Tool choice | Tool use system prompt token count |
 |---|---|---|
@@ -250,7 +260,13 @@ MTok = Million tokens.
 def test_parse_anthropic_page():
     from tokenprice.scrapers import anthropic_page
     rs = anthropic_page.parse(ANTHROPIC_MD, read_at="2026-11-13T00:00:00Z")
-    assert [r.model for r in rs] == ["claude-opus-4-7", "claude-sonnet-4-5", "claude-sonnet-3-7", "claude-haiku-3"]
+    assert [r.model for r in rs] == ["claude-opus-4-7", "claude-sonnet-4-5", "claude-sonnet-3-7", "claude-haiku-3",
+                                     "claude-haiku-5-5", "claude-haiku-5-5-long-context"]
+    h = [r for r in rs if r.model == "claude-haiku-5-5"][0]
+    assert h.input_per_m == 0.10 and h.output_per_m == 0.50 and h.extra["tier"] == "base"
+    assert [r for r in rs if r.model == "claude-haiku-5-5-long-context"][0].input_per_m == 0.50
+    # the batch table (no "Base Input" header) is skipped, so no 0.05 record exists
+    assert not any(r.input_per_m == 0.05 for r in rs)
     s = rs[1]
     assert s.provider == "anthropic" and s.provenance == "page" and s.input_per_m == 3.0 and s.output_per_m == 15.0
     assert s.cached_input_per_m == 0.30 and s.extra["cache_write_5m_per_m"] == 3.75
@@ -267,3 +283,5 @@ def test_markup_against_first_party():
     assert list(mk) == ["claude-sonnet-4-5"]
     assert mk["claude-sonnet-4-5"]["sellers"][0]["provider"] == "openrouter"
     assert mk["claude-sonnet-4-5"]["sellers"][0]["over_list"] == 1.0  # pass-through
+    assert mk["claude-sonnet-4-5"]["sellers"][0]["note"] == "pass-through"
+    assert feed._markup_note(1.1).startswith("regional") and feed._markup_note(2.0).startswith("fast mode")

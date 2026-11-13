@@ -93,7 +93,10 @@ def markup(records: list[Record]) -> dict:
     Only models with a `page`-provenance first-party record are included. Ratio
     1.0 means pass-through; above 1 is markup, below 1 is a discount. Blended basis.
     """
-    first = {r.model: r for r in records if r.provenance == "page"}
+    first: dict[str, Record] = {}
+    for r in records:
+        if r.provenance == "page" and (r.model not in first or blended(r) < blended(first[r.model])):
+            first[r.model] = r  # cheapest first-party tier is the list price
     out: dict[str, dict] = {}
     for r in records:
         if r.provenance == "page" or r.model not in first:
@@ -101,13 +104,27 @@ def markup(records: list[Record]) -> dict:
         lp = blended(first[r.model])
         if lp <= 0:
             continue
-        out.setdefault(r.model, {"list_provider": first[r.model].provider, "list_blended_per_m": round(lp, 4),
-                                 "sellers": []})
-        out[r.model]["sellers"].append({"provider": r.provider, "blended_per_m": round(blended(r), 4),
-                                        "over_list": round(blended(r) / lp, 3)})
+        entry = out.setdefault(r.model, {"list_provider": first[r.model].provider, "list_blended_per_m": round(lp, 4),
+                                         "sellers": {}})
+        ratio = round(blended(r) / lp, 3)
+        key = (r.provider, ratio)
+        if key not in entry["sellers"]:
+            entry["sellers"][key] = {"provider": r.provider, "blended_per_m": round(blended(r), 4),
+                                     "over_list": ratio, "endpoints": 0, "note": _markup_note(ratio)}
+        entry["sellers"][key]["endpoints"] += 1
     for v in out.values():
-        v["sellers"].sort(key=lambda x: x["over_list"])
+        v["sellers"] = sorted(v["sellers"].values(), key=lambda x: (x["over_list"], x["provider"]))
     return out
+
+
+def _markup_note(ratio: float) -> str:
+    if abs(ratio - 1.0) < 0.005:
+        return "pass-through"
+    if abs(ratio - 1.1) < 0.005:
+        return "regional / US-only endpoint surcharge (documented 1.1x)"
+    if abs(ratio - 2.0) < 0.005:
+        return "fast mode (documented 2x)"
+    return "markup" if ratio > 1 else "discount"
 
 
 def write_csv(records: list[Record], path: Path) -> None:

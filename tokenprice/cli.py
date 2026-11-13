@@ -78,7 +78,8 @@ def main(argv: list[str] | None = None) -> int:
         for model, v in sorted(mk.items()):
             print(f"{model}: list ${v['list_blended_per_m']:.3f}/M ({v['list_provider']})")
             for s in v["sellers"]:
-                print(f"  {s['provider']:<18} ${s['blended_per_m']:.3f}  {s['over_list']:.2f}x list")
+                n = f" x{s['endpoints']}" if s["endpoints"] > 1 else ""
+                print(f"  {s['provider']:<22} ${s['blended_per_m']:>9.3f}  {s['over_list']:.2f}x  {s['note']}{n}")
         return 0
     if a.models:
         print("\n".join(tokenprice.models()))
