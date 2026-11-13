@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-13T16:29:42Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-13T22:41:38Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-06. Source: [history/](history/).
 
 ## Biggest cuts
@@ -13,28 +13,28 @@ Window starts 2026-11-06. Source: [history/](history/).
 | streamlake | z-ai/glm-5.2 | 6.3933 | 2.92 | -54.3% |
 | openrouter | ricursiveai/ripple-65b-preview | 2.0 | 1.0 | -50.0% |
 | openrouter | xiaomi/mimo-v2.5-pro | 5.88 | 3.045 | -48.2% |
-| openrouter | qwen/qwen3.5-9b | 0.67 | 0.423 | -36.9% |
-| openrouter | deepseek/deepseek-v4.1-flash-1017 | 1.95 | 1.538 | -21.1% |
+| baidu | z-ai/glm-5.1 | 14.6 | 9.3732 | -35.8% |
+| streamlake | deepseek/deepseek-v4-pro | 6.2228 | 4.1741 | -32.9% |
+| baidu | deepseek/deepseek-v4-pro | 6.2344 | 4.2351 | -32.1% |
+| openrouter | google/gemma-4-26b-a4b-it | 0.93 | 0.7425 | -20.2% |
 | openrouter | deepseek/deepseek-v4-pro | 6.2228 | 5.4 | -13.2% |
 | wafer | moonshotai/kimi-k3.1-pro | 30.253 | 26.653 | -11.9% |
-| primeintellect | qwen/qwen3.5-9b | 0.471 | 0.423 | -10.2% |
-| streamlake | deepseek/deepseek-v4-pro | 6.2228 | 5.6649 | -9.0% |
-| baidu | deepseek/deepseek-v4-pro | 6.2344 | 5.7257 | -8.2% |
+| nextbit | google/gemma-4-26b-a4b-it | 0.8415 | 0.7425 | -11.8% |
+| decart | z-ai/glm-5.3 | 6.48 | 5.9 | -9.0% |
 | siliconflow | z-ai/glm-5.2 | 7.3 | 6.789 | -7.0% |
-| makora | moonshotai/kimi-k3 | 52.2 | 49.2 | -5.7% |
 
 ## Biggest rises
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
-| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.677 | +394.2% |
+| primeintellect | qwen/qwen3.8-27b | 1.614 | 9.912 | +514.1% |
 | openai | openai/gpt-6-astra | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6-astra-pro | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
-| primeintellect | qwen/qwen3.8-27b | 1.614 | 4.928 | +205.3% |
+| io-net | openai/gpt-oss-120b | 0.48 | 1.6 | +233.3% |
 | baidu | deepseek/deepseek-v4-flash | 0.3499 | 0.98 | +180.1% |
-| primeintellect | openai/gpt-oss-120b | 0.26 | 0.697 | +168.1% |
+| ionstream | deepseek/deepseek-v4.1-flash-1017 | 0.775 | 2.07 | +167.1% |
 | openrouter | z-ai/glm-5.3 | 4.2699 | 10.884 | +154.9% |
 | google | google/gemini-3.1-flash-lite | 2.375 | 5.225 | +120.0% |
 | google | google/gemini-3.5-flash | 14.25 | 31.35 | +120.0% |
@@ -43,7 +43,7 @@ Window starts 2026-11-06. Source: [history/](history/).
 | google | google/gemini-3.7-flash | 6.0 | 13.2 | +120.0% |
 | google | google/gemini-3.8-flash | 6.0 | 13.2 | +120.0% |
 
-## New listings (1316)
+## New listings (1311)
 
 - openrouter: google/gemini-4-hydrogen at 24.0
 - openrouter: google/gemini-4-hydrogen:batch at 12.0
@@ -76,7 +76,7 @@ Window starts 2026-11-06. Source: [history/](history/).
 - openrouter: meta/muse-spark-open at 14.0
 - openrouter: nvidia/nemotron-3.5-super-vl at 1.56
 
-## Removed listings (21)
+## Removed listings (25)
 
 - nebius: deepseek/deepseek-v4-flash-0731
 - river: z-ai/glm-5.3
@@ -99,6 +99,10 @@ Window starts 2026-11-06. Source: [history/](history/).
 - liquid: liquid/lfm-2.5-2.6b
 - streamlake: minimax/minimax-m2.5
 - streamlake: minimax/minimax-m3
+- river: deepseek/deepseek-v4.1-flash
+- river: deepseek/deepseek-v4.1-flash-1017
+- paretoalpha: moonshotai/kimi-k3
+- parasail: moonshotai/kimi-k3
 
 ## Widest pack spread right now (p90 / p10 across providers)
 
@@ -108,9 +112,9 @@ Window starts 2026-11-06. Source: [history/](history/).
 | mistral-nemo | 5 | 0.0814 | 0.119 | 0.6 | 7.37x |
 | deepseek-v4-flash-0731 | 23 | 0.6 | 1.32 | 4.4 | 7.33x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 1.013 | 7.24x |
-| gpt-oss-120b | 22 | 0.48 | 1.215 | 2.35 | 4.9x |
+| gpt-oss-120b | 22 | 0.48 | 1.29 | 2.35 | 4.9x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
 | glm-5-2 | 24 | 4.77 | 14.6 | 20.407 | 4.28x |
 | gemma-4-31b-it | 15 | 1.12 | 1.34 | 3.75 | 3.35x |
 | llama-4-scout | 2 | 0.8 | 1.575 | 2.35 | 2.94x |
-| deepseek-v4-1-flash-1017 | 38 | 1.365 | 2.1825 | 3.9 | 2.86x |
+| deepseek-v4-1-flash-1017 | 37 | 1.365 | 2.22 | 3.9 | 2.86x |
