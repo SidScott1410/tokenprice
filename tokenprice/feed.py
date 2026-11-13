@@ -34,7 +34,9 @@ def write_run(records: list[Record], root: Path | None = None, read_at: str | No
     changed = [r for r in records if prev.get(_key(r)) != _price_tuple(r)]
     removed = [r for r in prev_records if _key(r) not in {_key(x) for x in records}]
     # a listing that vanished is a change too (provider dropped the model)
-    set_changed = bool(changed or removed or not (root / "latest.json").exists())
+    exports = ["latest.json", "latest.csv", "litellm.json", "spread.json", "spread.svg"]
+    missing = [f for f in exports if not (root / f).exists()]
+    set_changed = bool(changed or removed or missing)  # also rewrite when an export is absent (new export added)
 
     day = read_at[:10]
     if set_changed:

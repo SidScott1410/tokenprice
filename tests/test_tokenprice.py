@@ -191,12 +191,18 @@ def test_change_only_writes_and_exports(tmp_path):
     assert "openrouter/anthropic/claude-sonnet-4.5" in ll and ll["_meta"]["source"] == "tokenprice"
     assert (tmp_path / "MOVES.md").read_text().startswith("# Price moves")
 
+    # a missing export (new file type added later) is written even when prices did not change
+    (tmp_path / "spread.svg").unlink()
+    feed.write_run(rs, root=tmp_path, read_at="2026-11-10T22:30:00Z")
+    assert (tmp_path / "spread.svg").exists()
+    m1 = (tmp_path / "latest.json").stat().st_mtime_ns
+
     # unchanged run: big files untouched, summary tracks checked_at separately
     info = feed.write_run(rs, root=tmp_path, read_at="2026-11-10T23:00:00Z")
     assert info["changed"] == 0 and info["removed"] == 0
     assert (tmp_path / "latest.json").stat().st_mtime_ns == m1
     summ = json.loads((tmp_path / "summary.json").read_text())
-    assert summ["read_at"] == "2026-11-10T22:00:00Z" and summ["checked_at"] == "2026-11-10T23:00:00Z"
+    assert summ["read_at"] == "2026-11-10T22:30:00Z" and summ["checked_at"] == "2026-11-10T23:00:00Z"
 
     # a provider drops a listing: recorded as removed, latest rewritten
     info = feed.write_run(rs[:-1], root=tmp_path, read_at="2026-11-11T00:00:00Z")
