@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "read_at": "2026-11-13T02:51:57Z",
+  "read_at": "2026-11-13T03:37:17Z",
   "source": "tokenprice",
   "url": "https://github.com/SidScott1410/tokenprice"
  },
@@ -533,8 +533,8 @@
   "output_cost_per_token": 4.44e-06
  },
  "openrouter/deepseek/deepseek-v4.1-flash": {
-  "cache_read_input_token_cost": 1.2e-09,
-  "input_cost_per_token": 3.9e-08,
+  "cache_read_input_token_cost": 6e-09,
+  "input_cost_per_token": 3e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
@@ -2605,12 +2605,12 @@
   "output_cost_per_token": 3.6e-06
  },
  "openrouter/qwen/qwen3.5-9b": {
-  "cache_read_input_token_cost": 7.4e-08,
-  "input_cost_per_token": 8.3e-08,
+  "cache_read_input_token_cost": 6.6e-08,
+  "input_cost_per_token": 7.3e-08,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 1.22e-07
+  "output_cost_per_token": 1.08e-07
  },
  "openrouter/qwen/qwen3.5-flash-02-23": {
   "input_cost_per_token": 6.5e-08,

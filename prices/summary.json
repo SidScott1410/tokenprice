@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-11-13T02:51:57Z",
- "models": 450,
+ "checked_at": "2026-11-13T03:37:17Z",
+ "models": 451,
  "models_with_spread": 153,
  "providers": 80,
- "read_at": "2026-11-13T02:51:57Z",
- "records": 1950,
+ "read_at": "2026-11-13T03:37:17Z",
+ "records": 1947,
  "top_spread_model": "qwen3-6-35b-a3b",
- "top_spread_p90_model": "mimo-v2-6-pro",
- "top_spread_p90_ratio": 12.26,
- "top_spread_ratio": 14.88
+ "top_spread_p90_model": "qwen3-6-35b-a3b",
+ "top_spread_p90_ratio": 12.74,
+ "top_spread_ratio": 17.96
 }

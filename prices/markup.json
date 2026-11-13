@@ -6,41 +6,50 @@
    "sellers": [
     {
      "blended_per_m": 160.0,
-     "over_list": 1.0,
-     "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 160.0,
-     "over_list": 1.0,
-     "provider": "claude-platform-on-aws"
-    },
-    {
-     "blended_per_m": 160.0,
-     "over_list": 1.0,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "anthropic"
+     "provider": "openrouter"
     },
     {
      "blended_per_m": 176.0,
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 176.0,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -52,31 +61,43 @@
    "sellers": [
     {
      "blended_per_m": 160.0,
-     "over_list": 1.0,
-     "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 160.0,
-     "over_list": 1.0,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 160.0,
-     "over_list": 1.0,
-     "provider": "anthropic"
-    },
-    {
-     "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
+     "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
      "blended_per_m": 176.0,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -88,31 +109,43 @@
    "sellers": [
     {
      "blended_per_m": 128.0,
-     "over_list": 1.0,
-     "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 128.0,
-     "over_list": 1.0,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 128.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 128.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 128.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 128.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "anthropic"
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 128.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
     },
     {
      "blended_per_m": 256.0,
+     "endpoints": 1,
+     "note": "fast mode (documented 2x)",
      "over_list": 2.0,
      "provider": "anthropic"
     }
@@ -124,109 +157,121 @@
    "sellers": [
     {
      "blended_per_m": 16.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "openrouter"
+     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 16.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 16.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 16.0,
-     "over_list": 1.0,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 16.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 16.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "anthropic"
+     "provider": "openrouter"
     },
     {
      "blended_per_m": 17.6,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 17.6,
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 17.6,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 17.6,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
    ]
   },
   "claude-haiku-5-5": {
-   "list_blended_per_m": 8.0,
+   "list_blended_per_m": 1.6,
    "list_provider": "anthropic",
    "sellers": [
     {
      "blended_per_m": 1.6,
-     "over_list": 0.2,
-     "provider": "openrouter"
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 1.6,
-     "over_list": 0.2,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 1.6,
-     "over_list": 0.2,
-     "provider": "claude-platform-on-aws"
-    },
-    {
-     "blended_per_m": 1.6,
-     "over_list": 0.2,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 1.6,
-     "over_list": 0.2,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 1.6,
-     "over_list": 0.2,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 1.6,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 1.6,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 1.6,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 1.76,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 1.76,
-     "over_list": 0.22,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 1.76,
-     "over_list": 0.22,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 1.76,
-     "over_list": 0.22,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 1.76,
-     "over_list": 0.22,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 1.76,
-     "over_list": 0.22,
-     "provider": "amazon-bedrock"
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
+     "provider": "google"
     }
    ]
   },
@@ -236,13 +281,17 @@
    "sellers": [
     {
      "blended_per_m": 240.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "openrouter"
+     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 240.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "amazon-bedrock"
+     "provider": "openrouter"
     }
    ]
   },
@@ -252,36 +301,50 @@
    "sellers": [
     {
      "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "claude-platform-on-aws"
-    },
-    {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
      "blended_per_m": 88.0,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     }
@@ -293,36 +356,50 @@
    "sellers": [
     {
      "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "claude-platform-on-aws"
-    },
-    {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
      "blended_per_m": 88.0,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -334,46 +411,57 @@
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "openrouter"
+     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "claude-platform-on-aws"
+     "provider": "anthropic"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "anthropic"
+     "provider": "openrouter"
     },
     {
      "blended_per_m": 88.0,
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 88.0,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 88.0,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -385,61 +473,71 @@
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "openrouter"
+     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "anthropic"
+     "provider": "openrouter"
     },
     {
      "blended_per_m": 88.0,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 88.0,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 88.0,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 88.0,
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 88.0,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 88.0,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     },
     {
      "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "fast mode (documented 2x)",
      "over_list": 2.0,
      "provider": "anthropic"
     }
@@ -451,61 +549,71 @@
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "openrouter"
+     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 80.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 88.0,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
+     "blended_per_m": 88.0,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
      "provider": "azure"
     },
     {
-     "blended_per_m": 80.0,
-     "over_list": 1.0,
-     "provider": "anthropic"
-    },
-    {
      "blended_per_m": 88.0,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 88.0,
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 88.0,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
-    },
-    {
-     "blended_per_m": 88.0,
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 88.0,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 160.0,
+     "endpoints": 1,
+     "note": "fast mode (documented 2x)",
      "over_list": 2.0,
      "provider": "anthropic"
     }
@@ -517,61 +625,71 @@
    "sellers": [
     {
      "blended_per_m": 64.0,
-     "over_list": 1.0,
-     "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 64.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 64.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 64.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 64.0,
-     "over_list": 1.0,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 64.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 64.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "anthropic"
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 64.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
     },
     {
      "blended_per_m": 70.4,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 70.4,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 70.4,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 70.4,
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 70.4,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     },
     {
      "blended_per_m": 128.0,
+     "endpoints": 1,
+     "note": "fast mode (documented 2x)",
      "over_list": 2.0,
      "provider": "anthropic"
     }
@@ -583,41 +701,57 @@
    "sellers": [
     {
      "blended_per_m": 48.0,
-     "over_list": 1.0,
-     "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 48.0,
-     "over_list": 1.0,
-     "provider": "claude-platform-on-aws"
-    },
-    {
-     "blended_per_m": 48.0,
-     "over_list": 1.0,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
+     "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
      "blended_per_m": 52.8,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 52.8,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -629,51 +763,57 @@
    "sellers": [
     {
      "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "openrouter"
+     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 48.0,
-     "over_list": 1.0,
-     "provider": "claude-platform-on-aws"
-    },
-    {
-     "blended_per_m": 48.0,
-     "over_list": 1.0,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "amazon-bedrock"
+     "provider": "azure"
     },
     {
      "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
+     "blended_per_m": 48.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
      "blended_per_m": 52.8,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 52.8,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 52.8,
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 52.8,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -685,58 +825,66 @@
    "sellers": [
     {
      "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "openrouter"
+     "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 35.2,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 35.2,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
      "provider": "azure"
     },
     {
-     "blended_per_m": 32.0,
-     "over_list": 1.0,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 32.0,
-     "over_list": 1.0,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 32.0,
-     "over_list": 1.0,
-     "provider": "anthropic"
-    },
-    {
      "blended_per_m": 35.2,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 35.2,
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 35.2,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
-    },
-    {
-     "blended_per_m": 35.2,
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 35.2,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
     }
    ]
   },
@@ -746,61 +894,69 @@
    "sellers": [
     {
      "blended_per_m": 32.0,
-     "over_list": 1.0,
-     "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 32.0,
-     "over_list": 1.0,
-     "provider": "google"
-    },
-    {
-     "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
      "over_list": 1.0,
-     "provider": "anthropic"
-    },
-    {
-     "blended_per_m": 35.2,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 35.2,
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 35.2,
-     "over_list": 1.1,
      "provider": "google"
     },
     {
+     "blended_per_m": 32.0,
+     "endpoints": 1,
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
      "blended_per_m": 35.2,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 35.2,
+     "endpoints": 1,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 35.2,
+     "endpoints": 2,
+     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
    ]
   }
  },
- "read_at": "2026-11-13T02:51:57Z"
+ "read_at": "2026-11-13T03:37:17Z"
 }
