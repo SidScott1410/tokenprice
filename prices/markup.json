@@ -1,0 +1,806 @@
+{
+ "models": {
+  "claude-fable-5": {
+   "list_blended_per_m": 160.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 176.0,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 176.0,
+     "over_list": 1.1,
+     "provider": "google"
+    }
+   ]
+  },
+  "claude-fable-5-1": {
+   "list_blended_per_m": 160.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 176.0,
+     "over_list": 1.1,
+     "provider": "google"
+    }
+   ]
+  },
+  "claude-fable-5-2": {
+   "list_blended_per_m": 128.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 128.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 128.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 128.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 128.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 128.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 256.0,
+     "over_list": 2.0,
+     "provider": "anthropic"
+    }
+   ]
+  },
+  "claude-haiku-4-5": {
+   "list_blended_per_m": 16.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 16.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 16.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 16.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 16.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 16.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 17.6,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 17.6,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 17.6,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 17.6,
+     "over_list": 1.1,
+     "provider": "google"
+    }
+   ]
+  },
+  "claude-haiku-5-5": {
+   "list_blended_per_m": 8.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 1.6,
+     "over_list": 0.2,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 1.6,
+     "over_list": 0.2,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 1.6,
+     "over_list": 0.2,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 1.6,
+     "over_list": 0.2,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 1.6,
+     "over_list": 0.2,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 1.6,
+     "over_list": 0.2,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 1.76,
+     "over_list": 0.22,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 1.76,
+     "over_list": 0.22,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 1.76,
+     "over_list": 0.22,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 1.76,
+     "over_list": 0.22,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 1.76,
+     "over_list": 0.22,
+     "provider": "amazon-bedrock"
+    }
+   ]
+  },
+  "claude-opus-4-1": {
+   "list_blended_per_m": 240.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 240.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 240.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    }
+   ]
+  },
+  "claude-opus-4-5": {
+   "list_blended_per_m": 80.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    }
+   ]
+  },
+  "claude-opus-4-6": {
+   "list_blended_per_m": 80.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "google"
+    }
+   ]
+  },
+  "claude-opus-4-7": {
+   "list_blended_per_m": 80.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "google"
+    }
+   ]
+  },
+  "claude-opus-4-8": {
+   "list_blended_per_m": 80.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 2.0,
+     "provider": "anthropic"
+    }
+   ]
+  },
+  "claude-opus-5": {
+   "list_blended_per_m": 80.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 80.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 88.0,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 160.0,
+     "over_list": 2.0,
+     "provider": "anthropic"
+    }
+   ]
+  },
+  "claude-opus-5-5": {
+   "list_blended_per_m": 64.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 64.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 64.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 64.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 64.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 64.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 64.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 70.4,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 70.4,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 70.4,
+     "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 70.4,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 70.4,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 128.0,
+     "over_list": 2.0,
+     "provider": "anthropic"
+    }
+   ]
+  },
+  "claude-sonnet-4-5": {
+   "list_blended_per_m": 48.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 52.8,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 52.8,
+     "over_list": 1.1,
+     "provider": "google"
+    }
+   ]
+  },
+  "claude-sonnet-4-6": {
+   "list_blended_per_m": 48.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 48.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 52.8,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 52.8,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 52.8,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 52.8,
+     "over_list": 1.1,
+     "provider": "google"
+    }
+   ]
+  },
+  "claude-sonnet-5": {
+   "list_blended_per_m": 32.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    }
+   ]
+  },
+  "claude-sonnet-5-5": {
+   "list_blended_per_m": 32.0,
+   "list_provider": "anthropic",
+   "sellers": [
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "claude-platform-on-aws"
+    },
+    {
+     "blended_per_m": 32.0,
+     "over_list": 1.0,
+     "provider": "anthropic"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 35.2,
+     "over_list": 1.1,
+     "provider": "google"
+    }
+   ]
+  }
+ },
+ "read_at": "2026-11-13T02:51:57Z"
+}

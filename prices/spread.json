@@ -84,6 +84,20 @@
    "ratio_p90": 1.0,
    "ratio_p90_p10": 1.0
   },
+  "claude-opus-4-1": {
+   "cheapest": "amazon-bedrock",
+   "dearest": "anthropic",
+   "max_blended_per_m": 240.0,
+   "median_blended_per_m": 240.0,
+   "median_x": 1.0,
+   "min_blended_per_m": 240.0,
+   "n": 2,
+   "p10_blended_per_m": 240.0,
+   "p90_blended_per_m": 240.0,
+   "ratio": 1.0,
+   "ratio_p90": 1.0,
+   "ratio_p90_p10": 1.0
+  },
   "claude-opus-4-5": {
    "cheapest": "claude-platform-on-aws",
    "dearest": "anthropic",
@@ -302,11 +316,11 @@
    "median_x": 2.26,
    "min_blended_per_m": 1.12,
    "n": 29,
-   "p10_blended_per_m": 1.62,
+   "p10_blended_per_m": 1.752,
    "p90_blended_per_m": 3.9,
    "ratio": 3.48,
    "ratio_p90": 3.48,
-   "ratio_p90_p10": 2.41
+   "ratio_p90_p10": 2.23
   },
   "deepseek-v4-1-flash-1017": {
    "cheapest": "sail-research",
@@ -316,11 +330,11 @@
    "median_x": 6.06,
    "min_blended_per_m": 0.3967,
    "n": 38,
-   "p10_blended_per_m": 1.222,
+   "p10_blended_per_m": 1.365,
    "p90_blended_per_m": 3.9,
    "ratio": 9.83,
    "ratio_p90": 9.83,
-   "ratio_p90_p10": 3.19
+   "ratio_p90_p10": 2.86
   },
   "deepseek-v4-flash": {
    "cheapest": "streamlake",
@@ -649,13 +663,13 @@
    "dearest": "google",
    "max_blended_per_m": 1.95,
    "median_blended_per_m": 1.0,
-   "median_x": 3.57,
-   "min_blended_per_m": 0.28,
+   "median_x": 4.55,
+   "min_blended_per_m": 0.22,
    "n": 15,
    "p10_blended_per_m": 0.49,
    "p90_blended_per_m": 1.34,
-   "ratio": 6.96,
-   "ratio_p90": 4.79,
+   "ratio": 8.86,
+   "ratio_p90": 6.09,
    "ratio_p90_p10": 2.73
   },
   "gemma-4-31b-it": {
@@ -1293,13 +1307,13 @@
    "dearest": "sambanova",
    "max_blended_per_m": 2.99,
    "median_blended_per_m": 1.215,
-   "median_x": 3.43,
-   "min_blended_per_m": 0.354,
+   "median_x": 4.67,
+   "min_blended_per_m": 0.26,
    "n": 22,
    "p10_blended_per_m": 0.48,
    "p90_blended_per_m": 2.35,
-   "ratio": 8.45,
-   "ratio_p90": 6.64,
+   "ratio": 11.5,
+   "ratio_p90": 9.04,
    "ratio_p90_p10": 4.9
   },
   "gpt-oss-20b": {
@@ -1387,18 +1401,18 @@
    "ratio_p90_p10": 1.0
   },
   "inkling-2-small": {
-   "cheapest": "nebius",
+   "cheapest": "primeintellect",
    "dearest": "cloudflare",
    "max_blended_per_m": 3.3,
    "median_blended_per_m": 3.3,
-   "median_x": 1.0,
-   "min_blended_per_m": 3.3,
-   "n": 3,
-   "p10_blended_per_m": 3.3,
+   "median_x": 2.0,
+   "min_blended_per_m": 1.65,
+   "n": 4,
+   "p10_blended_per_m": 1.65,
    "p90_blended_per_m": 3.3,
-   "ratio": 1.0,
-   "ratio_p90": 1.0,
-   "ratio_p90_p10": 1.0
+   "ratio": 2.0,
+   "ratio_p90": 2.0,
+   "ratio_p90_p10": 2.0
   },
   "kimi-k2-5": {
    "cheapest": "atlascloud",
@@ -1933,18 +1947,18 @@
    "ratio_p90_p10": 1.21
   },
   "qwen3-5-9b": {
-   "cheapest": "darkbloom",
+   "cheapest": "primeintellect",
    "dearest": "together",
    "max_blended_per_m": 0.92,
-   "median_blended_per_m": 0.5695,
-   "median_x": 1.21,
-   "min_blended_per_m": 0.47,
+   "median_blended_per_m": 0.55,
+   "median_x": 1.2,
+   "min_blended_per_m": 0.46,
    "n": 6,
-   "p10_blended_per_m": 0.47,
+   "p10_blended_per_m": 0.46,
    "p90_blended_per_m": 0.85,
-   "ratio": 1.96,
-   "ratio_p90": 1.81,
-   "ratio_p90_p10": 1.81
+   "ratio": 2.0,
+   "ratio_p90": 1.85,
+   "ratio_p90_p10": 1.85
   },
   "qwen3-6-27b": {
    "cheapest": "chutes",
@@ -1965,13 +1979,13 @@
    "dearest": "siliconflow",
    "max_blended_per_m": 5.64,
    "median_blended_per_m": 2.875,
-   "median_x": 9.16,
-   "min_blended_per_m": 0.314,
+   "median_x": 7.59,
+   "min_blended_per_m": 0.379,
    "n": 10,
    "p10_blended_per_m": 2.15,
    "p90_blended_per_m": 4.0,
-   "ratio": 17.96,
-   "ratio_p90": 12.74,
+   "ratio": 14.88,
+   "ratio_p90": 10.55,
    "ratio_p90_p10": 1.86
   },
   "qwen3-8-2-4t-a95b": {
@@ -1993,13 +2007,13 @@
    "dearest": "venice",
    "max_blended_per_m": 10.05,
    "median_blended_per_m": 6.66,
-   "median_x": 5.56,
-   "min_blended_per_m": 1.197,
+   "median_x": 3.59,
+   "min_blended_per_m": 1.856,
    "n": 23,
    "p10_blended_per_m": 3.789,
    "p90_blended_per_m": 10.05,
-   "ratio": 8.4,
-   "ratio_p90": 8.4,
+   "ratio": 5.41,
+   "ratio_p90": 5.41,
    "ratio_p90_p10": 2.65
   },
   "qwen3-coder": {
@@ -2129,5 +2143,5 @@
    "ratio_p90_p10": 1.0
   }
  },
- "read_at": "2026-11-13T01:09:08Z"
+ "read_at": "2026-11-13T02:51:57Z"
 }
