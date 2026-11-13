@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-13T00:24:58Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-13T00:47:28Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-06. Source: [history/](history/).
 
 ## Biggest cuts
@@ -9,14 +9,14 @@ Window starts 2026-11-06. Source: [history/](history/).
 |---|---|---|---|---|
 | openrouter | deepseek/deepseek-v4.1-flash | 3.9 | 1.222 | -68.7% |
 | openrouter | xiaomi/mimo-v2.5-pro | 5.88 | 3.045 | -48.2% |
-| openrouter | qwen/qwen3.5-9b | 0.67 | 0.438 | -34.6% |
-| primeintellect | qwen/qwen3.8-27b | 1.614 | 1.385 | -14.2% |
+| primeintellect | qwen/qwen3.8-27b | 1.614 | 1.018 | -36.9% |
+| openrouter | qwen/qwen3.5-9b | 0.67 | 0.581 | -13.3% |
 | openrouter | google/gemma-4-26b-a4b-it | 0.93 | 0.8415 | -9.5% |
-| decart | z-ai/glm-5.3 | 6.48 | 5.91 | -8.8% |
-| primeintellect | qwen/qwen3.5-9b | 0.471 | 0.438 | -7.0% |
+| decart | z-ai/glm-5.3 | 6.48 | 5.88 | -9.3% |
 | makora | moonshotai/kimi-k3 | 52.2 | 49.2 | -5.7% |
 | openrouter | moonshotai/kimi-k3.1-pro | 26.5943 | 25.4717 | -4.2% |
 | relace | moonshotai/kimi-k3.1-pro | 26.5943 | 25.4717 | -4.2% |
+| particle-ai | z-ai/glm-5.3-flash | 1.63 | 1.62 | -0.6% |
 
 ## Biggest rises
 
@@ -27,16 +27,16 @@ Window starts 2026-11-06. Source: [history/](history/).
 | openai | openai/gpt-6-astra-pro | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
-| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.503 | +267.2% |
+| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.41 | +199.3% |
 | baidu | deepseek/deepseek-v4-flash | 0.3499 | 0.98 | +180.1% |
-| openrouter | z-ai/glm-5.3 | 4.2699 | 10.88 | +154.8% |
+| openrouter | z-ai/glm-5.3 | 4.2699 | 10.884 | +154.9% |
 | baidu | moonshotai/kimi-k2.6 | 5.3095 | 12.95 | +143.9% |
-| alibaba | deepseek/deepseek-v4-pro-0813 | 5.808 | 13.2 | +127.3% |
 | google | google/gemini-3.1-flash-lite | 2.375 | 5.225 | +120.0% |
 | google | google/gemini-3.5-flash | 14.25 | 31.35 | +120.0% |
 | google | google/gemini-3.5-flash-lite | 3.9 | 8.58 | +120.0% |
 | google | google/gemini-3.6-flash | 6.0 | 13.2 | +120.0% |
 | google | google/gemini-3.7-flash | 6.0 | 13.2 | +120.0% |
+| google | google/gemini-3.8-flash | 6.0 | 13.2 | +120.0% |
 
 ## New listings (1309)
 
@@ -71,10 +71,11 @@ Window starts 2026-11-06. Source: [history/](history/).
 - openrouter: prism-ml/ternary-bonsai-2-9b at 0.47
 - openrouter: moondream/moondream3-preview at 7.8
 
-## Removed listings (2)
+## Removed listings (3)
 
 - nebius: deepseek/deepseek-v4-flash-0731
 - river: z-ai/glm-5.3
+- tenstorrent: z-ai/glm-5.3
 
 ## Widest pack spread right now (p90 / p10 across providers)
 

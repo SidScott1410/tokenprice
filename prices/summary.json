@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-11-13T00:24:58Z",
+ "checked_at": "2026-11-13T00:47:28Z",
  "models": 445,
  "models_with_spread": 152,
  "providers": 80,
- "read_at": "2026-11-13T00:24:58Z",
+ "read_at": "2026-11-13T00:47:28Z",
  "records": 1927,
  "top_spread_model": "qwen3-6-35b-a3b",
  "top_spread_p90_model": "mimo-v2-6-pro",
  "top_spread_p90_ratio": 12.26,
- "top_spread_ratio": 14.76
+ "top_spread_ratio": 12.97
 }
