@@ -1,40 +1,44 @@
 # Price moves, last 7 days
 
-Generated 2026-11-12T22:21:09Z. Blended = input + 3 x output, USD per M tokens.
-Window starts 2026-11-05. Source: [history/](history/).
+Generated 2026-11-13T00:24:58Z. Blended = input + 3 x output, USD per M tokens.
+Window starts 2026-11-06. Source: [history/](history/).
 
 ## Biggest cuts
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
-| baidu | deepseek/deepseek-v4.1-flash-1017 | 1.9634 | 1.2808 | -34.8% |
-| primeintellect | qwen/qwen3.8-27b | 1.614 | 1.2 | -25.7% |
+| openrouter | deepseek/deepseek-v4.1-flash | 3.9 | 1.222 | -68.7% |
+| openrouter | xiaomi/mimo-v2.5-pro | 5.88 | 3.045 | -48.2% |
+| openrouter | qwen/qwen3.5-9b | 0.67 | 0.438 | -34.6% |
+| primeintellect | qwen/qwen3.8-27b | 1.614 | 1.385 | -14.2% |
 | openrouter | google/gemma-4-26b-a4b-it | 0.93 | 0.8415 | -9.5% |
+| decart | z-ai/glm-5.3 | 6.48 | 5.91 | -8.8% |
+| primeintellect | qwen/qwen3.5-9b | 0.471 | 0.438 | -7.0% |
+| makora | moonshotai/kimi-k3 | 52.2 | 49.2 | -5.7% |
 | openrouter | moonshotai/kimi-k3.1-pro | 26.5943 | 25.4717 | -4.2% |
 | relace | moonshotai/kimi-k3.1-pro | 26.5943 | 25.4717 | -4.2% |
-| openrouter | qwen/qwen3.5-9b | 0.67 | 0.651 | -2.8% |
 
 ## Biggest rises
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
+| baidu | deepseek/deepseek-v4-flash-0731 | 0.5984 | 4.4 | +635.3% |
 | openai | openai/gpt-6-astra | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6-astra-pro | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
+| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.503 | +267.2% |
+| baidu | deepseek/deepseek-v4-flash | 0.3499 | 0.98 | +180.1% |
+| openrouter | z-ai/glm-5.3 | 4.2699 | 10.88 | +154.8% |
+| baidu | moonshotai/kimi-k2.6 | 5.3095 | 12.95 | +143.9% |
+| alibaba | deepseek/deepseek-v4-pro-0813 | 5.808 | 13.2 | +127.3% |
 | google | google/gemini-3.1-flash-lite | 2.375 | 5.225 | +120.0% |
 | google | google/gemini-3.5-flash | 14.25 | 31.35 | +120.0% |
 | google | google/gemini-3.5-flash-lite | 3.9 | 8.58 | +120.0% |
 | google | google/gemini-3.6-flash | 6.0 | 13.2 | +120.0% |
 | google | google/gemini-3.7-flash | 6.0 | 13.2 | +120.0% |
-| google | google/gemini-3.8-flash | 6.0 | 13.2 | +120.0% |
-| google-ai-studio | google/gemini-2.5-flash | 3.9 | 7.8 | +100.0% |
-| google-ai-studio | google/gemini-2.5-flash-lite | 0.65 | 1.3 | +100.0% |
-| google-ai-studio | google/gemini-2.5-pro | 15.625 | 31.25 | +100.0% |
-| google-ai-studio | google/gemini-2.5-pro-preview | 15.625 | 31.25 | +100.0% |
-| google | google/gemini-3-flash-preview | 4.75 | 9.5 | +100.0% |
 
-## New listings (1330)
+## New listings (1309)
 
 - openrouter: google/gemini-4-hydrogen at 24.0
 - openrouter: google/gemini-4-hydrogen:batch at 12.0
@@ -78,11 +82,11 @@ Window starts 2026-11-05. Source: [history/](history/).
 |---|---|---|---|---|---|
 | mimo-v2-6-pro | 5 | 2.2837 | 3.045 | 28.0 | 12.26x |
 | mistral-nemo | 5 | 0.0814 | 0.119 | 0.6 | 7.37x |
-| deepseek-v4-flash-0731 | 23 | 0.6 | 1.32 | 4.4 | 7.33x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 1.013 | 7.24x |
+| deepseek-v4-flash-0731 | 23 | 0.83 | 1.36 | 4.4 | 5.3x |
 | gpt-oss-120b | 22 | 0.48 | 1.215 | 2.35 | 4.9x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
-| deepseek-v4-flash | 13 | 0.49 | 0.735 | 1.65 | 3.37x |
 | gemma-4-31b-it | 15 | 1.12 | 1.34 | 3.75 | 3.35x |
-| deepseek-v4-1-flash-1017 | 38 | 1.222 | 2.1825 | 3.9 | 3.19x |
+| deepseek-v4-1-flash-1017 | 38 | 1.222 | 2.34 | 3.9 | 3.19x |
 | glm-5-2 | 24 | 6.577 | 14.6 | 20.407 | 3.1x |
+| llama-4-scout | 2 | 0.8 | 1.575 | 2.35 | 2.94x |
