@@ -213,3 +213,11 @@ def test_moves_digest(tmp_path):
     assert m["cuts"][0]["provider"] == "deepinfra" and m["cuts"][0]["pct"] < 0
     assert m["rises"] == []
     assert "deepinfra" in (tmp_path / "MOVES.md").read_text()
+
+
+def test_chart_svg(tmp_path):
+    from tokenprice.chart import dot_plot
+    mk = lambda prov, i, o: Record(prov, "m", "x/m", i, o, "https://x", "2026-01-01T00:00:00Z", "api")  # noqa: E731
+    svg = dot_plot([mk("a", 0.1, 0.4), mk("b", 0.3, 1.2), mk("c", 3.0, 12.0)], read_at="2026-01-01T00:00:00Z")
+    assert svg.startswith("<svg") and svg.count("<circle") == 3 and "30.0x" in svg
+    assert dot_plot([mk("a", 0.1, 0.4)]).startswith("<svg")  # fewer than 3 sellers: empty-state svg, no crash

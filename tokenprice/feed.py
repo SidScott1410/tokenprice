@@ -44,6 +44,9 @@ def write_run(records: list[Record], root: Path | None = None, read_at: str | No
         (root / "latest.json").write_text(json.dumps(latest, indent=1, sort_keys=True))
         write_csv(records, root / "latest.csv")
         write_litellm(records, root / "litellm.json", read_at)
+        from tokenprice.chart import write_chart  # local import avoids a cycle
+
+        write_chart(records, root / "spread.svg", read_at)
         with (root / "history" / f"{day}.jsonl").open("a") as f:
             for r in changed:
                 f.write(json.dumps(r.to_dict(), sort_keys=True) + "\n")
