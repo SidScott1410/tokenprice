@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-11-13T08:04:43Z",
- "models": 451,
+ "checked_at": "2026-11-13T16:29:42Z",
+ "models": 448,
  "models_with_spread": 152,
  "providers": 81,
- "read_at": "2026-11-13T08:04:43Z",
- "records": 1949,
- "top_spread_model": "gemma-4-26b-a4b-it",
+ "read_at": "2026-11-13T16:29:42Z",
+ "records": 1942,
+ "top_spread_model": "glm-5-2",
  "top_spread_p90_model": "mimo-v2-6-pro",
  "top_spread_p90_ratio": 12.26,
- "top_spread_ratio": 15.85
+ "top_spread_ratio": 12.27
 }
