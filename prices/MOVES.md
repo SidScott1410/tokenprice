@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-14T18:12:01Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-14T22:30:20Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-07. Source: [history/](history/).
 
 ## Biggest cuts
@@ -21,7 +21,7 @@ Window starts 2026-11-07. Source: [history/](history/).
 | openrouter | xiaomi/mimo-v2.5-pro | 5.88 | 3.045 | -48.2% |
 | baidu | z-ai/glm-5.1 | 14.6 | 9.3732 | -35.8% |
 | baidu | deepseek/deepseek-v4.1-flash-1017 | 1.9634 | 1.2808 | -34.8% |
-| openrouter | qwen/qwen3.5-9b | 0.67 | 0.449 | -33.0% |
+| decart | moonshotai/kimi-k3.1-pro | 28.16 | 19.52 | -30.7% |
 
 ## Biggest rises
 
@@ -76,7 +76,7 @@ Window starts 2026-11-07. Source: [history/](history/).
 - openrouter: nvidia/nemotron-3.5-super-vl at 1.56
 - openrouter: unbiased/pareto-26.10 at 10.4
 
-## Removed listings (28)
+## Removed listings (30)
 
 - nebius: deepseek/deepseek-v4-flash-0731
 - river: z-ai/glm-5.3
@@ -106,6 +106,8 @@ Window starts 2026-11-07. Source: [history/](history/).
 - openrouter: qwen/qwen3.8-27b
 - gmicloud: qwen/qwen3.8-27b
 - deepinfra: thinkingmachines/inkling-2-small
+- sail-research: moonshotai/kimi-k3
+- sail-research: moonshotai/kimi-k3
 
 ## Widest pack spread right now (p90 / p10 across providers)
 
