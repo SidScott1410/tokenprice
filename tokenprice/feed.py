@@ -12,6 +12,7 @@ server behind it.
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -92,10 +93,19 @@ def markup(records: list[Record]) -> dict:
 
     Only models with a `page`-provenance first-party record are included. Ratio
     1.0 means pass-through; above 1 is markup, below 1 is a discount. Blended basis.
+
+    A seller row whose raw id carries a date suffix the lab page does not price
+    (`openai/gpt-4o-2024-05-13` against a page that lists only `gpt-4o`) is a
+    different product at its own launch price, not a markup: it is reported with
+    `comparable: False` and left out of `off_list`.
     """
     first: dict[str, Record] = {}
+    first_raw: set[str] = set()
     for r in records:
-        if r.provenance == "page" and (r.model not in first or blended(r) < blended(first[r.model])):
+        if r.provenance != "page":
+            continue
+        first_raw.add(r.model_raw.split("/", 1)[-1].lower())
+        if r.model not in first or blended(r) < blended(first[r.model]):
             first[r.model] = r  # cheapest first-party tier is the list price
     out: dict[str, dict] = {}
     for r in records:
@@ -104,26 +114,43 @@ def markup(records: list[Record]) -> dict:
         lp = blended(first[r.model])
         if lp <= 0:
             continue
-        entry = out.setdefault(r.model, {"list_provider": first[r.model].provider, "list_blended_per_m": round(lp, 4),
-                                         "sellers": {}})
+        list_provider = first[r.model].provider
+        entry = out.setdefault(r.model, {"list_provider": list_provider, "list_blended_per_m": round(lp, 4),
+                                         "sellers": {}, "off_list": 0})
         ratio = round(blended(r) / lp, 3)
-        key = (r.provider, ratio)
+        raw_id = r.model_raw.split("/", 1)[-1].lower()
+        dated = _DATED.search(raw_id) is not None and raw_id not in first_raw
+        key = (r.provider, ratio, raw_id)
         if key not in entry["sellers"]:
-            entry["sellers"][key] = {"provider": r.provider, "blended_per_m": round(blended(r), 4),
-                                     "over_list": ratio, "endpoints": 0, "note": _markup_note(ratio)}
+            note = ("dated snapshot, lab page lists no price for this version" if dated
+                    else _markup_note(ratio, r.provider == list_provider))
+            entry["sellers"][key] = {"provider": r.provider, "model_raw": r.model_raw,
+                                     "blended_per_m": round(blended(r), 4), "over_list": ratio,
+                                     "endpoints": 0, "comparable": not dated, "note": note}
         entry["sellers"][key]["endpoints"] += 1
     for v in out.values():
         v["sellers"] = sorted(v["sellers"].values(), key=lambda x: (x["over_list"], x["provider"]))
+        v["off_list"] = sum(1 for s in v["sellers"]
+                            if s["comparable"] and s["note"] in ("markup", "discount"))
     return out
 
 
-def _markup_note(ratio: float) -> str:
+_DATED = re.compile(r"-\d{4}-\d{2}-\d{2}$")
+# Published multipliers. Lab tiers apply only when the seller is the lab itself;
+# cloud regional surcharges apply to any reseller.
+_LAB_TIERS = {0.5: "lab batch / flex tier (documented 0.5x)", 2.0: "lab fast tier (documented 2x)",
+              2.5: "lab fast tier (documented 2.5x)", 6.0: "lab ultrafast tier (documented 6x)"}
+_CLOUD_TIERS = {1.1: "regional / data-zone surcharge (documented 1.1x)",
+                1.2: "regional deployment surcharge (documented 1.2x)"}
+
+
+def _markup_note(ratio: float, same_provider: bool) -> str:
     if abs(ratio - 1.0) < 0.005:
         return "pass-through"
-    if abs(ratio - 1.1) < 0.005:
-        return "regional / US-only endpoint surcharge (documented 1.1x)"
-    if abs(ratio - 2.0) < 0.005:
-        return "fast mode (documented 2x)"
+    tiers = {**_CLOUD_TIERS, **(_LAB_TIERS if same_provider else {})}
+    for k, label in tiers.items():
+        if abs(ratio - k) < 0.005:
+            return label
     return "markup" if ratio > 1 else "discount"
 
 

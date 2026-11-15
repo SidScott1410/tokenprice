@@ -286,7 +286,9 @@ def test_markup_against_first_party():
     assert mk["claude-sonnet-4-5"]["sellers"][0]["provider"] == "openrouter"
     assert mk["claude-sonnet-4-5"]["sellers"][0]["over_list"] == 1.0  # pass-through
     assert mk["claude-sonnet-4-5"]["sellers"][0]["note"] == "pass-through"
-    assert feed._markup_note(1.1).startswith("regional") and feed._markup_note(2.0).startswith("fast mode")
+    assert feed._markup_note(1.1, False).startswith("regional") and feed._markup_note(2.0, True).startswith("lab fast")
+    assert feed._markup_note(0.5, False) == "discount"  # a reseller at half list is a real discount
+    assert feed._markup_note(0.5, True).startswith("lab batch")
 
 
 OPENAI_MD = """
@@ -332,3 +334,20 @@ def test_openai_page_parse():
     assert by["gpt-5-pro"].cached_input_per_m is None
     assert "gpt-realtime" not in by  # unrecognized heading inherits no tier
     assert normalize("openai/gpt-6.1-sol") == "gpt-6-1-sol"  # OpenRouter id lines up
+
+
+def test_markup_dated_snapshot_not_comparable():
+    from tokenprice.scrapers import openai_page
+    page = openai_page.parse(OPENAI_MD, read_at="2026-11-15T00:00:00Z")
+    old = Record(provider="azure", model=normalize("openai/gpt-5.4-mini-2026-01-01"),
+                 model_raw="openai/gpt-5.4-mini-2026-01-01", input_per_m=1.5, output_per_m=9.0,
+                 source="https://openrouter.ai/api/v1/models/x/endpoints", read_at="2026-11-15T00:00:00Z",
+                 provenance="api")
+    cur = Record(provider="azure", model="gpt-5-4-mini", model_raw="openai/gpt-5.4-mini", input_per_m=0.75,
+                 output_per_m=4.5, source="https://openrouter.ai/api/v1/models/x/endpoints",
+                 read_at="2026-11-15T00:00:00Z", provenance="api")
+    mk = feed.markup(page + [old, cur])["gpt-5-4-mini"]
+    by = {s["model_raw"]: s for s in mk["sellers"]}
+    assert by["openai/gpt-5.4-mini"]["comparable"] and by["openai/gpt-5.4-mini"]["note"] == "pass-through"
+    assert not by["openai/gpt-5.4-mini-2026-01-01"]["comparable"]
+    assert mk["off_list"] == 0

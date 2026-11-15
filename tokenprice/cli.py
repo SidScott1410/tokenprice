@@ -79,7 +79,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{model}: list ${v['list_blended_per_m']:.3f}/M ({v['list_provider']})")
             for s in v["sellers"]:
                 n = f" x{s['endpoints']}" if s["endpoints"] > 1 else ""
-                print(f"  {s['provider']:<22} ${s['blended_per_m']:>9.3f}  {s['over_list']:.2f}x  {s['note']}{n}")
+                raw = "" if s["comparable"] else f"  [{s['model_raw']}]"
+                print(f"  {s['provider']:<22} ${s['blended_per_m']:>9.3f}  {s['over_list']:.2f}x  {s['note']}{n}{raw}")
         return 0
     if a.models:
         print("\n".join(tokenprice.models()))
