@@ -1,9 +1,9 @@
 {
- "checked_at": "2026-11-15T04:50:31Z",
+ "checked_at": "2026-11-15T04:59:05Z",
  "models": 459,
  "models_with_spread": 157,
  "providers": 82,
- "read_at": "2026-11-15T04:50:31Z",
+ "read_at": "2026-11-15T04:59:05Z",
  "records": 2032,
  "top_spread_model": "deepseek-v4-flash",
  "top_spread_p90_model": "deepseek-v4-flash",

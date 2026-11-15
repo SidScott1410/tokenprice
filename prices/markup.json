@@ -3,53 +3,68 @@
   "claude-fable-5": {
    "list_blended_per_m": 160.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 176.0,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-fable-5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -58,46 +73,59 @@
   "claude-fable-5-1": {
    "list_blended_per_m": 160.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 176.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-fable-5.1",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -106,46 +134,59 @@
   "claude-fable-5-2": {
    "list_blended_per_m": 128.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 128.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.2",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 128.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.2",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 128.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.2",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 128.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.2",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 128.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-fable-5.2",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 256.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "anthropic/claude-fable-5.2",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "anthropic"
     }
@@ -154,53 +195,68 @@
   "claude-haiku-4-5": {
    "list_blended_per_m": 16.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 17.6,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-haiku-4.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 17.6,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-haiku-4.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -209,67 +265,86 @@
   "claude-haiku-5-5": {
    "list_blended_per_m": 1.6,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-haiku-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 1.76,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-haiku-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 1.76,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-haiku-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 1.76,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-haiku-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -278,17 +353,22 @@
   "claude-opus-4-1": {
    "list_blended_per_m": 240.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 240.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 240.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
@@ -298,53 +378,68 @@
   "claude-opus-4-5": {
    "list_blended_per_m": 80.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-4.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     }
@@ -353,53 +448,68 @@
   "claude-opus-4-6": {
    "list_blended_per_m": 80.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-4.6",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -408,60 +518,77 @@
   "claude-opus-4-7": {
    "list_blended_per_m": 80.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.7",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.7",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.7",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.7",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.7",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.7",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-4.7",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-4.7",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -470,74 +597,95 @@
   "claude-opus-4-8": {
    "list_blended_per_m": 80.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.8",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.8",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.8",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.8",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.8",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-4.8",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-4.8",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-4.8",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-4.8",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "anthropic/claude-opus-4.8",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "anthropic"
     }
@@ -546,74 +694,95 @@
   "claude-opus-5": {
    "list_blended_per_m": 80.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 88.0,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "anthropic/claude-opus-5",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "anthropic"
     }
@@ -622,74 +791,95 @@
   "claude-opus-5-5": {
    "list_blended_per_m": 64.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-opus-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 70.4,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 70.4,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 70.4,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-opus-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     },
     {
      "blended_per_m": 128.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "anthropic/claude-opus-5.5",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "anthropic"
     }
@@ -698,60 +888,77 @@
   "claude-sonnet-4-5": {
    "list_blended_per_m": 48.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 52.8,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-4.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 52.8,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-4.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -760,60 +967,77 @@
   "claude-sonnet-4-6": {
    "list_blended_per_m": 48.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 48.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-4.6",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 52.8,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-4.6",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 52.8,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-4.6",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -822,67 +1046,86 @@
   "claude-sonnet-5": {
    "list_blended_per_m": 32.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -891,67 +1134,86 @@
   "claude-sonnet-5-5": {
    "list_blended_per_m": 32.0,
    "list_provider": "anthropic",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "anthropic"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "claude-platform-on-aws"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "anthropic/claude-sonnet-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "anthropic/claude-sonnet-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "google"
     }
@@ -960,32 +1222,41 @@
   "gpt-4-1": {
    "list_blended_per_m": 26.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 26.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-4.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 26.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-4.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 26.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-4.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 28.6,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-4.1",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     }
@@ -994,32 +1265,41 @@
   "gpt-4-1-mini": {
    "list_blended_per_m": 5.2,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 5.2,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-4.1-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 5.2,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-4.1-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 5.2,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-4.1-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 5.72,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-4.1-mini",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     }
@@ -1028,39 +1308,95 @@
   "gpt-4o": {
    "list_blended_per_m": 32.5,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 32.5,
-     "endpoints": 2,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 32.5,
-     "endpoints": 3,
+     "comparable": false,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-2024-08-06",
+     "note": "dated snapshot, lab page lists no price for this version",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 32.5,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 32.5,
-     "endpoints": 3,
+     "comparable": false,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-2024-08-06",
+     "note": "dated snapshot, lab page lists no price for this version",
+     "over_list": 1.0,
+     "provider": "openai"
+    },
+    {
+     "blended_per_m": 32.5,
+     "comparable": false,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-2024-11-20",
+     "note": "dated snapshot, lab page lists no price for this version",
+     "over_list": 1.0,
+     "provider": "openai"
+    },
+    {
+     "blended_per_m": 32.5,
+     "comparable": false,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-2024-11-20",
+     "note": "dated snapshot, lab page lists no price for this version",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 32.5,
+     "comparable": false,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-2024-08-06",
+     "note": "dated snapshot, lab page lists no price for this version",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 32.5,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 50.0,
+     "comparable": false,
      "endpoints": 1,
-     "note": "markup",
+     "model_raw": "openai/gpt-4o-2024-05-13",
+     "note": "dated snapshot, lab page lists no price for this version",
      "over_list": 1.538,
      "provider": "azure"
     },
     {
      "blended_per_m": 50.0,
+     "comparable": false,
      "endpoints": 1,
-     "note": "markup",
+     "model_raw": "openai/gpt-4o-2024-05-13",
+     "note": "dated snapshot, lab page lists no price for this version",
      "over_list": 1.538,
      "provider": "openrouter"
     }
@@ -1069,32 +1405,59 @@
   "gpt-4o-mini": {
    "list_blended_per_m": 1.95,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 1.95,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-4o-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 1.95,
-     "endpoints": 2,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 1.95,
-     "endpoints": 2,
+     "comparable": false,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-mini-2024-07-18",
+     "note": "dated snapshot, lab page lists no price for this version",
+     "over_list": 1.0,
+     "provider": "openai"
+    },
+    {
+     "blended_per_m": 1.95,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 2.145,
+     "blended_per_m": 1.95,
+     "comparable": false,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-4o-mini-2024-07-18",
+     "note": "dated snapshot, lab page lists no price for this version",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 2.145,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-4o-mini",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     }
@@ -1103,32 +1466,41 @@
   "gpt-5": {
    "list_blended_per_m": 31.25,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 31.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 31.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 31.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 34.375,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     }
@@ -1137,46 +1509,59 @@
   "gpt-5-1": {
    "list_blended_per_m": 31.25,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 15.625,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.1",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 31.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 31.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 31.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.1",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 34.375,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.1",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 62.5,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-5.1",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -1185,39 +1570,50 @@
   "gpt-5-2": {
    "list_blended_per_m": 43.75,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 21.875,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.2",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 43.75,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.2",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 43.75,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.2",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 43.75,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.2",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 87.5,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-5.2",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -1226,17 +1622,22 @@
   "gpt-5-2-pro": {
    "list_blended_per_m": 525.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 525.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.2-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 525.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.2-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
@@ -1246,53 +1647,68 @@
   "gpt-5-4": {
    "list_blended_per_m": 47.5,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 23.75,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.4",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 47.5,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 47.5,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 47.5,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 52.25,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.4",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 52.25,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.4",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 95.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-5.4",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -1301,46 +1717,59 @@
   "gpt-5-4-mini": {
    "list_blended_per_m": 14.25,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 7.125,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.4-mini",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 14.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 14.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 14.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 15.675,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.4-mini",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 28.5,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-5.4-mini",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -1349,39 +1778,50 @@
   "gpt-5-4-nano": {
    "list_blended_per_m": 3.95,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 1.975,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.4-nano",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 3.95,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-nano",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 3.95,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-nano",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 3.95,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-nano",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 4.345,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.4-nano",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     }
@@ -1390,31 +1830,40 @@
   "gpt-5-4-pro": {
    "list_blended_per_m": 570.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 285.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.4-pro",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 570.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 570.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 570.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.4-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
@@ -1424,53 +1873,68 @@
   "gpt-5-5": {
    "list_blended_per_m": 95.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 47.5,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.5",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 95.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 95.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 95.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.5",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 104.5,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 104.5,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.5",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 237.5,
+     "comparable": true,
      "endpoints": 1,
-     "note": "markup",
+     "model_raw": "openai/gpt-5.5",
+     "note": "lab fast tier (documented 2.5x)",
      "over_list": 2.5,
      "provider": "openai"
     }
@@ -1479,24 +1943,31 @@
   "gpt-5-5-pro": {
    "list_blended_per_m": 570.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 285.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.5-pro",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 570.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.5-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 570.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.5-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
@@ -1506,60 +1977,77 @@
   "gpt-5-6-luna": {
    "list_blended_per_m": 3.8,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 1.9,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.6-luna",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 3.8,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-luna",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 3.8,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-luna",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 3.8,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-luna",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 3.8,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-luna",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 4.18,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.6-luna",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 4.18,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.6-luna",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 7.6,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-5.6-luna",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -1568,60 +2056,77 @@
   "gpt-5-6-sol": {
    "list_blended_per_m": 64.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.6-sol",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 70.4,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.6-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 70.4,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.6-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 70.4,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.6-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 128.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-5.6-sol",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -1630,53 +2135,68 @@
   "gpt-5-6-terra": {
    "list_blended_per_m": 38.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 19.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5.6-terra",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 38.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-terra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 38.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-terra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 38.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5.6-terra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 41.8,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.6-terra",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 41.8,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5.6-terra",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 76.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-5.6-terra",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -1685,39 +2205,50 @@
   "gpt-5-mini": {
    "list_blended_per_m": 6.25,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 3.125,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5-mini",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 6.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 6.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 6.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5-mini",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 6.875,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5-mini",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     }
@@ -1726,39 +2257,50 @@
   "gpt-5-nano": {
    "list_blended_per_m": 1.25,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 0.625,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-5-nano",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 1.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5-nano",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 1.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5-nano",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 1.25,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5-nano",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 1.375,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-5-nano",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     }
@@ -1767,17 +2309,22 @@
   "gpt-5-pro": {
    "list_blended_per_m": 375.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 375.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 375.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-5-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
@@ -1787,67 +2334,86 @@
   "gpt-6-1-sol": {
    "list_blended_per_m": 32.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-6.1-sol",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6.1-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6.1-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-6.1-sol",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 192.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "markup",
+     "model_raw": "openai/gpt-6.1-sol",
+     "note": "lab ultrafast tier (documented 6x)",
      "over_list": 6.0,
      "provider": "openai"
     }
@@ -1856,60 +2422,77 @@
   "gpt-6-1-terra": {
    "list_blended_per_m": 16.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 8.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-6.1-terra",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-terra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-terra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-terra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 17.6,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6.1-terra",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 17.6,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6.1-terra",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 19.2,
+     "comparable": true,
      "endpoints": 1,
-     "note": "markup",
+     "model_raw": "openai/gpt-6.1-terra",
+     "note": "regional deployment surcharge (documented 1.2x)",
      "over_list": 1.2,
      "provider": "azure"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-6.1-terra",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -1918,67 +2501,86 @@
   "gpt-6-astra": {
    "list_blended_per_m": 160.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 80.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-6-astra",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-astra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-astra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-astra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 160.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-astra",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 176.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6-astra",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 176.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6-astra",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 320.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-6-astra",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 960.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "markup",
+     "model_raw": "openai/gpt-6-astra",
+     "note": "lab ultrafast tier (documented 6x)",
      "over_list": 6.0,
      "provider": "openai"
     }
@@ -1987,60 +2589,77 @@
   "gpt-6-luna": {
    "list_blended_per_m": 1.6,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 0.8,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-6-luna",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-luna",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-luna",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-luna",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 1.6,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-luna",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 1.76,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6-luna",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 1.76,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6-luna",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 3.2,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-6-luna",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -2049,60 +2668,77 @@
   "gpt-6-sol": {
    "list_blended_per_m": 32.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 16.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "discount",
+     "model_raw": "openai/gpt-6-sol",
+     "note": "lab batch / flex tier (documented 0.5x)",
      "over_list": 0.5,
      "provider": "openai"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 32.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/gpt-6-sol",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 1,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "amazon-bedrock"
     },
     {
      "blended_per_m": 35.2,
+     "comparable": true,
      "endpoints": 2,
-     "note": "regional / US-only endpoint surcharge (documented 1.1x)",
+     "model_raw": "openai/gpt-6-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
      "provider": "azure"
     },
     {
      "blended_per_m": 64.0,
+     "comparable": true,
      "endpoints": 1,
-     "note": "fast mode (documented 2x)",
+     "model_raw": "openai/gpt-6-sol",
+     "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
      "provider": "openai"
     }
@@ -2111,17 +2747,22 @@
   "o3": {
    "list_blended_per_m": 26.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 26.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/o3",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 26.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/o3",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
@@ -2131,17 +2772,22 @@
   "o3-pro": {
    "list_blended_per_m": 260.0,
    "list_provider": "openai",
+   "off_list": 0,
    "sellers": [
     {
      "blended_per_m": 260.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/o3-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openai"
     },
     {
      "blended_per_m": 260.0,
+     "comparable": true,
      "endpoints": 1,
+     "model_raw": "openai/o3-pro",
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
@@ -2149,5 +2795,5 @@
    ]
   }
  },
- "read_at": "2026-11-15T04:50:31Z"
+ "read_at": "2026-11-15T04:59:05Z"
 }

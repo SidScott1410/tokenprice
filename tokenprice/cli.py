@@ -17,13 +17,13 @@ from tokenprice import feed
 
 
 def _update() -> int:
-    from tokenprice.scrapers import anthropic_page, openai_page, openrouter, openrouter_endpoints
+    from tokenprice.scrapers import anthropic_page, google_page, openai_page, openrouter, openrouter_endpoints
 
     listed = openrouter.scrape()  # one router price per model
     ids = sorted({r.model_raw for r in listed})
     per_provider, failed = openrouter_endpoints.scrape_all(ids)  # the spread lives here
     first_party: list = []
-    for name, mod in (("anthropic", anthropic_page), ("openai", openai_page)):
+    for name, mod in (("anthropic", anthropic_page), ("openai", openai_page), ("google", google_page)):
         try:  # first-party pages are best effort: a layout change must not take the feed down
             first_party += mod.scrape()
         except Exception as e:  # noqa: BLE001

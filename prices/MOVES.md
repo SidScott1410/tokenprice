@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-15T04:50:31Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-15T04:59:05Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-08. Source: [history/](history/).
 
 ## Biggest cuts
@@ -32,8 +32,8 @@ Window starts 2026-11-08. Source: [history/](history/).
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
 | io-net | openai/gpt-oss-120b | 0.48 | 1.6 | +233.3% |
+| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.423 | +208.8% |
 | openrouter | z-ai/glm-5.3 | 4.2699 | 10.884 | +154.9% |
-| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.347 | +153.3% |
 | google | google/gemini-3.1-flash-lite | 2.375 | 5.225 | +120.0% |
 | google | google/gemini-3.5-flash | 14.25 | 31.35 | +120.0% |
 | google | google/gemini-3.5-flash-lite | 3.9 | 8.58 | +120.0% |

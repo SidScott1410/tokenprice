@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pytest
 
@@ -138,16 +139,17 @@ def test_update_wires_endpoints(tmp_path, monkeypatch, capsys):
     from tokenprice.scrapers import anthropic_page, openrouter, openrouter_endpoints
     monkeypatch.setattr(openrouter, "fetch", lambda: FIXTURE)
     monkeypatch.setattr(anthropic_page, "fetch", lambda *a, **k: ANTHROPIC_MD)  # no live network in tests
-    from tokenprice.scrapers import openai_page
+    from tokenprice.scrapers import google_page, openai_page
     monkeypatch.setattr(openai_page, "fetch", lambda *a, **k: OPENAI_MD)
+    monkeypatch.setattr(google_page, "fetch", lambda *a, **k: GEMINI_PAGE)
     monkeypatch.setattr(openrouter_endpoints, "fetch", lambda mid, timeout=30: ENDPOINTS)
     monkeypatch.setattr(openrouter_endpoints, "time", type("T", (), {"sleep": staticmethod(lambda s: None)}))
     monkeypatch.setattr(feed, "ROOT", tmp_path)
     assert main(["--update"]) == 0
     info = json.loads(capsys.readouterr().out.strip().splitlines()[-1])
     assert info["endpoint_models"] == 4 and info["endpoint_records"] == 8 and info["endpoint_models_failed"] == 0
-    assert json.loads((tmp_path / "summary.json").read_text())["providers"] == 5  # 3 OpenRouter + anthropic + openai
-    assert info["first_party_records"] == 6 + 8  # anthropic fixture + openai fixture
+    assert json.loads((tmp_path / "summary.json").read_text())["providers"] == 6  # 3 OpenRouter + anthropic + openai + google
+    assert info["first_party_records"] == 6 + 8 + 5  # anthropic + openai + google fixtures
 
 
 def test_spread_survives_price_ties():
@@ -351,3 +353,23 @@ def test_markup_dated_snapshot_not_comparable():
     assert by["openai/gpt-5.4-mini"]["comparable"] and by["openai/gpt-5.4-mini"]["note"] == "pass-through"
     assert not by["openai/gpt-5.4-mini-2026-01-01"]["comparable"]
     assert mk["off_list"] == 0
+
+
+GEMINI_PAGE = (Path(__file__).parent / "fixtures" / "gemini_pricing.md").read_text()
+
+
+def test_google_page_parse():
+    from tokenprice.scrapers import google_page
+    rs = google_page.parse(GEMINI_PAGE, read_at="2026-11-15T00:00:00Z")
+    by = {r.model: r for r in rs}
+    # carbon (promo), 2.5-pro base + long-context (tiered), 2.5-flash (modality), robotics (promo); tts + gemma skipped
+    assert len(rs) == 5 and all(r.provider == "google" and r.provenance == "page" for r in rs)
+    assert by["gemini-4-carbon"].input_per_m == 2.0 and by["gemini-4-carbon"].extra["price_after_promo"] == 20.0
+    assert by["gemini-2-5-pro"].input_per_m == 1.25 and by["gemini-2-5-pro-long-context"].input_per_m == 2.5
+    assert by["gemini-2-5-flash"].input_per_m == 0.3 and by["gemini-2-5-flash"].output_per_m == 2.5  # text, not audio
+    assert by["gemini-2-5-flash"].cached_input_per_m == 0.03
+    assert "gemini-2-5-flash-preview-tts" not in by and "gemma-4" not in by
+    # promo rolls over by read date
+    later = {r.model: r for r in google_page.parse(GEMINI_PAGE, read_at="2026-12-02T00:00:00Z")}
+    assert later["gemini-4-carbon"].input_per_m == 4.0 and later["gemini-4-carbon"].output_per_m == 20.0
+    assert normalize("google/gemini-2.5-pro") == "gemini-2-5-pro"
