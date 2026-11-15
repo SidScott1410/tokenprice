@@ -291,6 +291,8 @@ def test_markup_against_first_party():
     assert feed._markup_note(1.1, False).startswith("regional") and feed._markup_note(2.0, True).startswith("lab fast")
     assert feed._markup_note(0.5, False) == "discount"  # a reseller at half list is a real discount
     assert feed._markup_note(0.5, True).startswith("lab batch")
+    assert feed._markup_note(1.8, True).startswith("lab priority") and feed._markup_note(1.8, False) == "markup"
+    assert "google-ai-studio" in feed._LAB_ALIASES["google"]
 
 
 OPENAI_MD = """

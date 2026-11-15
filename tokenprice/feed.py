@@ -122,8 +122,9 @@ def markup(records: list[Record]) -> dict:
         dated = _DATED.search(raw_id) is not None and raw_id not in first_raw
         key = (r.provider, ratio, raw_id)
         if key not in entry["sellers"]:
+            same_lab = r.provider in _LAB_ALIASES.get(list_provider, {list_provider})
             note = ("dated snapshot, lab page lists no price for this version" if dated
-                    else _markup_note(ratio, r.provider == list_provider))
+                    else _markup_note(ratio, same_lab))
             entry["sellers"][key] = {"provider": r.provider, "model_raw": r.model_raw,
                                      "blended_per_m": round(blended(r), 4), "over_list": ratio,
                                      "endpoints": 0, "comparable": not dated, "note": note}
@@ -138,8 +139,12 @@ def markup(records: list[Record]) -> dict:
 _DATED = re.compile(r"-\d{4}-\d{2}-\d{2}$")
 # Published multipliers. Lab tiers apply only when the seller is the lab itself;
 # cloud regional surcharges apply to any reseller.
-_LAB_TIERS = {0.5: "lab batch / flex tier (documented 0.5x)", 2.0: "lab fast tier (documented 2x)",
-              2.5: "lab fast tier (documented 2.5x)", 6.0: "lab ultrafast tier (documented 6x)"}
+_LAB_TIERS = {0.5: "lab batch / flex tier (documented 0.5x)", 1.8: "lab priority tier (documented 1.8x)",
+              2.0: "lab fast tier (documented 2x)", 2.5: "lab fast tier (documented 2.5x)",
+              6.0: "lab ultrafast tier (documented 6x)"}
+# Lab endpoints that appear under a different provider name on OpenRouter.
+_LAB_ALIASES = {"google": {"google", "google-ai-studio", "google-vertex"}, "openai": {"openai"},
+                "anthropic": {"anthropic"}}
 _CLOUD_TIERS = {1.1: "regional / data-zone surcharge (documented 1.1x)",
                 1.2: "regional deployment surcharge (documented 1.2x)"}
 
