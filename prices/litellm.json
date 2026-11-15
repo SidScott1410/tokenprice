@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "read_at": "2026-11-15T04:59:05Z",
+  "read_at": "2026-11-15T05:05:54Z",
   "source": "tokenprice",
   "url": "https://github.com/SidScott1410/tokenprice"
  },
@@ -2580,12 +2580,12 @@
   "output_cost_per_token": 3.6e-06
  },
  "openrouter/qwen/qwen3.5-9b": {
-  "cache_read_input_token_cost": 1.51e-07,
-  "input_cost_per_token": 1.68e-07,
+  "cache_read_input_token_cost": 1.34e-07,
+  "input_cost_per_token": 1.49e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 2.46e-07
+  "output_cost_per_token": 2.2e-07
  },
  "openrouter/qwen/qwen3.5-flash-02-23": {
   "input_cost_per_token": 6.5e-08,

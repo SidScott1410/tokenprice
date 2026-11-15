@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-15T04:59:05Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-15T05:05:54Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-08. Source: [history/](history/).
 
 ## Biggest cuts
@@ -32,7 +32,7 @@ Window starts 2026-11-08. Source: [history/](history/).
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
 | io-net | openai/gpt-oss-120b | 0.48 | 1.6 | +233.3% |
-| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.423 | +208.8% |
+| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.407 | +197.1% |
 | openrouter | z-ai/glm-5.3 | 4.2699 | 10.884 | +154.9% |
 | google | google/gemini-3.1-flash-lite | 2.375 | 5.225 | +120.0% |
 | google | google/gemini-3.5-flash | 14.25 | 31.35 | +120.0% |
@@ -40,10 +40,10 @@ Window starts 2026-11-08. Source: [history/](history/).
 | google | google/gemini-3.6-flash | 6.0 | 13.2 | +120.0% |
 | google | google/gemini-3.7-flash | 6.0 | 13.2 | +120.0% |
 | google | google/gemini-3.8-flash | 6.0 | 13.2 | +120.0% |
+| primeintellect | qwen/qwen3.6-35b-a3b | 0.314 | 0.672 | +114.0% |
 | openrouter | minimax/minimax-m3.1-flash | 0.975 | 1.95 | +100.0% |
-| alibaba | deepseek/deepseek-v4-flash-0731 | 1.76 | 3.52 | +100.0% |
 
-## New listings (1325)
+## New listings (1344)
 
 - openrouter: google/gemini-4-hydrogen at 24.0
 - openrouter: google/gemini-4-hydrogen:batch at 12.0
