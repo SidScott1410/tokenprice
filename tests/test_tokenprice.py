@@ -138,14 +138,16 @@ def test_update_wires_endpoints(tmp_path, monkeypatch, capsys):
     from tokenprice.scrapers import anthropic_page, openrouter, openrouter_endpoints
     monkeypatch.setattr(openrouter, "fetch", lambda: FIXTURE)
     monkeypatch.setattr(anthropic_page, "fetch", lambda *a, **k: ANTHROPIC_MD)  # no live network in tests
+    from tokenprice.scrapers import openai_page
+    monkeypatch.setattr(openai_page, "fetch", lambda *a, **k: OPENAI_MD)
     monkeypatch.setattr(openrouter_endpoints, "fetch", lambda mid, timeout=30: ENDPOINTS)
     monkeypatch.setattr(openrouter_endpoints, "time", type("T", (), {"sleep": staticmethod(lambda s: None)}))
     monkeypatch.setattr(feed, "ROOT", tmp_path)
     assert main(["--update"]) == 0
     info = json.loads(capsys.readouterr().out.strip().splitlines()[-1])
     assert info["endpoint_models"] == 4 and info["endpoint_records"] == 8 and info["endpoint_models_failed"] == 0
-    assert json.loads((tmp_path / "summary.json").read_text())["providers"] == 4  # 3 OpenRouter + anthropic
-    assert info["first_party_records"] == 6
+    assert json.loads((tmp_path / "summary.json").read_text())["providers"] == 5  # 3 OpenRouter + anthropic + openai
+    assert info["first_party_records"] == 6 + 8  # anthropic fixture + openai fixture
 
 
 def test_spread_survives_price_ties():
@@ -285,3 +287,48 @@ def test_markup_against_first_party():
     assert mk["claude-sonnet-4-5"]["sellers"][0]["over_list"] == 1.0  # pass-through
     assert mk["claude-sonnet-4-5"]["sellers"][0]["note"] == "pass-through"
     assert feed._markup_note(1.1).startswith("regional") and feed._markup_note(2.0).startswith("fast mode")
+
+
+OPENAI_MD = """
+# Pricing
+
+### Standard pricing data
+
+| Model | Short context input | Short context output | Short context cached input | Short context 30m write | Short context 12h write | Long context input | Long context output | Long context cached input | Long context 30m write | Long context 12h write |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| gpt-6-astra | $10.00 | $50.00 | $1.00 | $12.50 | $25.00 | $20.00 | $75.00 | $2.00 | $25.00 | $50.00 |
+| gpt-6.1-sol | $2.00 | $10.00 | $0.10 | $2.50 | $5.00 | $4.00 | $15.00 | $0.20 | $5.00 | $10.00 |
+| gpt-5.5-pro (<272K context length) | $30.00 | $180.00 | - | - | - | $60.00 | $270.00 | - | - | - |
+
+| Model | Input | Output | Cached input |
+| --- | --- | --- | --- |
+| gpt-5.4-mini | $0.75 | $4.50 | $0.075 |
+| gpt-5-pro | $15.00 | $120.00 | - |
+
+### Batch pricing data
+
+| Model | Input | Output | Cached input |
+| --- | --- | --- | --- |
+| gpt-5.4-mini | $0.375 | $2.25 | $0.0375 |
+
+### Grouped Pricing Table data
+
+| Model | Input | Output | Cached input |
+| --- | --- | --- | --- |
+| gpt-realtime | $4.00 | $16.00 | $0.40 |
+"""
+
+
+def test_openai_page_parse():
+    from tokenprice.scrapers import openai_page
+    rs = openai_page.parse(OPENAI_MD, read_at="2026-11-15T00:00:00Z")
+    by = {r.model: r for r in rs}
+    # 3 short + 3 long-context from the wide table, 2 from the narrow table; batch skipped
+    assert len(rs) == 8 and all(r.provider == "openai" and r.provenance == "page" for r in rs)
+    assert by["gpt-6-1-sol"].input_per_m == 2.0 and by["gpt-6-1-sol"].output_per_m == 10.0
+    assert by["gpt-6-1-sol-long-context"].input_per_m == 4.0 and by["gpt-6-1-sol"].cached_input_per_m == 0.10
+    assert by["gpt-5-5-pro"].input_per_m == 30.0 and by["gpt-5-5-pro"].extra["tier_note"] == "<272K context length"
+    assert by["gpt-5-4-mini"].input_per_m == 0.75  # standard, not the 0.375 batch row
+    assert by["gpt-5-pro"].cached_input_per_m is None
+    assert "gpt-realtime" not in by  # unrecognized heading inherits no tier
+    assert normalize("openai/gpt-6.1-sol") == "gpt-6-1-sol"  # OpenRouter id lines up
