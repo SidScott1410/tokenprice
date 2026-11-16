@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-11-15T22:54:09Z",
- "models": 461,
+ "checked_at": "2026-11-16T02:48:06Z",
+ "models": 462,
  "models_with_spread": 160,
  "providers": 82,
- "read_at": "2026-11-15T22:54:09Z",
- "records": 2046,
- "top_spread_model": "deepseek-v4-flash",
- "top_spread_p90_model": "deepseek-v4-flash",
- "top_spread_p90_ratio": 16.03,
- "top_spread_ratio": 18.37
+ "read_at": "2026-11-16T02:48:06Z",
+ "records": 2048,
+ "top_spread_model": "mimo-v2-6-pro",
+ "top_spread_p90_model": "mimo-v2-6-pro",
+ "top_spread_p90_ratio": 12.26,
+ "top_spread_ratio": 12.26
 }
