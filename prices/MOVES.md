@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-16T02:48:06Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-16T11:33:00Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-09. Source: [history/](history/).
 
 ## Biggest cuts
@@ -12,11 +12,11 @@ Window starts 2026-11-09. Source: [history/](history/).
 | openrouter | xiaomi/mimo-v2.5-pro | 5.88 | 3.045 | -48.2% |
 | openrouter | deepseek/deepseek-v4-flash-0731 | 0.9434 | 0.6 | -36.4% |
 | streamlake | deepseek/deepseek-v4-flash-0731 | 1.32 | 0.88 | -33.3% |
+| openrouter | openai/gpt-oss-20b | 0.42 | 0.288 | -31.4% |
 | decart | moonshotai/kimi-k3.1-pro | 28.16 | 19.52 | -30.7% |
 | river | deepseek/deepseek-v4.1-flash-1017 | 1.56 | 1.1232 | -28.0% |
 | openrouter | z-ai/glm-4.5-air | 3.5 | 2.68 | -23.4% |
 | openrouter | z-ai/glm-4.7 | 7.2 | 5.65 | -21.5% |
-| openrouter | google/gemma-4-26b-a4b-it | 0.93 | 0.7425 | -20.2% |
 | river | deepseek/deepseek-v4.1-flash | 1.56 | 1.248 | -20.0% |
 | deepinfra | mistralai/mistral-nemo | 0.119 | 0.0952 | -20.0% |
 | deepinfra | mistralai/mistral-small-24b-instruct-2501 | 0.29 | 0.232 | -20.0% |
@@ -27,23 +27,23 @@ Window starts 2026-11-09. Source: [history/](history/).
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
+| primeintellect | qwen/qwen3.6-35b-a3b | 0.314 | 2.465 | +685.0% |
 | baidu | deepseek/deepseek-v4-flash-0731 | 0.5984 | 4.4 | +635.3% |
-| primeintellect | qwen/qwen3.6-35b-a3b | 0.314 | 1.909 | +508.0% |
+| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.61 | +345.3% |
 | openai | openai/gpt-6-astra | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6-astra-pro | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
 | io-net | openai/gpt-oss-120b | 0.48 | 1.6 | +233.3% |
 | baidu | deepseek/deepseek-v4-flash | 0.3499 | 0.98 | +180.1% |
-| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.383 | +179.6% |
+| primeintellect | openai/gpt-oss-20b | 0.11 | 0.297 | +170.0% |
 | baidu | moonshotai/kimi-k2.6 | 5.3095 | 12.95 | +143.9% |
-| morph | deepseek/deepseek-v4.1-flash-1017 | 1.222 | 2.957 | +142.0% |
-| openrouter | openai/gpt-oss-20b | 0.42 | 0.975 | +132.1% |
-| alibaba | deepseek/deepseek-v4-pro-0813 | 5.808 | 13.2 | +127.3% |
 | google | google/gemini-3.1-flash-lite | 2.375 | 5.225 | +120.0% |
 | google | google/gemini-3.5-flash | 14.25 | 31.35 | +120.0% |
+| google | google/gemini-3.5-flash-lite | 3.9 | 8.58 | +120.0% |
+| google | google/gemini-3.6-flash | 6.0 | 13.2 | +120.0% |
 
-## New listings (1332)
+## New listings (1330)
 
 - openrouter: google/gemini-4-hydrogen at 24.0
 - openrouter: google/gemini-4-hydrogen:batch at 12.0
@@ -76,7 +76,7 @@ Window starts 2026-11-09. Source: [history/](history/).
 - openrouter: unbiased/pareto-26.9 at 25.0
 - openrouter: liquid/lfm-2.5-24b-a2b at 2.15
 
-## Removed listings (44)
+## Removed listings (50)
 
 - nebius: deepseek/deepseek-v4-flash-0731
 - river: z-ai/glm-5.3
@@ -116,10 +116,10 @@ Window starts 2026-11-09. Source: [history/](history/).
 | mimo-v2-6-pro | 5 | 2.2837 | 3.045 | 28.0 | 12.26x |
 | mistral-nemo | 5 | 0.0814 | 0.108 | 0.6 | 7.37x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 1.013 | 7.24x |
-| deepseek-v4-flash-0731 | 23 | 0.79 | 1.36 | 4.4 | 5.57x |
+| deepseek-v4-flash-0731 | 23 | 0.82 | 1.36 | 4.4 | 5.37x |
 | gpt-oss-120b | 22 | 0.48 | 1.29 | 2.35 | 4.9x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
-| deepseek-v4-1-flash-1017:batch | 3 | 0.5 | 1.479 | 1.95 | 3.9x |
-| deepseek-v4-1-flash-1017 | 38 | 1.1232 | 2.6325 | 3.9 | 3.47x |
-| gemma-4-31b-it | 15 | 1.12 | 1.34 | 3.75 | 3.35x |
+| deepseek-v4-1-flash-1017:batch | 3 | 0.5 | 1.027 | 1.95 | 3.9x |
+| deepseek-v4-1-flash-1017 | 37 | 1.1232 | 2.34 | 3.9 | 3.47x |
+| gemma-4-31b-it | 14 | 1.12 | 1.285 | 3.75 | 3.35x |
 | gemma-3-27b-it | 4 | 0.448 | 1.065 | 1.43 | 3.19x |

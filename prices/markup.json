@@ -2678,15 +2678,6 @@
    "off_list": 0,
    "sellers": [
     {
-     "blended_per_m": 285.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.4-pro",
-     "note": "lab batch / flex tier (documented 0.5x)",
-     "over_list": 0.5,
-     "provider": "openai"
-    },
-    {
      "blended_per_m": 570.0,
      "comparable": true,
      "endpoints": 1,
@@ -3640,5 +3631,5 @@
    ]
   }
  },
- "read_at": "2026-11-16T02:48:06Z"
+ "read_at": "2026-11-16T11:33:00Z"
 }
