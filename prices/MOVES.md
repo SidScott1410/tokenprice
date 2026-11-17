@@ -1,49 +1,49 @@
 # Price moves, last 7 days
 
-Generated 2026-11-17T04:34:11Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-17T14:32:19Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-10. Source: [history/](history/).
 
 ## Biggest cuts
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
+| baidu | deepseek/deepseek-v4.1-flash | 3.8961 | 0.6591 | -83.1% |
 | makora | deepseek/deepseek-v4.1-flash-1017 | 3.75 | 1.32 | -64.8% |
-| openrouter | deepseek/deepseek-v4.1-flash | 3.9 | 1.4 | -64.1% |
 | openrouter | z-ai/glm-5.3-flash:batch | 0.59 | 0.231 | -60.8% |
-| primeintellect | google/gemma-4-31b-it | 0.676 | 0.284 | -58.0% |
 | openrouter | ricursiveai/ripple-65b-preview | 2.0 | 1.0 | -50.0% |
 | particle-ai | z-ai/glm-5.3-flash | 1.63 | 0.815 | -50.0% |
+| io-net | qwen/qwen3.8-27b | 5.5 | 2.75 | -50.0% |
 | particle-ai | particle-ai/particle-1 | 1.55 | 0.78 | -49.7% |
 | openrouter | xiaomi/mimo-v2.5-pro | 5.88 | 3.045 | -48.2% |
 | openrouter | z-ai/glm-5.3-prime | 29.2 | 17.52 | -40.0% |
 | alibaba | z-ai/glm-5.3-prime | 29.2 | 17.52 | -40.0% |
 | morph | deepseek/deepseek-v4.1-flash-1017:batch | 0.795 | 0.486 | -38.9% |
 | novita | deepseek/deepseek-v4.1-flash | 2.535 | 1.56 | -38.5% |
-| io-net | qwen/qwen3.8-27b | 5.5 | 3.41 | -38.0% |
 | openrouter | z-ai/glm-5.3:batch | 6.45 | 4.031 | -37.5% |
 | sail-research | deepseek/deepseek-v4.1-flash-1017 | 0.3967 | 0.25 | -37.0% |
+| openrouter | deepseek/deepseek-v4-flash-0731 | 0.9434 | 0.6 | -36.4% |
 
 ## Biggest rises
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
-| baidu | deepseek/deepseek-v4-flash-0731 | 0.5984 | 4.4 | +635.3% |
-| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 0.593 | +332.8% |
-| primeintellect | qwen/qwen3.6-35b-a3b | 0.314 | 1.281 | +308.0% |
+| primeintellect | openai/gpt-oss-20b | 0.11 | 1.1 | +900.0% |
+| primeintellect | qwen/qwen3.6-35b-a3b | 0.314 | 3.14 | +900.0% |
+| primeintellect | google/gemma-4-26b-a4b-it | 0.137 | 1.0 | +629.9% |
+| openrouter | z-ai/glm-5.3-flash | 0.2751 | 1.65 | +499.8% |
 | openai | openai/gpt-6-astra | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6-astra-pro | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
 | io-net | openai/gpt-oss-120b | 0.48 | 1.6 | +233.3% |
-| baidu | deepseek/deepseek-v4-flash | 0.3499 | 0.98 | +180.1% |
-| baidu | moonshotai/kimi-k2.6 | 5.3095 | 12.95 | +143.9% |
-| alibaba | deepseek/deepseek-v4-pro-0813 | 5.808 | 13.2 | +127.3% |
+| nextbit | google/gemma-3-12b-it | 0.525 | 1.7 | +223.8% |
 | google | google/gemini-3.1-flash-lite | 2.375 | 5.225 | +120.0% |
 | google | google/gemini-3.5-flash | 14.25 | 31.35 | +120.0% |
 | google | google/gemini-3.5-flash-lite | 3.9 | 8.58 | +120.0% |
 | google | google/gemini-3.6-flash | 6.0 | 13.2 | +120.0% |
+| google | google/gemini-3.7-flash | 6.0 | 13.2 | +120.0% |
 
-## New listings (1327)
+## New listings (1322)
 
 - openrouter: google/gemini-4-hydrogen at 24.0
 - openrouter: google/gemini-4-hydrogen:batch at 12.0
@@ -114,12 +114,12 @@ Window starts 2026-11-10. Source: [history/](history/).
 | model | providers | p10 | median | p90 | p90/p10 |
 |---|---|---|---|---|---|
 | mimo-v2-6-pro | 5 | 2.2837 | 3.045 | 28.0 | 12.26x |
-| mistral-nemo | 5 | 0.0757 | 0.108 | 0.6 | 7.92x |
+| mistral-nemo | 5 | 0.0814 | 0.108 | 0.6 | 7.37x |
+| deepseek-v4-flash-0731 | 23 | 0.5984 | 1.32 | 4.4 | 7.35x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 1.013 | 7.24x |
-| gemma-4-31b-it | 15 | 0.64 | 1.34 | 3.75 | 5.86x |
 | glm-5-3-flash:batch | 4 | 0.231 | 0.7075 | 1.32 | 5.71x |
-| deepseek-v4-flash-0731 | 23 | 0.83 | 1.36 | 4.4 | 5.3x |
 | gpt-oss-120b | 21 | 0.48 | 1.26 | 2.35 | 4.9x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
+| gemma-3-12b-it | 2 | 0.4 | 1.05 | 1.7 | 4.25x |
 | deepseek-v4-1-flash-1017:batch | 3 | 0.486 | 0.5 | 1.95 | 4.01x |
-| deepseek-v4-1-flash-1017 | 39 | 0.98 | 2.18 | 3.9 | 3.98x |
+| deepseek-v4-1-flash-1017 | 39 | 0.98 | 1.9634 | 3.9 | 3.98x |

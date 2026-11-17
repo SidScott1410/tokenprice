@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "read_at": "2026-11-17T04:34:11Z",
+  "read_at": "2026-11-17T14:32:19Z",
   "source": "tokenprice",
   "url": "https://github.com/SidScott1410/tokenprice"
  },
@@ -533,12 +533,12 @@
   "output_cost_per_token": 4.44e-06
  },
  "openrouter/deepseek/deepseek-v4.1-flash": {
-  "cache_read_input_token_cost": 4.2e-09,
-  "input_cost_per_token": 1.4e-07,
+  "cache_read_input_token_cost": 6e-09,
+  "input_cost_per_token": 3e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 4.2e-07
+  "output_cost_per_token": 1.2e-06
  },
  "openrouter/deepseek/deepseek-v4.1-flash-1017": {
   "cache_read_input_token_cost": 1e-08,
@@ -898,12 +898,12 @@
   "output_cost_per_token": 1e-07
  },
  "openrouter/google/gemma-4-26b-a4b-it": {
-  "cache_read_input_token_cost": 4.25e-08,
-  "input_cost_per_token": 7.65e-08,
+  "cache_read_input_token_cost": 5e-08,
+  "input_cost_per_token": 9e-08,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 2.55e-07
+  "output_cost_per_token": 3e-07
  },
  "openrouter/google/gemma-4-31b-it": {
   "input_cost_per_token": 2e-07,
@@ -1417,11 +1417,11 @@
  },
  "openrouter/moonshotai/kimi-k2.7-code": {
   "cache_read_input_token_cost": 1.6e-07,
-  "input_cost_per_token": 6e-07,
+  "input_cost_per_token": 7e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 3.5e-06
+  "output_cost_per_token": 3.75e-06
  },
  "openrouter/moonshotai/kimi-k3": {
   "cache_read_input_token_cost": 1.82e-07,
@@ -2274,12 +2274,12 @@
   "output_cost_per_token": 1.36e-07
  },
  "openrouter/openai/gpt-oss-20b": {
-  "cache_read_input_token_cost": 3e-08,
-  "input_cost_per_token": 3e-08,
+  "cache_read_input_token_cost": 9e-09,
+  "input_cost_per_token": 1.8e-08,
   "litellm_provider": "openrouter",
   "max_input_tokens": 131072,
   "mode": "chat",
-  "output_cost_per_token": 1.3e-07
+  "output_cost_per_token": 9e-08
  },
  "openrouter/openai/gpt-oss-20b:batch": {
   "input_cost_per_token": 2.4e-08,
@@ -2574,12 +2574,12 @@
   "output_cost_per_token": 3e-06
  },
  "openrouter/qwen/qwen3.5-9b": {
-  "cache_read_input_token_cost": 9.6e-08,
-  "input_cost_per_token": 1.06e-07,
+  "cache_read_input_token_cost": 1.53e-07,
+  "input_cost_per_token": 1.7e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 1.57e-07
+  "output_cost_per_token": 2.5e-07
  },
  "openrouter/qwen/qwen3.5-flash-02-23": {
   "input_cost_per_token": 6.5e-08,
@@ -3249,11 +3249,11 @@
  },
  "openrouter/z-ai/glm-5.3-flash": {
   "cache_read_input_token_cost": 3e-08,
-  "input_cost_per_token": 3.99e-08,
+  "input_cost_per_token": 1.5e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 7.84e-08
+  "output_cost_per_token": 5e-07
  },
  "openrouter/z-ai/glm-5.3-flash:batch": {
   "cache_read_input_token_cost": 1e-08,
