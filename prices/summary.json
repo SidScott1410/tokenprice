@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-11-17T14:32:19Z",
- "models": 464,
- "models_with_spread": 161,
+ "checked_at": "2026-11-17T22:56:34Z",
+ "models": 474,
+ "models_with_spread": 165,
  "providers": 83,
- "read_at": "2026-11-17T14:32:19Z",
- "records": 2062,
- "top_spread_model": "deepseek-v4-1-flash-1017",
+ "read_at": "2026-11-17T22:56:34Z",
+ "records": 2104,
+ "top_spread_model": "qwen3-6-35b-a3b",
  "top_spread_p90_model": "deepseek-v4-1-flash-1017",
  "top_spread_p90_ratio": 15.6,
- "top_spread_ratio": 15.6
+ "top_spread_ratio": 17.79
 }

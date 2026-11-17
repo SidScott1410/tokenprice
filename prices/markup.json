@@ -3220,10 +3220,19 @@
     {
      "blended_per_m": 35.2,
      "comparable": true,
-     "endpoints": 2,
+     "endpoints": 1,
      "model_raw": "openai/gpt-6.1-sol",
      "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 38.4,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-sol",
+     "note": "regional deployment surcharge (documented 1.2x)",
+     "over_list": 1.2,
      "provider": "azure"
     },
     {
@@ -3321,6 +3330,182 @@
      "model_raw": "openai/gpt-6.1-terra",
      "note": "lab fast tier (documented 2x)",
      "over_list": 2.0,
+     "provider": "openai"
+    }
+   ]
+  },
+  "gpt-6-2-astra": {
+   "list_blended_per_m": 128.0,
+   "list_provider": "openai",
+   "off_list": 1,
+   "sellers": [
+    {
+     "blended_per_m": 128.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 128.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 128.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openai"
+    },
+    {
+     "blended_per_m": 128.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 140.8,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 140.8,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
+     "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 153.6,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "regional deployment surcharge (documented 1.2x)",
+     "over_list": 1.2,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 256.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "lab fast tier (documented 2x)",
+     "over_list": 2.0,
+     "provider": "openai"
+    },
+    {
+     "blended_per_m": 384.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "markup",
+     "over_list": 3.0,
+     "provider": "openai"
+    }
+   ]
+  },
+  "gpt-6-2-sol": {
+   "list_blended_per_m": 32.0,
+   "list_provider": "openai",
+   "off_list": 1,
+   "sellers": [
+    {
+     "blended_per_m": 32.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 32.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 32.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openai"
+    },
+    {
+     "blended_per_m": 32.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 35.2,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
+     "over_list": 1.1,
+     "provider": "amazon-bedrock"
+    },
+    {
+     "blended_per_m": 35.2,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "regional / data-zone surcharge (documented 1.1x)",
+     "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 38.4,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "regional deployment surcharge (documented 1.2x)",
+     "over_list": 1.2,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 64.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "lab fast tier (documented 2x)",
+     "over_list": 2.0,
+     "provider": "openai"
+    },
+    {
+     "blended_per_m": 96.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "markup",
+     "over_list": 3.0,
      "provider": "openai"
     }
    ]
@@ -3475,10 +3660,19 @@
     {
      "blended_per_m": 1.76,
      "comparable": true,
-     "endpoints": 2,
+     "endpoints": 1,
      "model_raw": "openai/gpt-6-luna",
      "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 1.92,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6-luna",
+     "note": "regional deployment surcharge (documented 1.2x)",
+     "over_list": 1.2,
      "provider": "azure"
     },
     {
@@ -3554,10 +3748,19 @@
     {
      "blended_per_m": 35.2,
      "comparable": true,
-     "endpoints": 2,
+     "endpoints": 1,
      "model_raw": "openai/gpt-6-sol",
      "note": "regional / data-zone surcharge (documented 1.1x)",
      "over_list": 1.1,
+     "provider": "azure"
+    },
+    {
+     "blended_per_m": 38.4,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6-sol",
+     "note": "regional deployment surcharge (documented 1.2x)",
+     "over_list": 1.2,
      "provider": "azure"
     },
     {
@@ -3622,5 +3825,5 @@
    ]
   }
  },
- "read_at": "2026-11-17T14:32:19Z"
+ "read_at": "2026-11-17T22:56:34Z"
 }
