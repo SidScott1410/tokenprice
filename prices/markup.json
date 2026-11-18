@@ -12,15 +12,6 @@
      "model_raw": "anthropic/claude-fable-5",
      "note": "pass-through",
      "over_list": 1.0,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 160.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-fable-5",
-     "note": "pass-through",
-     "over_list": 1.0,
      "provider": "anthropic"
     },
     {
@@ -58,15 +49,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 176.0,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-fable-5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -75,15 +57,6 @@
    "list_provider": "anthropic",
    "off_list": 0,
    "sellers": [
-    {
-     "blended_per_m": 160.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-fable-5.1",
-     "note": "pass-through",
-     "over_list": 1.0,
-     "provider": "amazon-bedrock"
-    },
     {
      "blended_per_m": 160.0,
      "comparable": true,
@@ -119,15 +92,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 176.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-fable-5.1",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -136,15 +100,6 @@
    "list_provider": "anthropic",
    "off_list": 0,
    "sellers": [
-    {
-     "blended_per_m": 128.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-fable-5.2",
-     "note": "pass-through",
-     "over_list": 1.0,
-     "provider": "amazon-bedrock"
-    },
     {
      "blended_per_m": 128.0,
      "comparable": true,
@@ -241,24 +196,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 17.6,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-haiku-4.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 17.6,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-haiku-4.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -320,33 +257,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 1.76,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-haiku-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 1.76,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-haiku-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 1.76,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-haiku-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -433,15 +343,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-opus-4.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
     }
    ]
   },
@@ -503,15 +404,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-opus-4.6",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -573,24 +465,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-opus-4.7",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-opus-4.7",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -652,33 +526,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-opus-4.8",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-opus-4.8",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-opus-4.8",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     },
     {
      "blended_per_m": 160.0,
@@ -751,33 +598,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-opus-5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-opus-5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 88.0,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-opus-5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
      "blended_per_m": 160.0,
      "comparable": true,
      "endpoints": 1,
@@ -848,33 +668,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 70.4,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-opus-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 70.4,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-opus-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 70.4,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-opus-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
      "blended_per_m": 128.0,
      "comparable": true,
      "endpoints": 1,
@@ -943,24 +736,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 52.8,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-sonnet-4.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 52.8,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-sonnet-4.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -1022,24 +797,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 52.8,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-sonnet-4.6",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 52.8,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-sonnet-4.6",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -1101,33 +858,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-sonnet-5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-sonnet-5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-sonnet-5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -1189,33 +919,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-sonnet-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "anthropic/claude-sonnet-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "anthropic/claude-sonnet-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     }
    ]
   },
@@ -1399,15 +1102,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 5.225,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "google/gemini-3.1-flash-lite",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
      "blended_per_m": 8.55,
      "comparable": true,
      "endpoints": 1,
@@ -1548,15 +1242,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 8.58,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "google/gemini-3.5-flash-lite",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
      "blended_per_m": 14.04,
      "comparable": true,
      "endpoints": 1,
@@ -1627,15 +1312,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 13.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "google/gemini-3.6-flash",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
      "blended_per_m": 21.6,
      "comparable": true,
      "endpoints": 1,
@@ -1695,15 +1371,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "google-ai-studio"
-    },
-    {
-     "blended_per_m": 13.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "google/gemini-3.8-flash",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     },
     {
      "blended_per_m": 13.2,
@@ -1846,15 +1513,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "google/gemini-4-argon",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
      "blended_per_m": 57.6,
      "comparable": true,
      "endpoints": 1,
@@ -1914,15 +1572,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "google/gemini-4-carbon",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
     },
     {
      "blended_per_m": 57.6,
@@ -1986,15 +1635,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 26.4,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "google/gemini-4-hydrogen",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "google"
-    },
-    {
      "blended_per_m": 43.2,
      "comparable": true,
      "endpoints": 1,
@@ -2008,6 +1648,67 @@
      "comparable": true,
      "endpoints": 1,
      "model_raw": "google/gemini-4-hydrogen",
+     "note": "lab priority tier (documented 1.8x)",
+     "over_list": 1.8,
+     "provider": "google-ai-studio"
+    }
+   ]
+  },
+  "gemini-4-neon": {
+   "list_blended_per_m": 48.0,
+   "list_provider": "google",
+   "off_list": 0,
+   "sellers": [
+    {
+     "blended_per_m": 24.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "google/gemini-4-neon",
+     "note": "lab batch / flex tier (documented 0.5x)",
+     "over_list": 0.5,
+     "provider": "google-ai-studio"
+    },
+    {
+     "blended_per_m": 48.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "google/gemini-4-neon",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 48.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "google/gemini-4-neon",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "google-ai-studio"
+    },
+    {
+     "blended_per_m": 48.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "google/gemini-4-neon",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "openrouter"
+    },
+    {
+     "blended_per_m": 86.4,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "google/gemini-4-neon",
+     "note": "lab priority tier (documented 1.8x)",
+     "over_list": 1.8,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 86.4,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "google/gemini-4-neon",
      "note": "lab priority tier (documented 1.8x)",
      "over_list": 1.8,
      "provider": "google-ai-studio"
@@ -2095,15 +1796,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 28.6,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-4.1",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     }
    ]
   },
@@ -2138,15 +1830,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 5.72,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-4.1-mini",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     }
    ]
   },
@@ -2296,15 +1979,6 @@
      "note": "dated snapshot, lab page lists no price for this version",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 2.145,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-4o-mini",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     }
    ]
   },
@@ -2339,15 +2013,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 34.375,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     }
    ]
   },
@@ -2391,15 +2056,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 34.375,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.1",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     },
     {
      "blended_per_m": 62.5,
@@ -2531,24 +2187,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 52.25,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.4",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 52.25,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "openai/gpt-5.4",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 95.0,
      "comparable": true,
      "endpoints": 1,
@@ -2601,15 +2239,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 15.675,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.4-mini",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 28.5,
      "comparable": true,
      "endpoints": 1,
@@ -2660,15 +2289,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 4.345,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.4-nano",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     }
    ]
   },
@@ -2746,24 +2366,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 104.5,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 104.5,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "openai/gpt-5.5",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     },
     {
      "blended_per_m": 237.5,
@@ -2852,24 +2454,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 4.18,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.6-luna",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 4.18,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "openai/gpt-5.6-luna",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 7.6,
      "comparable": true,
      "endpoints": 1,
@@ -2931,24 +2515,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 70.4,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.6-sol",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 70.4,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "openai/gpt-5.6-sol",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 128.0,
      "comparable": true,
      "endpoints": 1,
@@ -3001,24 +2567,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 41.8,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5.6-terra",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 41.8,
-     "comparable": true,
-     "endpoints": 2,
-     "model_raw": "openai/gpt-5.6-terra",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 76.0,
      "comparable": true,
      "endpoints": 1,
@@ -3069,15 +2617,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 6.875,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5-mini",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     }
    ]
   },
@@ -3121,15 +2660,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 1.375,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-5-nano",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
     }
    ]
   },
@@ -3209,33 +2739,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.1-sol",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.1-sol",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 38.4,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.1-sol",
-     "note": "regional deployment surcharge (documented 1.2x)",
-     "over_list": 1.2,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 64.0,
      "comparable": true,
      "endpoints": 1,
@@ -3297,33 +2800,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 17.6,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.1-terra",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 17.6,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.1-terra",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 19.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.1-terra",
-     "note": "regional deployment surcharge (documented 1.2x)",
-     "over_list": 1.2,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 32.0,
      "comparable": true,
      "endpoints": 1,
@@ -3374,33 +2850,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 140.8,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.2-astra",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 140.8,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.2-astra",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 153.6,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.2-astra",
-     "note": "regional deployment surcharge (documented 1.2x)",
-     "over_list": 1.2,
-     "provider": "azure"
     },
     {
      "blended_per_m": 256.0,
@@ -3462,33 +2911,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.2-sol",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.2-sol",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 38.4,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6.2-sol",
-     "note": "regional deployment surcharge (documented 1.2x)",
-     "over_list": 1.2,
-     "provider": "azure"
     },
     {
      "blended_per_m": 64.0,
@@ -3561,24 +2983,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 176.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6-astra",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 176.0,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6-astra",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 320.0,
      "comparable": true,
      "endpoints": 1,
@@ -3649,33 +3053,6 @@
      "provider": "openrouter"
     },
     {
-     "blended_per_m": 1.76,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6-luna",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 1.76,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6-luna",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 1.92,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6-luna",
-     "note": "regional deployment surcharge (documented 1.2x)",
-     "over_list": 1.2,
-     "provider": "azure"
-    },
-    {
      "blended_per_m": 3.2,
      "comparable": true,
      "endpoints": 1,
@@ -3735,33 +3112,6 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "openrouter"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6-sol",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "amazon-bedrock"
-    },
-    {
-     "blended_per_m": 35.2,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6-sol",
-     "note": "regional / data-zone surcharge (documented 1.1x)",
-     "over_list": 1.1,
-     "provider": "azure"
-    },
-    {
-     "blended_per_m": 38.4,
-     "comparable": true,
-     "endpoints": 1,
-     "model_raw": "openai/gpt-6-sol",
-     "note": "regional deployment surcharge (documented 1.2x)",
-     "over_list": 1.2,
-     "provider": "azure"
     },
     {
      "blended_per_m": 64.0,
@@ -3825,5 +3175,5 @@
    ]
   }
  },
- "read_at": "2026-11-18T14:08:16Z"
+ "read_at": "2026-11-18T22:01:52Z"
 }
