@@ -1,9 +1,9 @@
 {
- "checked_at": "2026-11-19T03:35:51Z",
+ "checked_at": "2026-11-19T13:20:31Z",
  "models": 476,
  "models_with_spread": 163,
  "providers": 84,
- "read_at": "2026-11-19T03:35:51Z",
+ "read_at": "2026-11-19T13:20:31Z",
  "records": 1943,
  "top_spread_model": "mimo-v2-6-pro",
  "top_spread_p90_model": "mimo-v2-6-pro",
