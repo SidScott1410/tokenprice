@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "read_at": "2026-11-18T22:01:52Z",
+  "read_at": "2026-11-19T03:35:51Z",
   "source": "tokenprice",
   "url": "https://github.com/SidScott1410/tokenprice"
  },
@@ -492,12 +492,12 @@
   "output_cost_per_token": 1.8e-07
  },
  "openrouter/deepseek/deepseek-v4-flash-0731": {
-  "cache_read_input_token_cost": 1.5e-08,
-  "input_cost_per_token": 6e-08,
+  "cache_read_input_token_cost": 3.5e-08,
+  "input_cost_per_token": 4.7e-08,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 1.8e-07
+  "output_cost_per_token": 3e-07
  },
  "openrouter/deepseek/deepseek-v4-flash-0731:batch": {
   "cache_read_input_token_cost": 1.2e-08,
@@ -532,20 +532,20 @@
   "output_cost_per_token": 4.44e-06
  },
  "openrouter/deepseek/deepseek-v4.1-flash": {
-  "cache_read_input_token_cost": 1.014e-09,
-  "input_cost_per_token": 5.07e-08,
+  "cache_read_input_token_cost": 6e-09,
+  "input_cost_per_token": 3e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 2.028e-07
+  "output_cost_per_token": 1.2e-06
  },
  "openrouter/deepseek/deepseek-v4.1-flash-1017": {
-  "cache_read_input_token_cost": 3e-09,
-  "input_cost_per_token": 1.5e-07,
+  "cache_read_input_token_cost": 6e-09,
+  "input_cost_per_token": 3e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 6e-07
+  "output_cost_per_token": 1.2e-06
  },
  "openrouter/deepseek/deepseek-v4.1-flash-1017:batch": {
   "cache_read_input_token_cost": 3e-09,
@@ -898,12 +898,11 @@
   "output_cost_per_token": 1.5e-07
  },
  "openrouter/google/gemma-3-27b-it": {
-  "cache_read_input_token_cost": 4e-08,
   "input_cost_per_token": 8e-08,
   "litellm_provider": "openrouter",
   "max_input_tokens": 131072,
   "mode": "chat",
-  "output_cost_per_token": 4.5e-07
+  "output_cost_per_token": 1.6e-07
  },
  "openrouter/google/gemma-3-4b-it": {
   "input_cost_per_token": 5e-08,
@@ -1200,12 +1199,12 @@
   "output_cost_per_token": 1.2e-06
  },
  "openrouter/minimax/minimax-m3.1-flash": {
-  "cache_read_input_token_cost": 7.5e-09,
-  "input_cost_per_token": 7.5e-08,
+  "cache_read_input_token_cost": 1.5e-08,
+  "input_cost_per_token": 1.5e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 3e-07
+  "output_cost_per_token": 6e-07
  },
  "openrouter/minimax/minimax-m3:batch": {
   "cache_read_input_token_cost": 4.48e-08,
@@ -1446,12 +1445,12 @@
   "output_cost_per_token": 1.6e-05
  },
  "openrouter/moonshotai/kimi-k3.1-pro": {
-  "cache_read_input_token_cost": 2e-07,
-  "input_cost_per_token": 2.403e-07,
+  "cache_read_input_token_cost": 1.8e-07,
+  "input_cost_per_token": 2.53e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 8.4023e-06
+  "output_cost_per_token": 8.8e-06
  },
  "openrouter/moonshotai/kimi-k3.1-pro:batch": {
   "cache_read_input_token_cost": 1e-07,
@@ -2630,11 +2629,11 @@
   "output_cost_per_token": 2.08e-06
  },
  "openrouter/qwen/qwen3.5-27b": {
-  "input_cost_per_token": 3e-07,
+  "input_cost_per_token": 1.95e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 2.4e-06
+  "output_cost_per_token": 1.56e-06
  },
  "openrouter/qwen/qwen3.5-35b-a3b": {
   "cache_read_input_token_cost": 5e-08,
@@ -2653,12 +2652,12 @@
   "output_cost_per_token": 3e-06
  },
  "openrouter/qwen/qwen3.5-9b": {
-  "cache_read_input_token_cost": 1.53e-07,
-  "input_cost_per_token": 1.7e-07,
+  "cache_read_input_token_cost": 1.38e-07,
+  "input_cost_per_token": 1.54e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 2.5e-07
+  "output_cost_per_token": 2.26e-07
  },
  "openrouter/qwen/qwen3.5-flash-02-23": {
   "input_cost_per_token": 6.5e-08,
@@ -2813,8 +2812,8 @@
   "output_cost_per_token": 4.275e-06
  },
  "openrouter/reflection/beam-1.0-501b-a23b": {
-  "cache_read_input_token_cost": 4e-08,
-  "input_cost_per_token": 3e-07,
+  "cache_read_input_token_cost": 5e-08,
+  "input_cost_per_token": 2.5e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
@@ -2954,12 +2953,12 @@
   "output_cost_per_token": 2.95e-07
  },
  "openrouter/tencent/hy3": {
-  "cache_read_input_token_cost": 2.0625e-08,
-  "input_cost_per_token": 8.25e-08,
+  "cache_read_input_token_cost": 3.3e-08,
+  "input_cost_per_token": 1.32e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 3.3e-07
+  "output_cost_per_token": 5.28e-07
  },
  "openrouter/tencent/hy3-preview": {
   "cache_read_input_token_cost": 6e-08,
@@ -2986,12 +2985,12 @@
   "output_cost_per_token": 1.405e-07
  },
  "openrouter/tencent/hy4-preview": {
-  "cache_read_input_token_cost": 3.78e-08,
-  "input_cost_per_token": 7.506e-07,
+  "cache_read_input_token_cost": 4.2e-08,
+  "input_cost_per_token": 8.34e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 2.2509e-06
+  "output_cost_per_token": 2.501e-06
  },
  "openrouter/thedrummer/cydonia-24b-v4.1": {
   "cache_read_input_token_cost": 1.5e-07,
@@ -3295,20 +3294,20 @@
   "output_cost_per_token": 4e-06
  },
  "openrouter/z-ai/glm-5.1": {
-  "cache_read_input_token_cost": 2.6e-07,
-  "input_cost_per_token": 1.4e-06,
+  "cache_read_input_token_cost": 6e-07,
+  "input_cost_per_token": 1.19e-06,
   "litellm_provider": "openrouter",
   "max_input_tokens": 204800,
   "mode": "chat",
-  "output_cost_per_token": 4.4e-06
+  "output_cost_per_token": 3.74e-06
  },
  "openrouter/z-ai/glm-5.2": {
-  "cache_read_input_token_cost": 1.4e-07,
-  "input_cost_per_token": 6.2e-07,
+  "cache_read_input_token_cost": 6e-09,
+  "input_cost_per_token": 7e-09,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 2.42e-06
+  "output_cost_per_token": 6.8e-06
  },
  "openrouter/z-ai/glm-5.2:batch": {
   "cache_read_input_token_cost": 1.09e-07,
@@ -3432,7 +3431,7 @@
  },
  "openrouter/~deepseek/deepseek-v4-flash-latest": {
   "cache_read_input_token_cost": 3.5e-08,
-  "input_cost_per_token": 4.34e-08,
+  "input_cost_per_token": 4.7e-08,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
