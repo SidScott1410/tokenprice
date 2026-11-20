@@ -1,27 +1,27 @@
 # Price moves, last 7 days
 
-Generated 2026-11-20T13:00:20Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-20T21:12:09Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-13. Source: [history/](history/).
 
 ## Biggest cuts
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
+| baidu | deepseek/deepseek-v4-flash-0731 | 4.4 | 0.44 | -90.0% |
+| baidu | deepseek/deepseek-v4-pro-0813 | 13.2 | 1.32 | -90.0% |
 | openrouter | z-ai/glm-5.3-flash | 1.65 | 0.2751 | -83.3% |
 | baidu | deepseek/deepseek-v4.1-flash | 3.9 | 0.6591 | -83.1% |
+| baidu | deepseek/deepseek-v4-flash | 0.98 | 0.2097 | -78.6% |
 | together | deepseek/deepseek-v4.1-flash-1017:batch | 1.95 | 0.482 | -75.3% |
 | together | z-ai/glm-5.3-flash:batch | 0.825 | 0.227 | -72.5% |
-| openrouter | openai/gpt-oss-20b | 0.975 | 0.288 | -70.5% |
+| openrouter | openai/gpt-oss-20b | 0.975 | 0.272 | -72.1% |
+| primalabs | nvidia/nemotron-3.5-super-vl | 4.75 | 1.65 | -65.3% |
+| streamlake | deepseek/deepseek-v4-flash | 0.5782 | 0.2097 | -63.7% |
 | openrouter | z-ai/glm-5.3 | 10.88 | 4.2699 | -60.8% |
-| openrouter | google/gemma-3-27b-it | 1.43 | 0.56 | -60.8% |
+| openrouter | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.536 | -60.6% |
+| baidu | deepseek/deepseek-v4-pro | 11.83 | 4.7675 | -59.7% |
 | baidu | moonshotai/kimi-k2.6 | 12.95 | 5.3095 | -59.0% |
-| inceptron | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.9 | -51.3% |
-| openrouter | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.95 | -50.0% |
-| deepseek | deepseek/deepseek-v4-pro-0813 | 13.2 | 6.6 | -50.0% |
-| deepseek | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.95 | -50.0% |
-| io-net | qwen/qwen3.8-27b | 5.5 | 2.75 | -50.0% |
-| particle-ai | z-ai/glm-5.3-flash | 1.62 | 0.815 | -49.7% |
-| baidu | deepseek/deepseek-v4.1-flash-1017 | 3.67 | 1.9634 | -46.5% |
+| alibaba | deepseek/deepseek-v4.1-flash | 2.73 | 1.17 | -57.1% |
 
 ## Biggest rises
 
@@ -29,21 +29,21 @@ Window starts 2026-11-13. Source: [history/](history/).
 |---|---|---|---|---|
 | primeintellect | openai/gpt-oss-20b | 0.132 | 1.1 | +733.3% |
 | primeintellect | qwen/qwen3.6-35b-a3b | 0.382 | 3.14 | +722.0% |
-| baidu | z-ai/glm-5.2 | 1.971 | 14.6 | +640.7% |
-| primeintellect | openai/gpt-oss-120b | 0.354 | 2.6 | +634.5% |
 | primeintellect | qwen/qwen3.8-27b | 1.385 | 10.05 | +625.6% |
+| primeintellect | openai/gpt-oss-120b | 0.354 | 2.42 | +583.6% |
+| venice | deepseek/deepseek-v4.1-flash | 3.9 | 19.5 | +400.0% |
 | openai | openai/gpt-6-astra | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6-astra-pro | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
-| wafer | deepseek/deepseek-v4-pro-0813 | 13.431 | 51.42 | +282.8% |
+| openrouter | deepseek/deepseek-v4.1-flash | 1.222 | 3.9 | +219.1% |
 | io-net | nvidia/nemotron-3.5-super-vl | 3.0 | 7.65 | +155.0% |
 | sambanova | minimax/minimax-m3.1-flash | 0.78 | 1.95 | +150.0% |
 | baidu | z-ai/glm-5.3 | 5.9422 | 14.6 | +145.7% |
 | morph | z-ai/glm-5.3 | 7.102 | 15.673 | +120.7% |
-| streamlake | z-ai/glm-5.2 | 2.92 | 6.3933 | +119.0% |
+| particle-ai | deepseek/deepseek-v4.1-flash-1017 | 0.785 | 1.71 | +117.8% |
 
-## New listings (213)
+## New listings (222)
 
 - openrouter: xiaomi/mimo-v2.5-pro at 3.045
 - nebius: thinkingmachines/inkling-2-small at 3.3
@@ -76,7 +76,7 @@ Window starts 2026-11-13. Source: [history/](history/).
 - openrouter: ricursiveai/ripple-65b-preview at 1.0
 - io-net: google/gemma-4-26b-a4b-it at 0.937
 
-## Removed listings (135)
+## Removed listings (169)
 
 - tenstorrent: z-ai/glm-5.3
 - modal: thinkingmachines/inkling-2-small
@@ -113,13 +113,13 @@ Window starts 2026-11-13. Source: [history/](history/).
 
 | model | providers | p10 | median | p90 | p90/p10 |
 |---|---|---|---|---|---|
-| mimo-v2-6-pro | 5 | 2.2837 | 3.045 | 18.48 | 8.09x |
+| deepseek-v4-flash-0731 | 21 | 0.49 | 0.98 | 4.4 | 8.98x |
+| deepseek-v4-flash | 12 | 0.2097 | 0.9665 | 1.65 | 7.87x |
 | mistral-nemo | 5 | 0.0814 | 0.108 | 0.6 | 7.37x |
+| mimo-v2-6-pro | 4 | 2.736 | 3.045 | 18.48 | 6.75x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 0.88 | 6.29x |
 | glm-5-3-flash:batch | 4 | 0.227 | 0.4105 | 1.32 | 5.81x |
-| deepseek-v4-flash-0731 | 22 | 0.77 | 1.185 | 4.4 | 5.71x |
-| gpt-oss-120b | 21 | 0.54 | 1.32 | 2.6 | 4.81x |
+| gpt-oss-120b | 20 | 0.54 | 1.46 | 2.42 | 4.48x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
 | gemma-3-12b-it | 2 | 0.4 | 1.05 | 1.7 | 4.25x |
-| nemotron-3-5-super-vl | 11 | 1.3 | 1.65 | 4.75 | 3.65x |
 | gpt-oss-20b | 10 | 0.288 | 0.4645 | 0.975 | 3.39x |

@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-11-20T13:00:20Z",
- "models": 476,
- "models_with_spread": 164,
- "providers": 84,
- "read_at": "2026-11-20T13:00:20Z",
- "records": 1938,
- "top_spread_model": "deepseek-v4-flash-0731",
+ "checked_at": "2026-11-20T21:12:09Z",
+ "models": 475,
+ "models_with_spread": 162,
+ "providers": 83,
+ "read_at": "2026-11-20T21:12:09Z",
+ "records": 1908,
+ "top_spread_model": "deepseek-v4-pro-0813",
  "top_spread_p90_model": "deepseek-v4-flash-0731",
- "top_spread_p90_ratio": 9.17,
- "top_spread_ratio": 9.17
+ "top_spread_p90_ratio": 10.0,
+ "top_spread_ratio": 18.26
 }
