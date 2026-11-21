@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "read_at": "2026-11-20T21:12:09Z",
+  "read_at": "2026-11-21T02:23:50Z",
   "source": "tokenprice",
   "url": "https://github.com/SidScott1410/tokenprice"
  },
@@ -531,20 +531,20 @@
   "output_cost_per_token": 3.96e-06
  },
  "openrouter/deepseek/deepseek-v4.1-flash": {
-  "cache_read_input_token_cost": 6e-09,
-  "input_cost_per_token": 3e-07,
+  "cache_read_input_token_cost": 1.014e-09,
+  "input_cost_per_token": 5.07e-08,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 1.2e-06
+  "output_cost_per_token": 2.028e-07
  },
  "openrouter/deepseek/deepseek-v4.1-flash-1017": {
-  "cache_read_input_token_cost": 1e-08,
-  "input_cost_per_token": 3.6e-08,
+  "cache_read_input_token_cost": 3e-09,
+  "input_cost_per_token": 1.5e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 5e-07
+  "output_cost_per_token": 6e-07
  },
  "openrouter/deepseek/deepseek-v4.1-flash-1017:batch": {
   "cache_read_input_token_cost": 2.9e-09,
@@ -1168,12 +1168,12 @@
   "output_cost_per_token": 1.4e-07
  },
  "openrouter/minimax/minimax-m2.5": {
-  "cache_read_input_token_cost": 6e-08,
-  "input_cost_per_token": 2.95e-07,
+  "cache_read_input_token_cost": 3e-08,
+  "input_cost_per_token": 2.7e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 198000,
   "mode": "chat",
-  "output_cost_per_token": 1.2e-06
+  "output_cost_per_token": 9.5e-07
  },
  "openrouter/minimax/minimax-m2.7": {
   "input_cost_per_token": 6e-07,
@@ -1191,12 +1191,12 @@
   "output_cost_per_token": 1.2e-06
  },
  "openrouter/minimax/minimax-m3.1-flash": {
-  "cache_read_input_token_cost": 7.5e-09,
-  "input_cost_per_token": 7.5e-08,
+  "cache_read_input_token_cost": 1.5e-08,
+  "input_cost_per_token": 1.5e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 3e-07
+  "output_cost_per_token": 6e-07
  },
  "openrouter/minimax/minimax-m3:batch": {
   "cache_read_input_token_cost": 4.48e-08,
@@ -1579,7 +1579,7 @@
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 5e-07
+  "output_cost_per_token": 4.7e-07
  },
  "openrouter/openai/gpt-3.5-turbo-0613": {
   "input_cost_per_token": 1e-06,
@@ -2566,11 +2566,11 @@
   "output_cost_per_token": 1e-06
  },
  "openrouter/qwen/qwen3-coder-30b-a3b-instruct": {
-  "input_cost_per_token": 1.5e-07,
+  "input_cost_per_token": 7e-08,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 6e-07
+  "output_cost_per_token": 2.8e-07
  },
  "openrouter/qwen/qwen3-coder-flash": {
   "cache_read_input_token_cost": 3.9e-08,
@@ -2808,6 +2808,14 @@
   "mode": "chat",
   "output_cost_per_token": 4.275e-06
  },
+ "openrouter/radixark/daisyrose-27b": {
+  "cache_read_input_token_cost": 3.75e-08,
+  "input_cost_per_token": 1.5e-07,
+  "litellm_provider": "openrouter",
+  "max_input_tokens": 262144,
+  "mode": "chat",
+  "output_cost_per_token": 1.875e-06
+ },
  "openrouter/reflection/beam-1.0-501b-a23b": {
   "cache_read_input_token_cost": 5e-08,
   "input_cost_per_token": 2.5e-07,
@@ -2950,12 +2958,12 @@
   "output_cost_per_token": 2.95e-07
  },
  "openrouter/tencent/hy3": {
-  "cache_read_input_token_cost": 2.0625e-08,
-  "input_cost_per_token": 8.25e-08,
+  "cache_read_input_token_cost": 3.3e-08,
+  "input_cost_per_token": 1.32e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 262144,
   "mode": "chat",
-  "output_cost_per_token": 3.3e-07
+  "output_cost_per_token": 5.28e-07
  },
  "openrouter/tencent/hy4": {
   "cache_read_input_token_cost": 2.1e-08,
@@ -2974,12 +2982,12 @@
   "output_cost_per_token": 1.405e-07
  },
  "openrouter/tencent/hy4-preview": {
-  "cache_read_input_token_cost": 3.78e-08,
-  "input_cost_per_token": 7.506e-07,
+  "cache_read_input_token_cost": 4.2e-08,
+  "input_cost_per_token": 8.34e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 2.2509e-06
+  "output_cost_per_token": 2.501e-06
  },
  "openrouter/thedrummer/cydonia-24b-v4.1": {
   "cache_read_input_token_cost": 1.5e-07,
@@ -3236,7 +3244,7 @@
   "output_cost_per_token": 2e-06
  },
  "openrouter/z-ai/glm-4.6v": {
-  "cache_read_input_token_cost": 5e-08,
+  "cache_read_input_token_cost": 5.5e-08,
   "input_cost_per_token": 3e-07,
   "litellm_provider": "openrouter",
   "max_input_tokens": 131072,
