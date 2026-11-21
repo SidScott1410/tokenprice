@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "read_at": "2026-11-21T18:04:02Z",
+  "read_at": "2026-11-21T23:25:14Z",
   "source": "tokenprice",
   "url": "https://github.com/SidScott1410/tokenprice"
  },
@@ -3283,12 +3283,12 @@
   "output_cost_per_token": 4e-06
  },
  "openrouter/z-ai/glm-5.1": {
-  "cache_read_input_token_cost": 6e-07,
-  "input_cost_per_token": 1.19e-06,
+  "cache_read_input_token_cost": 2.6e-07,
+  "input_cost_per_token": 1.4e-06,
   "litellm_provider": "openrouter",
   "max_input_tokens": 204800,
   "mode": "chat",
-  "output_cost_per_token": 3.74e-06
+  "output_cost_per_token": 4.4e-06
  },
  "openrouter/z-ai/glm-5.2": {
   "cache_read_input_token_cost": 1.4e-07,
@@ -3448,7 +3448,7 @@
   "litellm_provider": "openrouter",
   "max_input_tokens": 1048576,
   "mode": "chat",
-  "output_cost_per_token": 1.06066e-05
+  "output_cost_per_token": 1.10055e-05
  },
  "openrouter/~openai/gpt-astra-latest": {
   "cache_read_input_token_cost": 4e-07,

@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-21T18:04:02Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-21T23:25:14Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-14. Source: [history/](history/).
 
 ## Biggest cuts
@@ -27,23 +27,23 @@ Window starts 2026-11-14. Source: [history/](history/).
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
-| primeintellect | openai/gpt-oss-120b | 0.301 | 2.6 | +763.8% |
-| primeintellect | openai/gpt-oss-20b | 0.132 | 1.1 | +733.3% |
+| primeintellect | openai/gpt-oss-120b | 0.301 | 2.499 | +730.2% |
+| primeintellect | openai/gpt-oss-20b | 0.132 | 0.979 | +641.7% |
 | primeintellect | qwen/qwen3.8-27b | 2.089 | 10.05 | +381.1% |
 | openrouter | ~deepseek/deepseek-flash-latest | 0.344 | 1.536 | +346.5% |
 | openai | openai/gpt-6-astra | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6-astra-pro | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
-| morph | z-ai/glm-5.3-flash | 0.414 | 1.168 | +182.1% |
+| morph | z-ai/glm-5.3-flash | 0.414 | 1.091 | +163.5% |
 | baidu | z-ai/glm-5.3 | 5.8254 | 14.6 | +150.6% |
 | sambanova | minimax/minimax-m3.1-flash | 0.78 | 1.95 | +150.0% |
-| morph | z-ai/glm-5.3 | 6.577 | 15.448 | +134.9% |
-| primeintellect | google/gemma-4-26b-a4b-it | 0.427 | 1.0 | +134.2% |
-| featherless | z-ai/glm-5.3 | 4.4 | 10.22 | +132.3% |
+| morph | z-ai/glm-5.3 | 6.577 | 14.866 | +126.0% |
 | fireworks | deepseek/deepseek-v4.1-flash-1017 | 1.95 | 3.9 | +100.0% |
+| google-ai-studio | google/gemini-2.5-flash | 3.9 | 7.8 | +100.0% |
+| google-ai-studio | google/gemini-2.5-flash-lite | 0.65 | 1.3 | +100.0% |
 
-## New listings (210)
+## New listings (212)
 
 - morph: deepseek/deepseek-v4.1-flash at 1.853
 - together: meta/muse-glimmer-30b at 4.85
@@ -119,7 +119,7 @@ Window starts 2026-11-14. Source: [history/](history/).
 | mimo-v2-6-pro | 4 | 2.736 | 3.045 | 18.48 | 6.75x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 0.88 | 6.29x |
 | glm-5-3-flash:batch | 4 | 0.227 | 0.4105 | 1.32 | 5.81x |
-| gpt-oss-120b | 21 | 0.54 | 1.6 | 2.6 | 4.81x |
+| gemma-4-31b-it | 15 | 0.705 | 1.23 | 3.75 | 5.32x |
+| gpt-oss-120b | 21 | 0.54 | 1.6 | 2.499 | 4.63x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
 | gemma-3-12b-it | 2 | 0.4 | 1.05 | 1.7 | 4.25x |
-| deepseek-v4-1-flash-1017 | 41 | 0.95 | 1.95 | 3.9 | 4.11x |
