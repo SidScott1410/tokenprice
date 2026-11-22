@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-22T06:58:15Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-22T15:25:25Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-15. Source: [history/](history/).
 
 ## Biggest cuts
@@ -13,22 +13,22 @@ Window starts 2026-11-15. Source: [history/](history/).
 | baidu | z-ai/glm-5.2 | 14.6 | 1.971 | -86.5% |
 | baidu | deepseek/deepseek-v4.1-flash | 3.9 | 0.6474 | -83.4% |
 | openrouter | z-ai/glm-5.3-flash | 1.65 | 0.2751 | -83.3% |
-| openrouter | openai/gpt-oss-20b | 0.975 | 0.272 | -72.1% |
 | io-net | nvidia/nemotron-3.5-super-vl | 3.0 | 0.99 | -67.0% |
 | streamlake | deepseek/deepseek-v4-flash | 0.5782 | 0.196 | -66.1% |
 | primalabs | nvidia/nemotron-3.5-super-vl | 4.75 | 1.65 | -65.3% |
 | baidu | deepseek/deepseek-v4-pro | 11.83 | 4.6255 | -60.9% |
 | baidu | moonshotai/kimi-k2.6 | 12.95 | 5.3095 | -59.0% |
+| alibaba | deepseek/deepseek-v4.1-flash | 2.73 | 1.17 | -57.1% |
+| alibaba | deepseek/deepseek-v4.1-flash-1017 | 2.73 | 1.17 | -57.1% |
 | wafer | deepseek/deepseek-v4-flash | 1.4 | 0.63 | -55.0% |
 | streamlake | z-ai/glm-5.2 | 6.3933 | 2.92 | -54.3% |
-| openrouter | deepseek/deepseek-v4.1-flash | 1.4 | 0.6474 | -53.8% |
 
 ## Biggest rises
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
 | primeintellect | qwen/qwen3.6-35b-a3b | 0.333 | 5.29 | +1488.6% |
-| primeintellect | openai/gpt-oss-120b | 0.264 | 2.499 | +846.6% |
+| primeintellect | openai/gpt-oss-120b | 0.264 | 2.534 | +859.8% |
 | primeintellect | openai/gpt-oss-20b | 0.132 | 1.1 | +733.3% |
 | primeintellect | qwen/qwen3.8-27b | 1.382 | 10.05 | +627.2% |
 | openrouter | deepseek/deepseek-v4.1-flash-1017 | 0.344 | 1.95 | +466.9% |
@@ -41,11 +41,10 @@ Window starts 2026-11-15. Source: [history/](history/).
 | openrouter | qwen/qwen3.5-9b | 0.353 | 0.92 | +160.6% |
 | primeintellect | qwen/qwen3.5-9b | 0.353 | 0.92 | +160.6% |
 | sambanova | minimax/minimax-m3.1-flash | 0.78 | 1.95 | +150.0% |
-| morph | z-ai/glm-5.3 | 7.102 | 15.094 | +112.5% |
+| morph | z-ai/glm-5.3 | 7.102 | 14.847 | +109.1% |
 
-## New listings (216)
+## New listings (217)
 
-- openrouter: z-ai/glm-4.7 at 5.65
 - wafer: minimax/minimax-m3.1-flash at 1.755
 - openai: openai/gpt-6-astra at 160.0
 - openai: openai/gpt-6-astra-long-context at 245.0
@@ -75,8 +74,9 @@ Window starts 2026-11-15. Source: [history/](history/).
 - openai: openai/gpt-5.4-nano at 3.95
 - openai: openai/gpt-5.2 at 43.75
 - openai: openai/gpt-5.2-pro at 525.0
+- openai: openai/gpt-5.1 at 31.25
 
-## Removed listings (170)
+## Removed listings (175)
 
 - openrouter: z-ai/glm-5.2:batch
 - morph: deepseek/deepseek-v4.1-flash
@@ -119,7 +119,7 @@ Window starts 2026-11-15. Source: [history/](history/).
 | mimo-v2-6-pro | 4 | 2.736 | 3.045 | 18.48 | 6.75x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 0.88 | 6.29x |
 | glm-5-3-flash:batch | 4 | 0.227 | 0.4105 | 1.32 | 5.81x |
-| gemma-4-31b-it | 15 | 0.766 | 1.23 | 3.75 | 4.9x |
-| gpt-oss-120b | 21 | 0.54 | 1.6 | 2.499 | 4.63x |
+| gpt-oss-120b | 21 | 0.54 | 1.6 | 2.534 | 4.69x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
 | gemma-3-12b-it | 2 | 0.4 | 1.05 | 1.7 | 4.25x |
+| deepseek-v4-1-flash-1017 | 40 | 0.95 | 1.95 | 3.9 | 4.11x |
