@@ -1,10 +1,10 @@
 {
- "checked_at": "2026-11-22T15:25:25Z",
+ "checked_at": "2026-11-22T21:51:21Z",
  "models": 476,
  "models_with_spread": 163,
  "providers": 81,
- "read_at": "2026-11-22T15:25:25Z",
- "records": 1896,
+ "read_at": "2026-11-22T21:51:21Z",
+ "records": 1898,
  "top_spread_model": "deepseek-v4-flash",
  "top_spread_p90_model": "deepseek-v4-flash",
  "top_spread_p90_ratio": 16.48,

@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-22T15:25:25Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-22T21:51:21Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-15. Source: [history/](history/).
 
 ## Biggest cuts
@@ -20,15 +20,15 @@ Window starts 2026-11-15. Source: [history/](history/).
 | baidu | moonshotai/kimi-k2.6 | 12.95 | 5.3095 | -59.0% |
 | alibaba | deepseek/deepseek-v4.1-flash | 2.73 | 1.17 | -57.1% |
 | alibaba | deepseek/deepseek-v4.1-flash-1017 | 2.73 | 1.17 | -57.1% |
+| openrouter | openai/gpt-oss-20b | 0.975 | 0.42 | -56.9% |
 | wafer | deepseek/deepseek-v4-flash | 1.4 | 0.63 | -55.0% |
-| streamlake | z-ai/glm-5.2 | 6.3933 | 2.92 | -54.3% |
 
 ## Biggest rises
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
-| primeintellect | qwen/qwen3.6-35b-a3b | 0.333 | 5.29 | +1488.6% |
-| primeintellect | openai/gpt-oss-120b | 0.264 | 2.534 | +859.8% |
+| primeintellect | qwen/qwen3.6-35b-a3b | 0.333 | 5.05 | +1416.5% |
+| primeintellect | openai/gpt-oss-120b | 0.264 | 2.382 | +802.3% |
 | primeintellect | openai/gpt-oss-20b | 0.132 | 1.1 | +733.3% |
 | primeintellect | qwen/qwen3.8-27b | 1.382 | 10.05 | +627.2% |
 | openrouter | deepseek/deepseek-v4.1-flash-1017 | 0.344 | 1.95 | +466.9% |
@@ -41,9 +41,9 @@ Window starts 2026-11-15. Source: [history/](history/).
 | openrouter | qwen/qwen3.5-9b | 0.353 | 0.92 | +160.6% |
 | primeintellect | qwen/qwen3.5-9b | 0.353 | 0.92 | +160.6% |
 | sambanova | minimax/minimax-m3.1-flash | 0.78 | 1.95 | +150.0% |
-| morph | z-ai/glm-5.3 | 7.102 | 14.847 | +109.1% |
+| morph | z-ai/glm-5.3 | 7.102 | 15.757 | +121.9% |
 
-## New listings (217)
+## New listings (218)
 
 - wafer: minimax/minimax-m3.1-flash at 1.755
 - openai: openai/gpt-6-astra at 160.0
@@ -119,7 +119,7 @@ Window starts 2026-11-15. Source: [history/](history/).
 | mimo-v2-6-pro | 4 | 2.736 | 3.045 | 18.48 | 6.75x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 0.88 | 6.29x |
 | glm-5-3-flash:batch | 4 | 0.227 | 0.4105 | 1.32 | 5.81x |
-| gpt-oss-120b | 21 | 0.54 | 1.6 | 2.534 | 4.69x |
+| gemma-4-31b-it | 15 | 0.712 | 1.23 | 3.75 | 5.27x |
+| gpt-oss-120b | 21 | 0.54 | 1.6 | 2.382 | 4.41x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
 | gemma-3-12b-it | 2 | 0.4 | 1.05 | 1.7 | 4.25x |
-| deepseek-v4-1-flash-1017 | 40 | 0.95 | 1.95 | 3.9 | 4.11x |
