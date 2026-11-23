@@ -298,22 +298,22 @@
    "cheapest": "baidu",
    "dearest": "venice",
    "max_blended_per_m": 3.9,
-   "median_blended_per_m": 2.375,
-   "median_x": 3.67,
+   "median_blended_per_m": 2.4013,
+   "median_x": 3.71,
    "min_blended_per_m": 0.6474,
    "n": 28,
-   "p10_blended_per_m": 1.56,
+   "p10_blended_per_m": 1.62,
    "p90_blended_per_m": 3.9,
    "ratio": 6.02,
    "ratio_p90": 6.02,
-   "ratio_p90_p10": 2.5
+   "ratio_p90_p10": 2.41
   },
   "deepseek-v4-1-flash-1017": {
    "cheapest": "sail-research",
-   "dearest": "parasail",
+   "dearest": "deepseek",
    "max_blended_per_m": 3.9,
-   "median_blended_per_m": 1.95,
-   "median_x": 5.74,
+   "median_blended_per_m": 2.074,
+   "median_x": 6.1,
    "min_blended_per_m": 0.34,
    "n": 40,
    "p10_blended_per_m": 0.95,
@@ -358,18 +358,18 @@
    "median_x": 9.45,
    "min_blended_per_m": 0.1019,
    "n": 11,
-   "p10_blended_per_m": 0.196,
+   "p10_blended_per_m": 0.49,
    "p90_blended_per_m": 1.68,
    "ratio": 18.54,
    "ratio_p90": 16.48,
-   "ratio_p90_p10": 8.57
+   "ratio_p90_p10": 3.43
   },
   "deepseek-v4-flash-0731": {
    "cheapest": "baidu",
    "dearest": "primeintellect",
    "max_blended_per_m": 4.4,
-   "median_blended_per_m": 0.96,
-   "median_x": 2.18,
+   "median_blended_per_m": 0.98,
+   "median_x": 2.23,
    "min_blended_per_m": 0.44,
    "n": 20,
    "p10_blended_per_m": 0.49,
@@ -393,32 +393,32 @@
    "ratio_p90_p10": 2.55
   },
   "deepseek-v4-pro": {
-   "cheapest": "baidu",
+   "cheapest": "streamlake",
    "dearest": "azure",
    "max_blended_per_m": 13.4,
    "median_blended_per_m": 7.294,
    "median_x": 1.58,
-   "min_blended_per_m": 4.6255,
+   "min_blended_per_m": 4.6138,
    "n": 10,
-   "p10_blended_per_m": 4.6357,
+   "p10_blended_per_m": 4.6255,
    "p90_blended_per_m": 11.553,
    "ratio": 2.9,
    "ratio_p90": 2.5,
-   "ratio_p90_p10": 2.49
+   "ratio_p90_p10": 2.5
   },
   "deepseek-v4-pro-0813": {
    "cheapest": "baidu",
-   "dearest": "relace",
-   "max_blended_per_m": 24.0999,
-   "median_blended_per_m": 13.195,
+   "dearest": "venice",
+   "max_blended_per_m": 16.5,
+   "median_blended_per_m": 13.2,
    "median_x": 10.0,
    "min_blended_per_m": 1.32,
    "n": 16,
-   "p10_blended_per_m": 6.6,
-   "p90_blended_per_m": 16.5,
-   "ratio": 18.26,
-   "ratio_p90": 12.5,
-   "ratio_p90_p10": 2.5
+   "p10_blended_per_m": 7.28,
+   "p90_blended_per_m": 15.1188,
+   "ratio": 12.5,
+   "ratio_p90": 11.45,
+   "ratio_p90_p10": 2.08
   },
   "gemini-2-5-flash": {
    "cheapest": "google-ai-studio",
@@ -778,11 +778,11 @@
    "median_x": 1.92,
    "min_blended_per_m": 0.64,
    "n": 15,
-   "p10_blended_per_m": 0.712,
+   "p10_blended_per_m": 0.784,
    "p90_blended_per_m": 3.75,
    "ratio": 5.98,
    "ratio_p90": 5.86,
-   "ratio_p90_p10": 5.27
+   "ratio_p90_p10": 4.78
   },
   "glm-4-5-air": {
    "cheapest": "novita",
@@ -904,11 +904,11 @@
    "median_x": 4.59,
    "min_blended_per_m": 1.971,
    "n": 20,
-   "p10_blended_per_m": 4.77,
+   "p10_blended_per_m": 5.84,
    "p90_blended_per_m": 14.6,
    "ratio": 10.35,
    "ratio_p90": 7.41,
-   "ratio_p90_p10": 3.06
+   "ratio_p90_p10": 2.5
   },
   "glm-5-3": {
    "cheapest": "wafer",
@@ -918,11 +918,11 @@
    "median_x": 3.08,
    "min_blended_per_m": 4.2699,
    "n": 35,
-   "p10_blended_per_m": 6.45,
+   "p10_blended_per_m": 6.4,
    "p90_blended_per_m": 14.7,
    "ratio": 5.13,
    "ratio_p90": 3.44,
-   "ratio_p90_p10": 2.28
+   "ratio_p90_p10": 2.3
   },
   "glm-5-3-flash": {
    "cheapest": "relace",
@@ -1465,10 +1465,10 @@
    "min_blended_per_m": 0.48,
    "n": 21,
    "p10_blended_per_m": 0.54,
-   "p90_blended_per_m": 2.382,
+   "p90_blended_per_m": 2.472,
    "ratio": 6.23,
-   "ratio_p90": 4.96,
-   "ratio_p90_p10": 4.41
+   "ratio_p90": 5.15,
+   "ratio_p90_p10": 4.58
   },
   "gpt-oss-20b": {
    "cheapest": "darkbloom",
@@ -1530,15 +1530,15 @@
    "cheapest": "tencent",
    "dearest": "novita",
    "max_blended_per_m": 1.88,
-   "median_blended_per_m": 1.4762,
-   "median_x": 1.38,
-   "min_blended_per_m": 1.0725,
+   "median_blended_per_m": 1.798,
+   "median_x": 1.05,
+   "min_blended_per_m": 1.716,
    "n": 2,
-   "p10_blended_per_m": 1.0725,
+   "p10_blended_per_m": 1.716,
    "p90_blended_per_m": 1.88,
-   "ratio": 1.75,
-   "ratio_p90": 1.75,
-   "ratio_p90_p10": 1.75
+   "ratio": 1.1,
+   "ratio_p90": 1.1,
+   "ratio_p90_p10": 1.1
   },
   "hy4": {
    "cheapest": "tencent",
@@ -1555,18 +1555,18 @@
    "ratio_p90_p10": 2.0
   },
   "hy4-preview": {
-   "cheapest": "tencent",
+   "cheapest": "deepinfra",
    "dearest": "venice",
    "max_blended_per_m": 10.4213,
    "median_blended_per_m": 8.337,
-   "median_x": 1.11,
-   "min_blended_per_m": 7.5033,
+   "median_x": 1.0,
+   "min_blended_per_m": 8.337,
    "n": 5,
-   "p10_blended_per_m": 7.5033,
+   "p10_blended_per_m": 8.337,
    "p90_blended_per_m": 10.4213,
-   "ratio": 1.39,
-   "ratio_p90": 1.39,
-   "ratio_p90_p10": 1.39
+   "ratio": 1.25,
+   "ratio_p90": 1.25,
+   "ratio_p90_p10": 1.25
   },
   "inkling-2-mini": {
    "cheapest": "primeintellect",
@@ -1628,8 +1628,8 @@
    "cheapest": "coreweave",
    "dearest": "moonshot-ai",
    "max_blended_per_m": 12.95,
-   "median_blended_per_m": 11.7596,
-   "median_x": 1.22,
+   "median_blended_per_m": 11.8158,
+   "median_x": 1.23,
    "min_blended_per_m": 9.6,
    "n": 8,
    "p10_blended_per_m": 9.7125,
@@ -1657,13 +1657,13 @@
    "dearest": "amazon-bedrock",
    "max_blended_per_m": 64.0,
    "median_blended_per_m": 31.875,
-   "median_x": 1.66,
-   "min_blended_per_m": 19.2,
+   "median_x": 1.61,
+   "min_blended_per_m": 19.84,
    "n": 20,
    "p10_blended_per_m": 26.653,
    "p90_blended_per_m": 32.0,
-   "ratio": 3.33,
-   "ratio_p90": 1.67,
+   "ratio": 3.23,
+   "ratio_p90": 1.61,
    "ratio_p90_p10": 1.2
   },
   "kimi-k3-1-pro:batch": {
@@ -2121,12 +2121,12 @@
    "median_blended_per_m": 2.8,
    "median_x": 1.3,
    "min_blended_per_m": 2.15,
-   "n": 8,
+   "n": 7,
    "p10_blended_per_m": 2.36,
-   "p90_blended_per_m": 5.05,
+   "p90_blended_per_m": 4.938,
    "ratio": 2.62,
-   "ratio_p90": 2.35,
-   "ratio_p90_p10": 2.14
+   "ratio_p90": 2.3,
+   "ratio_p90_p10": 2.09
   },
   "qwen3-8-2-4t-a95b": {
    "cheapest": "fireworks",
@@ -2283,5 +2283,5 @@
    "ratio_p90_p10": 1.0
   }
  },
- "read_at": "2026-11-22T21:51:21Z"
+ "read_at": "2026-11-23T02:52:10Z"
 }
