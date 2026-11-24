@@ -2788,6 +2788,15 @@
      "model_raw": "openai/gpt-6.1-terra",
      "note": "pass-through",
      "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 16.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.1-terra",
+     "note": "pass-through",
+     "over_list": 1.0,
      "provider": "openai"
     },
     {
@@ -2832,6 +2841,15 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
+    },
+    {
+     "blended_per_m": 128.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-astra",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "google"
     },
     {
      "blended_per_m": 128.0,
@@ -2893,6 +2911,15 @@
      "note": "pass-through",
      "over_list": 1.0,
      "provider": "azure"
+    },
+    {
+     "blended_per_m": 32.0,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6.2-sol",
+     "note": "pass-through",
+     "over_list": 1.0,
+     "provider": "google"
     },
     {
      "blended_per_m": 32.0,
@@ -3175,5 +3202,5 @@
    ]
   }
  },
- "read_at": "2026-11-23T12:58:36Z"
+ "read_at": "2026-11-24T00:57:45Z"
 }
