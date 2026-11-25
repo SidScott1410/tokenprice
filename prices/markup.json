@@ -3068,6 +3068,15 @@
      "model_raw": "openai/gpt-6-luna",
      "note": "pass-through",
      "over_list": 1.0,
+     "provider": "google"
+    },
+    {
+     "blended_per_m": 1.6,
+     "comparable": true,
+     "endpoints": 1,
+     "model_raw": "openai/gpt-6-luna",
+     "note": "pass-through",
+     "over_list": 1.0,
      "provider": "openai"
     },
     {
@@ -3202,5 +3211,5 @@
    ]
   }
  },
- "read_at": "2026-11-24T21:18:50Z"
+ "read_at": "2026-11-25T04:55:17Z"
 }
