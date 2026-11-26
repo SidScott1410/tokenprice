@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-26T00:27:47Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-26T09:37:38Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-19. Source: [history/](history/).
 
 ## Biggest cuts
@@ -12,38 +12,38 @@ Window starts 2026-11-19. Source: [history/](history/).
 | openrouter | z-ai/glm-5.2 | 20.407 | 7.88 | -61.4% |
 | baidu | moonshotai/kimi-k2.6 | 12.95 | 5.3095 | -59.0% |
 | wafer | deepseek/deepseek-v4-flash | 1.4 | 0.63 | -55.0% |
-| openrouter | minimax/minimax-m3.1-flash | 1.95 | 0.975 | -50.0% |
-| openrouter | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.95 | -50.0% |
-| deepseek | deepseek/deepseek-v4-pro-0813 | 13.2 | 6.6 | -50.0% |
-| deepseek | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.95 | -50.0% |
 | minimax | minimax/minimax-m3.1-flash | 1.95 | 0.975 | -50.0% |
 | doubleword | z-ai/glm-5.3 | 14.6 | 7.8 | -46.6% |
+| openrouter | ~deepseek/deepseek-pro-latest | 24.1211 | 13.431 | -44.3% |
 | openrouter | deepseek/deepseek-v4-pro-0813 | 23.58 | 13.431 | -43.0% |
 | alibaba | moonshotai/kimi-k3.1-pro | 64.0 | 36.8 | -42.5% |
 | openinference | deepseek/deepseek-v4.1-flash-1017 | 3.68 | 2.297 | -37.6% |
 | openinference | deepseek/deepseek-v4.1-flash | 3.68 | 2.302 | -37.4% |
+| relace | deepseek/deepseek-v4-pro-0813 | 24.1211 | 15.25 | -36.8% |
+| openrouter | deepseek/deepseek-v4-flash-0731 | 0.947 | 0.6 | -36.6% |
+| morph | moonshotai/kimi-k3.1-pro | 41.44 | 26.956 | -35.0% |
 
 ## Biggest rises
 
 | provider | model | from | to | change |
 |---|---|---|---|---|
-| openrouter | z-ai/glm-5.3-flash | 0.2751 | 1.26 | +358.0% |
+| openrouter | z-ai/glm-5.3-flash | 0.2751 | 1.65 | +499.8% |
 | openai | openai/gpt-6-astra | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6-astra-pro | 80.0 | 320.0 | +300.0% |
 | openai | openai/gpt-6.1-sol | 16.0 | 64.0 | +300.0% |
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
+| featherless | deepseek/deepseek-v3.2 | 1.494 | 5.7 | +281.5% |
 | featherless | z-ai/glm-5.3 | 4.38 | 14.6 | +233.3% |
-| featherless | deepseek/deepseek-v3.2 | 1.494 | 4.56 | +205.2% |
 | featherless | xiaomi/mimo-v2.6-flash | 0.9478 | 2.65 | +179.6% |
+| openrouter | google/gemma-3-27b-it | 0.56 | 1.43 | +155.4% |
 | openrouter | xiaomi/mimo-v2.6-flash-mopd | 1.41 | 3.5 | +148.2% |
 | featherless | xiaomi/mimo-v2.6-flash-mopd | 1.41 | 3.5 | +148.2% |
 | openrouter | deepseek/deepseek-v4-flash-vision-exp | 2.156 | 4.4 | +104.1% |
 | google-ai-studio | google/gemini-2.5-flash | 3.9 | 7.8 | +100.0% |
 | google-ai-studio | google/gemini-2.5-flash-lite | 0.65 | 1.3 | +100.0% |
 | google-ai-studio | google/gemini-2.5-pro | 15.625 | 31.25 | +100.0% |
-| google-ai-studio | google/gemini-2.5-pro-preview | 15.625 | 31.25 | +100.0% |
 
-## New listings (152)
+## New listings (149)
 
 - makora: deepseek/deepseek-v4.1-flash-1017 at 2.55
 - featherless: minimax/minimax-m3 at 7.15
@@ -76,7 +76,7 @@ Window starts 2026-11-19. Source: [history/](history/).
 - together: deepseek/deepseek-v4.1-flash:batch at 1.116
 - amazon-bedrock: mistralai/pixtral-large-2502 at 20.0
 
-## Removed listings (168)
+## Removed listings (171)
 
 - sail-research: deepseek/deepseek-v4.1-flash-1017
 - sail-research: deepseek/deepseek-v4.1-flash-1017
@@ -118,8 +118,8 @@ Window starts 2026-11-19. Source: [history/](history/).
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 0.88 | 6.29x |
 | glm-5-3-flash:batch | 4 | 0.227 | 0.4105 | 1.32 | 5.81x |
 | deepseek-v4-flash-0731 | 19 | 0.77 | 0.98 | 4.18 | 5.43x |
+| gpt-oss-120b | 20 | 0.54 | 1.775 | 2.6 | 4.81x |
 | inkling-2-mini | 5 | 0.3412 | 0.975 | 1.62 | 4.75x |
-| gpt-oss-120b | 20 | 0.54 | 1.775 | 2.413 | 4.47x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
 | gemma-3-12b-it | 2 | 0.4 | 1.05 | 1.7 | 4.25x |
-| deepseek-v4-1-flash-1017 | 44 | 0.95 | 2.1108 | 3.9 | 4.11x |
+| deepseek-v4-1-flash-1017 | 44 | 0.95 | 2.1443 | 3.9 | 4.11x |
