@@ -324,12 +324,12 @@
   },
   "deepseek-v4-1-flash-1017": {
    "cheapest": "sail-research",
-   "dearest": "deepseek",
+   "dearest": "parasail",
    "max_blended_per_m": 3.9,
-   "median_blended_per_m": 2.292,
-   "median_x": 6.74,
+   "median_blended_per_m": 2.145,
+   "median_x": 6.31,
    "min_blended_per_m": 0.34,
-   "n": 44,
+   "n": 43,
    "p10_blended_per_m": 0.954,
    "p90_blended_per_m": 3.9,
    "ratio": 11.47,
@@ -392,20 +392,6 @@
    "ratio_p90": 8.71,
    "ratio_p90_p10": 5.43
   },
-  "deepseek-v4-flash-vision-exp": {
-   "cheapest": "deepinfra",
-   "dearest": "siliconflow",
-   "max_blended_per_m": 4.4,
-   "median_blended_per_m": 3.0624,
-   "median_x": 1.78,
-   "min_blended_per_m": 1.7248,
-   "n": 2,
-   "p10_blended_per_m": 1.7248,
-   "p90_blended_per_m": 4.4,
-   "ratio": 2.55,
-   "ratio_p90": 2.55,
-   "ratio_p90_p10": 2.55
-  },
   "deepseek-v4-pro": {
    "cheapest": "relace",
    "dearest": "azure",
@@ -428,11 +414,11 @@
    "median_x": 2.0,
    "min_blended_per_m": 6.6,
    "n": 17,
-   "p10_blended_per_m": 11.0,
+   "p10_blended_per_m": 7.28,
    "p90_blended_per_m": 13.2,
    "ratio": 2.5,
    "ratio_p90": 2.0,
-   "ratio_p90_p10": 1.2
+   "ratio_p90_p10": 1.81
   },
   "gemini-2-5-flash": {
    "cheapest": "google-ai-studio",
@@ -900,8 +886,8 @@
    "cheapest": "relace",
    "dearest": "particle-ai",
    "max_blended_per_m": 2.08,
-   "median_blended_per_m": 1.32,
-   "median_x": 4.71,
+   "median_blended_per_m": 1.26,
+   "median_x": 4.5,
    "min_blended_per_m": 0.2801,
    "n": 35,
    "p10_blended_per_m": 0.605,
@@ -1437,22 +1423,22 @@
    "min_blended_per_m": 0.48,
    "n": 20,
    "p10_blended_per_m": 0.54,
-   "p90_blended_per_m": 2.534,
+   "p90_blended_per_m": 2.6,
    "ratio": 6.23,
-   "ratio_p90": 5.28,
-   "ratio_p90_p10": 4.69
+   "ratio_p90": 5.42,
+   "ratio_p90_p10": 4.81
   },
   "gpt-oss-20b": {
    "cheapest": "darkbloom",
    "dearest": "primeintellect",
-   "max_blended_per_m": 1.1,
+   "max_blended_per_m": 1.038,
    "median_blended_per_m": 0.48,
    "median_x": 1.96,
    "min_blended_per_m": 0.2448,
    "n": 9,
    "p10_blended_per_m": 0.288,
    "p90_blended_per_m": 0.975,
-   "ratio": 4.49,
+   "ratio": 4.24,
    "ratio_p90": 3.98,
    "ratio_p90_p10": 3.39
   },
@@ -1557,16 +1543,16 @@
   "inkling-2-mini": {
    "cheapest": "darkbloom",
    "dearest": "io-net",
-   "max_blended_per_m": 1.62,
+   "max_blended_per_m": 1.13,
    "median_blended_per_m": 0.7312,
    "median_x": 2.14,
    "min_blended_per_m": 0.3412,
    "n": 4,
    "p10_blended_per_m": 0.3412,
-   "p90_blended_per_m": 1.62,
-   "ratio": 4.75,
-   "ratio_p90": 4.75,
-   "ratio_p90_p10": 4.75
+   "p90_blended_per_m": 1.13,
+   "ratio": 3.31,
+   "ratio_p90": 3.31,
+   "ratio_p90_p10": 3.31
   },
   "inkling-2-small": {
    "cheapest": "primeintellect",
@@ -1725,14 +1711,14 @@
   "mimo-v2-6-flash": {
    "cheapest": "darkbloom",
    "dearest": "featherless",
-   "max_blended_per_m": 1.59,
+   "max_blended_per_m": 2.65,
    "median_blended_per_m": 0.98,
    "median_x": 1.04,
    "min_blended_per_m": 0.94,
    "n": 8,
    "p10_blended_per_m": 0.98,
    "p90_blended_per_m": 1.155,
-   "ratio": 1.69,
+   "ratio": 2.82,
    "ratio_p90": 1.23,
    "ratio_p90_p10": 1.18
   },
@@ -1988,20 +1974,6 @@
    "ratio_p90": 2.51,
    "ratio_p90_p10": 2.51
   },
-  "qwen3-5-122b-a10b": {
-   "cheapest": "siliconflow",
-   "dearest": "alibaba",
-   "max_blended_per_m": 6.5,
-   "median_blended_per_m": 6.5,
-   "median_x": 1.0,
-   "min_blended_per_m": 6.5,
-   "n": 2,
-   "p10_blended_per_m": 6.5,
-   "p90_blended_per_m": 6.5,
-   "ratio": 1.0,
-   "ratio_p90": 1.0,
-   "ratio_p90_p10": 1.0
-  },
   "qwen3-5-27b": {
    "cheapest": "alibaba",
    "dearest": "deepinfra",
@@ -2045,18 +2017,18 @@
    "ratio_p90_p10": 1.92
   },
   "qwen3-5-9b": {
-   "cheapest": "deepinfra",
+   "cheapest": "primeintellect",
    "dearest": "together",
    "max_blended_per_m": 0.92,
    "median_blended_per_m": 0.51,
-   "median_x": 1.16,
-   "min_blended_per_m": 0.44,
+   "median_x": 1.57,
+   "min_blended_per_m": 0.324,
    "n": 6,
-   "p10_blended_per_m": 0.44,
+   "p10_blended_per_m": 0.324,
    "p90_blended_per_m": 0.85,
-   "ratio": 2.09,
-   "ratio_p90": 1.93,
-   "ratio_p90_p10": 1.93
+   "ratio": 2.84,
+   "ratio_p90": 2.62,
+   "ratio_p90_p10": 2.62
   },
   "qwen3-6-27b": {
    "cheapest": "chutes",
@@ -2093,7 +2065,7 @@
    "median_blended_per_m": 20.0,
    "median_x": 1.0,
    "min_blended_per_m": 20.0,
-   "n": 4,
+   "n": 3,
    "p10_blended_per_m": 20.0,
    "p90_blended_per_m": 20.0,
    "ratio": 1.0,
@@ -2241,5 +2213,5 @@
    "ratio_p90_p10": 1.0
   }
  },
- "read_at": "2026-11-27T02:54:26Z"
+ "read_at": "2026-11-27T12:35:03Z"
 }

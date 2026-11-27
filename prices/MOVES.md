@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-27T02:54:26Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-27T12:35:03Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-20. Source: [history/](history/).
 
 ## Biggest cuts
@@ -9,19 +9,19 @@ Window starts 2026-11-20. Source: [history/](history/).
 |---|---|---|---|---|
 | openrouter | deepseek/deepseek-v4.1-flash | 3.9 | 1.4 | -64.1% |
 | wafer | deepseek/deepseek-v4-pro-0813 | 34.77 | 13.431 | -61.4% |
+| openrouter | google/gemma-3-27b-it | 1.43 | 0.56 | -60.8% |
 | baidu | moonshotai/kimi-k2.6 | 12.95 | 5.3095 | -59.0% |
 | wafer | deepseek/deepseek-v4-flash | 1.4 | 0.63 | -55.0% |
+| openrouter | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.95 | -50.0% |
+| deepseek | deepseek/deepseek-v4-pro-0813 | 13.2 | 6.6 | -50.0% |
+| deepseek | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.95 | -50.0% |
 | minimax | minimax/minimax-m3.1-flash | 1.95 | 0.975 | -50.0% |
-| primeintellect | qwen/qwen3.5-9b | 0.857 | 0.46 | -46.3% |
 | alibaba | moonshotai/kimi-k3.1-pro | 64.0 | 36.8 | -42.5% |
+| openrouter | thinkingmachines/inkling-2-mini | 1.3 | 0.78 | -40.0% |
+| primeintellect | thinkingmachines/inkling-2-mini | 1.3 | 0.78 | -40.0% |
+| inceptron | z-ai/glm-5.3-flash | 1.66 | 1.03 | -38.0% |
 | openrouter | ~deepseek/deepseek-pro-latest | 24.2565 | 15.0999 | -37.7% |
 | relace | deepseek/deepseek-v4-pro-0813 | 24.2565 | 15.0999 | -37.7% |
-| primeintellect | qwen/qwen3.8-27b | 10.05 | 6.538 | -34.9% |
-| openrouter | openai/gpt-oss-120b | 1.17 | 0.8 | -31.6% |
-| tenstorrent | qwen/qwen3.8-27b | 6.3 | 4.33 | -31.3% |
-| morph | moonshotai/kimi-k3.1-pro | 40.572 | 28.375 | -30.1% |
-| krea | z-ai/glm-5.3 | 12.41 | 8.69 | -30.0% |
-| wafer | deepseek/deepseek-v4-flash-0731 | 1.35 | 0.947 | -29.9% |
 
 ## Biggest rises
 
@@ -35,15 +35,15 @@ Window starts 2026-11-20. Source: [history/](history/).
 | openai | openai/gpt-6.1-sol-pro | 16.0 | 64.0 | +300.0% |
 | featherless | deepseek/deepseek-v3.2 | 1.494 | 5.7 | +281.5% |
 | particle-ai | deepseek/deepseek-v4.1-flash-1017 | 0.78 | 2.29 | +193.6% |
+| featherless | xiaomi/mimo-v2.6-flash | 0.9478 | 2.65 | +179.6% |
 | openrouter | xiaomi/mimo-v2.6-flash-mopd | 1.41 | 3.5 | +148.2% |
 | featherless | xiaomi/mimo-v2.6-flash-mopd | 1.41 | 3.5 | +148.2% |
 | openrouter | ~deepseek/deepseek-flash-latest | 0.63 | 1.536 | +143.8% |
-| openrouter | deepseek/deepseek-v4-flash-vision-exp | 2.156 | 4.4 | +104.1% |
 | fireworks | deepseek/deepseek-v4.1-flash | 1.95 | 3.9 | +100.0% |
 | fireworks | deepseek/deepseek-v4.1-flash-1017 | 1.95 | 3.9 | +100.0% |
 | google-ai-studio | google/gemini-2.5-flash | 3.9 | 7.8 | +100.0% |
 
-## New listings (144)
+## New listings (146)
 
 - openrouter: mistralai/pixtral-large-2502 at 20.0
 - openrouter: deepseek/deepseek-v4.1-flash-1017:batch at 0.482
@@ -76,7 +76,7 @@ Window starts 2026-11-20. Source: [history/](history/).
 - openrouter: deepseek/deepseek-chat-v3-0324 at 3.25
 - sail-research: deepseek/deepseek-v4.1-flash-1017:batch at 0.5
 
-## Removed listings (178)
+## Removed listings (183)
 
 - openrouter: x-ai/grok-build-0.1
 - sail-research: deepseek/deepseek-v4.1-flash-1017:batch
@@ -118,8 +118,8 @@ Window starts 2026-11-20. Source: [history/](history/).
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 0.88 | 6.29x |
 | glm-5-3-flash:batch | 4 | 0.227 | 0.4105 | 1.32 | 5.81x |
 | deepseek-v4-flash-0731 | 19 | 0.77 | 0.98 | 4.18 | 5.43x |
-| inkling-2-mini | 4 | 0.3412 | 0.7312 | 1.62 | 4.75x |
-| gpt-oss-120b | 20 | 0.54 | 1.775 | 2.534 | 4.69x |
+| gpt-oss-120b | 20 | 0.54 | 1.775 | 2.6 | 4.81x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
 | gemma-3-12b-it | 2 | 0.4 | 1.05 | 1.7 | 4.25x |
-| deepseek-v4-1-flash-1017 | 44 | 0.954 | 2.292 | 3.9 | 4.09x |
+| deepseek-v4-1-flash-1017 | 43 | 0.954 | 2.145 | 3.9 | 4.09x |
+| deepseek-v3-2 | 4 | 1.4 | 2.0995 | 5.7 | 4.07x |
