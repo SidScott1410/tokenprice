@@ -1,6 +1,6 @@
 # Price moves, last 7 days
 
-Generated 2026-11-28T03:57:16Z. Blended = input + 3 x output, USD per M tokens.
+Generated 2026-11-28T13:07:52Z. Blended = input + 3 x output, USD per M tokens.
 Window starts 2026-11-21. Source: [history/](history/).
 
 ## Biggest cuts
@@ -9,16 +9,16 @@ Window starts 2026-11-21. Source: [history/](history/).
 |---|---|---|---|---|
 | baidu | deepseek/deepseek-v4-flash-0731 | 4.4 | 0.4532 | -89.7% |
 | venice | deepseek/deepseek-v4.1-flash-1017 | 19.5 | 3.9 | -80.0% |
-| primeintellect | qwen/qwen3.6-35b-a3b | 5.29 | 1.41 | -73.3% |
+| baidu | deepseek/deepseek-v4-pro | 4.6255 | 1.4551 | -68.5% |
+| streamlake | deepseek/deepseek-v4-pro | 4.6357 | 1.4616 | -68.5% |
 | openrouter | openai/gpt-oss-20b | 0.975 | 0.42 | -56.9% |
+| primeintellect | qwen/qwen3.5-9b | 0.92 | 0.405 | -56.0% |
+| openrouter | qwen/qwen3.5-9b | 0.85 | 0.405 | -52.4% |
 | openrouter | ~deepseek/deepseek-v4-flash-latest | 0.9434 | 0.4532 | -52.0% |
 | openrouter | deepseek/deepseek-v4-flash-vision-exp | 4.4 | 2.156 | -51.0% |
 | baidu | deepseek/deepseek-v4-pro-0813 | 13.2 | 6.5868 | -50.1% |
-| primeintellect | qwen/qwen3.5-9b | 0.92 | 0.46 | -50.0% |
 | deepseek | deepseek/deepseek-v4-pro-0813 | 13.2 | 6.6 | -50.0% |
 | deepseek | deepseek/deepseek-v4.1-flash-1017 | 3.9 | 1.95 | -50.0% |
-| openrouter | qwen/qwen3.5-9b | 0.85 | 0.46 | -45.9% |
-| openrouter | deepseek/deepseek-v4-pro | 8.96 | 5.0432 | -43.7% |
 | openrouter | thinkingmachines/inkling-2-mini | 1.3 | 0.78 | -40.0% |
 | primeintellect | thinkingmachines/inkling-2-mini | 1.3 | 0.78 | -40.0% |
 | featherless | z-ai/glm-5.2 | 14.6 | 8.76 | -40.0% |
@@ -40,10 +40,10 @@ Window starts 2026-11-21. Source: [history/](history/).
 | openrouter | xiaomi/mimo-v2.6-flash-mopd | 1.41 | 3.5 | +148.2% |
 | featherless | xiaomi/mimo-v2.6-flash-mopd | 1.41 | 3.5 | +148.2% |
 | openrouter | ~deepseek/deepseek-flash-latest | 0.63 | 1.536 | +143.8% |
-| baidu | deepseek/deepseek-v4-flash | 0.1078 | 0.2313 | +114.5% |
 | fireworks | deepseek/deepseek-v4.1-flash | 1.95 | 3.9 | +100.0% |
+| fireworks | deepseek/deepseek-v4.1-flash-1017 | 1.95 | 3.9 | +100.0% |
 
-## New listings (125)
+## New listings (126)
 
 - openrouter: radixark/daisyrose-27b at 5.775
 - openrouter: minimax/minimax-m2.5 at 3.12
@@ -52,7 +52,6 @@ Window starts 2026-11-21. Source: [history/](history/).
 - liquid: liquid/lfm-2.5-24b-a2b at 2.15
 - liquid: liquid/lfm-3-1.7b at 0.68
 - deepinfra: radixark/daisyrose-27b at 5.775
-- decart: z-ai/glm-5.3 at 5.99
 - darkbloom: xiaomi/mimo-v2.6-flash at 0.94
 - darkbloom: z-ai/glm-5.3-flash at 0.605
 - coreweave: nvidia/nemotron-3-ultra-550b-a55b at 6.95
@@ -75,8 +74,9 @@ Window starts 2026-11-21. Source: [history/](history/).
 - crusoe: deepseek/deepseek-v4.1-flash-1017 at 2.5285
 - ant-digital: inclusionai/ling-3.1-flash at 0.75
 - darkbloom: openai/gpt-oss-20b at 0.2448
+- openrouter: thinkingmachines/inkling at 13.15
 
-## Removed listings (139)
+## Removed listings (140)
 
 - liquid: liquid/lfm-2.5-24b-a2b
 - liquid: liquid/lfm-3-1.7b
@@ -113,13 +113,13 @@ Window starts 2026-11-21. Source: [history/](history/).
 
 | model | providers | p10 | median | p90 | p90/p10 |
 |---|---|---|---|---|---|
+| deepseek-v4-flash | 12 | 0.196 | 0.9665 | 1.68 | 8.57x |
+| deepseek-v4-pro | 9 | 1.4616 | 7.28 | 11.553 | 7.9x |
 | mistral-nemo | 5 | 0.0814 | 0.12 | 0.6 | 7.37x |
-| deepseek-v4-flash | 12 | 0.2313 | 0.9665 | 1.68 | 7.26x |
 | deepseek-v4-flash-0731 | 19 | 0.49 | 0.94 | 3.52 | 7.18x |
 | mimo-v2-6-pro | 3 | 2.736 | 3.045 | 18.48 | 6.75x |
 | llama-3-1-8b-instruct | 4 | 0.14 | 0.585 | 0.88 | 6.29x |
 | glm-5-3-flash:batch | 4 | 0.227 | 0.4105 | 1.32 | 5.81x |
-| gpt-oss-120b | 20 | 0.54 | 1.775 | 2.534 | 4.69x |
+| gpt-oss-120b | 20 | 0.54 | 1.775 | 2.6 | 4.81x |
 | mythomax-l2-13b | 2 | 0.41 | 1.105 | 1.8 | 4.39x |
 | gemma-3-12b-it | 2 | 0.4 | 1.05 | 1.7 | 4.25x |
-| deepseek-v4-1-flash-1017 | 43 | 0.954 | 2.078 | 3.9 | 4.09x |
